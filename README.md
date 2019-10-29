@@ -3,7 +3,7 @@ Creation of a DSL for browser automation
 
 Functions of our DSL : 
 - ON  <b>browser</b> : open a window in the browser <b> browser </b> 
-- GOTO <URL> : open the window at the url <b> URL </b>
+- GOTO <b>URL</b> : open the window at the url <b> URL </b>
  - IS <b>component</b> : returns a boolean. True if <b>component</b> is found on the page. False otherwise.
  - WHERE ATTRIBUT <b> a </B> :  search on the attribute <b>a</b>
  - WHERE CONTENT <b> c </B> :  search on the content ( inside the tags)  <b>c</b>
