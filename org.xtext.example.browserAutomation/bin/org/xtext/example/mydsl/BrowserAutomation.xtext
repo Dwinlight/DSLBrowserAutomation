@@ -1,0 +1,26 @@
+grammar org.xtext.example.mydsl.BrowserAutomation with org.eclipse.xtext.common.Terminals
+
+generate browserAutomation "http://www.xtext.org/example/mydsl/BrowserAutomation"
+
+Model:
+	(tisi+=Test)*;
+	
+	
+Test:
+	'ON' b=Browser 'GOTO' u=Url 'IS' 'ATTRIBUT' a1=Attribut 'WHERE' 'ATTRIBUT' a2=Attribut 'CONTAINS' '"'STRING'"' 
+;
+
+Browser:
+	name = ID
+;
+Url:
+	name = STRING
+;
+Attribut:
+	name = ID
+;
+
+
+	
+Greeting:
+	'Hello' name=ID '!';
