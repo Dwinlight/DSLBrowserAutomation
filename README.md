@@ -11,6 +11,6 @@ Functions of our DSL :
  - SET ATTRIBUT <b> (a,v)</b> : set the the attribut <b>a</b> at the value <b>v</b> 
  - EQUALS : verify the strict equality  of two attributes/contents 
  - CONTAINS <b>s</b> :  verify that an attribute/content contains the string <b>s</b>
- - PRINT <b>v</b> : print the variable <b>v</b> 
+ - Print <b>v</b> : print the variable <b>v</b> 
   
   
