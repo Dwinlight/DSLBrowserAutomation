@@ -1,0 +1,26 @@
+###Test1###
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" IS link WHERE ATTRIBUT content EQUALS "Toutes les actualités"
+
+###Test2###
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link CONTENT "Toutes les actualités" IS link CONTENT "Accueil"
+
+###Test3###
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" 
+CLICK link WHERE CONTENT "Toutes les actualités" 
+CLICK image WHERE ATTRIBUT alt EQUALS "Accueil"
+
+###Test4###
+ON firefox GOTO "http://www.imt-atlantique.fr/fr/rechercher"
+SET ATTRIBUT value "Donald Trump" WHERE ATTRIBUT id EQUALS "edit-search-api-fulltext"
+CLICK button VALUE "Appliquer les filtres"
+IS CONTENT "Aucun résultat ne correspond à votre recherche"
+
+###Test5###
+ON firefox GOTO "http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation"
+SET ATTRIBUT checked false WHERE ATTRIBUT type EQUALS "checkbox" 
+SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET ATTRIBUT for WHERE CONTENT CONTAINS "Temps plein") //GET retourne le 1er respectant la condition
+SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET ATTRIBUT for WHERE CONTENT CONTAINS "A domicile")
+SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET ATTRIBUT for WHERE CONTENT CONTAINS "Anglais")
+CLICK button VALUE "Appliquer les critères"
+IS CONTENT "No found course matching your criteria."
+
