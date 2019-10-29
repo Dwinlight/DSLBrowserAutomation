@@ -2,7 +2,7 @@
 ON firefox GOTO "http://www.imt-atlantique.fr/fr" IS link WHERE ATTRIBUT content CONTAINS "Toutes les actualités"
 
 ###Test2###
-ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link CONTENT "Toutes les actualités" IS link WHERE ATTRIBUT CONTAINS "Accueil"
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link CONTENT "Toutes les actualités" IS ATTRIBUT link WHERE ATTRIBUT CONTAINS "Accueil"
 
 ###Test3###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr" 
