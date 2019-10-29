@@ -1,19 +1,19 @@
 ###Test1###
-ON firefox GOTO "http://www.imt-atlantique.fr/fr" IS link WHERE ATTRIBUT content EQUALS "Toutes les actualités"
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" IS link WHERE ATTRIBUT content CONTAINS "Toutes les actualités"
 
 ###Test2###
-ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link CONTENT "Toutes les actualités" IS link CONTENT "Accueil"
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link CONTENT "Toutes les actualités" IS link WHERE ATTRIBUT CONTAINS "Accueil"
 
 ###Test3###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr" 
-CLICK link WHERE CONTENT "Toutes les actualités" 
+CLICK link WHERE ATTRIBUT content CONTAINS "Toutes les actualités" 
 CLICK image WHERE ATTRIBUT alt EQUALS "Accueil"
 
 ###Test4###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr/rechercher"
 SET ATTRIBUT value "Donald Trump" WHERE ATTRIBUT id EQUALS "edit-search-api-fulltext"
 CLICK button VALUE "Appliquer les filtres"
-IS CONTENT "Aucun résultat ne correspond à votre recherche"
+IS ATTRIBUT content CONTAINS "Aucun résultat ne correspond à votre recherche"
 
 ###Test5###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation"
@@ -23,4 +23,3 @@ SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET ATTRIBUT for WHERE CONTE
 SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET ATTRIBUT for WHERE CONTENT CONTAINS "Anglais")
 CLICK button VALUE "Appliquer les critères"
 IS CONTENT "No found course matching your criteria."
-
