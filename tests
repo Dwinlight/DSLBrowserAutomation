@@ -1,8 +1,10 @@
 ###Test1###
-GOTO "http://www.imt-atlantique.fr/fr" ON firefox FIND link WHERE  content CONTAINS "Toutes les actualités"
+GOTO "http://www.imt-atlantique.fr/fr" ON firefox 
+FIND link WHERE  content CONTAINS "Toutes les actualités"
 
 ###Test2###
-GOTO "http://www.imt-atlantique.fr/fr" ON firefox CLICK link WHERE content CONTAINS "Toutes les actualités" FIND  link WHERE content  CONTAINS "Accueil"
+GOTO "http://www.imt-atlantique.fr/fr" ON firefox 
+CLICK link WHERE content CONTAINS "Toutes les actualités" FIND  link WHERE content  CONTAINS "Accueil"
 
 ###Test3###
 GOTO "http://www.imt-atlantique.fr/fr" ON firefox
@@ -23,7 +25,7 @@ SET  checked true WHERE  Content CONTAINS "Temps plein" //GET retourne le 1er re
 SET  checked true  WHERE Content CONTAINS "A domicile"
 SET checked true WHERE  Content CONTAINS "Anglais"
 CLICK button WHERE value CONTAINS "Appliquer les critères"
-FIND CONTENT "No found course matching your criteria."
+FIND Body CONTENT "No found course matching your criteria."
 
 ###Test6###
  GOTO "http://www.imt-atlantique.fr/fr/rechercher" ON firefox
@@ -42,8 +44,7 @@ FIND  content CONTAINS $titre
 GOTO "http://www.imt-atlantique.fr/fr" ON firefox
 $titre = GET 1  content WHERE  class EQUALS "actu_home_ctner_inner_cell1_titre"
 $url =  GET link WHERE  title EQUALS $titre
-PRINT $titre
-PRINT $url
+
 GOTO "http://www.imt-atlantique.fr/fr/rechercher" ON firefox
 SET  value $titre" WHERE  id EQUALS "edit-search-api-fulltext"
 CLICK button WHERE value CONTAINS "Appliquer les critères"
