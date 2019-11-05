@@ -2,7 +2,7 @@
 ON firefox GOTO "http://www.imt-atlantique.fr/fr" IS link WHERE  content CONTAINS "Toutes les actualités"
 
 ###Test2###
-ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link Content "Toutes les actualités" IS  link WHERE content  CONTAINS "Accueil"
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link WHERE content CONTAINS "Toutes les actualités" IS  link WHERE content  CONTAINS "Accueil"
 
 ###Test3###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr" 
@@ -18,9 +18,9 @@ IS  content CONTAINS "Aucun résultat ne correspond à votre recherche"
 ###Test5###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation"
 SET  checked false WHERE  type EQUALS "checkbox" 
-SET  checked true WHERE  id EQUALS (GET 1  for WHERE CONTENT CONTAINS "Temps plein") //GET retourne le 1er respectant la condition
-SET  checked true WHERE  id EQUALS (GET 1  for WHERE CONTENT CONTAINS "A domicile")
-SET checked true WHERE  id EQUALS (GET 1  for WHERE CONTENT CONTAINS "Anglais")
+SET  checked true WHERE id EQUALS (GET 1 for WHERE CONTENT CONTAINS "Temps plein") //GET retourne le 1er respectant la condition
+SET  checked true WHERE id EQUALS (GET 1 for WHERE CONTENT CONTAINS "A domicile")
+SET checked true WHERE  id EQUALS (GET 1 for WHERE CONTENT CONTAINS "Anglais")
 CLICK button VALUE "Appliquer les critères"
 IS CONTENT "No found course matching your criteria."
 
