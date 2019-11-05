@@ -1,52 +1,52 @@
 ###Test1###
-ON firefox GOTO "http://www.imt-atlantique.fr/fr" IS link WHERE ATTRIBUT content CONTAINS "Toutes les actualités"
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" IS link WHERE  content CONTAINS "Toutes les actualités"
 
 ###Test2###
-ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link CONTENT "Toutes les actualités" IS ATTRIBUT link WHERE ATTRIBUT CONTAINS "Accueil"
+ON firefox GOTO "http://www.imt-atlantique.fr/fr" CLICK link WHERE content CONTAINS "Toutes les actualités" IS  link WHERE content  CONTAINS "Accueil"
 
 ###Test3###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr" 
-CLICK link WHERE ATTRIBUT content CONTAINS "Toutes les actualités" 
-CLICK image WHERE ATTRIBUT alt EQUALS "Accueil"
+CLICK link WHERE  content CONTAINS "Toutes les actualités" 
+CLICK image WHERE  alt EQUALS "Accueil"
 
 ###Test4###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr/rechercher"
-SET ATTRIBUT value "Donald Trump" WHERE ATTRIBUT id EQUALS "edit-search-api-fulltext"
+SET  value "Donald Trump" WHERE  id EQUALS "edit-search-api-fulltext"
 CLICK button VALUE "Appliquer les filtres"
-IS ATTRIBUT content CONTAINS "Aucun résultat ne correspond à votre recherche"
+IS  content CONTAINS "Aucun résultat ne correspond à votre recherche"
 
 ###Test5###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation"
-SET ATTRIBUT checked false WHERE ATTRIBUT type EQUALS "checkbox" 
-SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET 1 ATTRIBUT for WHERE CONTENT CONTAINS "Temps plein") //GET retourne le 1er respectant la condition
-SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET 1 ATTRIBUT for WHERE CONTENT CONTAINS "A domicile")
-SET ATTRIBUT checked true WHERE ATTRIBUT id EQUALS (GET 1 ATTRIBUT for WHERE CONTENT CONTAINS "Anglais")
+SET  checked false WHERE  type EQUALS "checkbox" 
+SET  checked true WHERE id EQUALS (GET 1 for WHERE CONTENT CONTAINS "Temps plein") //GET retourne le 1er respectant la condition
+SET  checked true WHERE id EQUALS (GET 1 for WHERE CONTENT CONTAINS "A domicile")
+SET checked true WHERE  id EQUALS (GET 1 for WHERE CONTENT CONTAINS "Anglais")
 CLICK button VALUE "Appliquer les critères"
 IS CONTENT "No found course matching your criteria."
 
 ###Test6###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr/rechercher"
-SET ATTRIBUT value "2007" WHERE ATTRIBUT id EQUALS "edit-search-api-fulltext"
-SET ATTRIBUT class "nice-select form-select open" WHERE ATTRIBUT class EQUALS "nice-select form-select"
-CLICK li WHERE ATTRIBUT content EQUALS "Le mois dernier"
+SET  value "2007" WHERE  id EQUALS "edit-search-api-fulltext"
+SET  class "nice-select form-select open" WHERE  class EQUALS "nice-select form-select"
+CLICK li WHERE  content EQUALS "Le mois dernier"
 CLICK button VALUE "Appliquer les critères"
-IS ATTRIBUT content CONTAINS "Aucun résultat ne correspond à votre recherche"
+IS  content CONTAINS "Aucun résultat ne correspond à votre recherche"
 
 ###Test7###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr"
-$titre = GET 1 ATTRIBUT content WHERE ATTRIBUT class EQUALS "actu_home_ctner_inner_cell1_titre"
-CLICK link WHERE ATTRIBUT title EQUALS $titre
-IS ATTRIBUT content CONTAINS $titre
+$titre = GET 1  content WHERE  class EQUALS "actu_home_ctner_inner_cell1_titre"
+CLICK link WHERE  title EQUALS $titre
+IS  content CONTAINS $titre
 
 ###Test8###
 ON firefox GOTO "http://www.imt-atlantique.fr/fr"
-$titre = GET 1 ATTRIBUT content WHERE ATTRIBUT class EQUALS "actu_home_ctner_inner_cell1_titre"
-$url = link WHERE ATTRIBUT title EQUALS $titre
+$titre = GET 1  content WHERE  class EQUALS "actu_home_ctner_inner_cell1_titre"
+$url = link WHERE  title EQUALS $titre
 PRINT $titre
 PRINT $url
 GOTO "http://www.imt-atlantique.fr/fr/rechercher"
-SET ATTRIBUT value $titre" WHERE ATTRIBUT id EQUALS "edit-search-api-fulltext"
+SET  value $titre" WHERE  id EQUALS "edit-search-api-fulltext"
 CLICK button VALUE "Appliquer les critères"
-IS ATTRIBUT link CONTAINS "Aucun résultat ne correspond à votre recherche"
+IS  link CONTAINS "Aucun résultat ne correspond à votre recherche"
 
 
