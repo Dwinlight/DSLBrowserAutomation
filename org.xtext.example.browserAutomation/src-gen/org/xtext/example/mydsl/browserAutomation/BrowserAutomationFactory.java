@@ -33,13 +33,49 @@ public interface BrowserAutomationFactory extends EFactory
   Model createModel();
 
   /**
-   * Returns a new object of class '<em>Test</em>'.
+   * Returns a new object of class '<em>Launch</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Test</em>'.
+   * @return a new object of class '<em>Launch</em>'.
    * @generated
    */
-  Test createTest();
+  Launch createLaunch();
+
+  /**
+   * Returns a new object of class '<em>Click</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Click</em>'.
+   * @generated
+   */
+  Click createClick();
+
+  /**
+   * Returns a new object of class '<em>Composant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Composant</em>'.
+   * @generated
+   */
+  Composant createComposant();
+
+  /**
+   * Returns a new object of class '<em>Attribut</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Attribut</em>'.
+   * @generated
+   */
+  Attribut createAttribut();
+
+  /**
+   * Returns a new object of class '<em>Content</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Content</em>'.
+   * @generated
+   */
+  Content createContent();
 
   /**
    * Returns a new object of class '<em>Browser</em>'.
@@ -58,15 +94,6 @@ public interface BrowserAutomationFactory extends EFactory
    * @generated
    */
   Url createUrl();
-
-  /**
-   * Returns a new object of class '<em>Attribut</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Attribut</em>'.
-   * @generated
-   */
-  Attribut createAttribut();
 
   /**
    * Returns a new object of class '<em>Greeting</em>'.

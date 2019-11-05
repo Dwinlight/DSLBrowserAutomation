@@ -9,20 +9,28 @@
     <genClasses ecoreClass="BrowserAutomation.ecore#//Model">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi"/>
     </genClasses>
-    <genClasses ecoreClass="BrowserAutomation.ecore#//Test">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Test/b"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Test/u"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Test/a1"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Test/a2"/>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Launch">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Launch/u"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Launch/b"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Click">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Click/c"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Click/a"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Composant">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Composant/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Attribut">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Attribut/name"/>
+    </genClasses>
+    <genClasses ecoreClass="BrowserAutomation.ecore#//Content">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Content/contenu"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Browser">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Browser/name"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Url">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Url/name"/>
-    </genClasses>
-    <genClasses ecoreClass="BrowserAutomation.ecore#//Attribut">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Attribut/name"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Greeting">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Greeting/name"/>

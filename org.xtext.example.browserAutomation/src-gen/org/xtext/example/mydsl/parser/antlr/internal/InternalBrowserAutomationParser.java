@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'ON'", "'GOTO'", "'IS'", "'ATTRIBUT'", "'WHERE'", "'CONTAINS'", "'\"'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'GOTO'", "'ON'", "'CLICK'", "'WHERE'", "'CONTAINS'"
     };
     public static final int RULE_ID=5;
     public static final int RULE_WS=9;
@@ -29,8 +29,6 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     public static final int RULE_ANY_OTHER=10;
     public static final int RULE_SL_COMMENT=8;
     public static final int T__15=15;
-    public static final int T__16=16;
-    public static final int T__17=17;
     public static final int RULE_INT=6;
     public static final int T__11=11;
     public static final int RULE_ML_COMMENT=7;
@@ -115,68 +113,100 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleModel"
-    // InternalBrowserAutomation.g:71:1: ruleModel returns [EObject current=null] : ( (lv_tisi_0_0= ruleTest ) )* ;
+    // InternalBrowserAutomation.g:71:1: ruleModel returns [EObject current=null] : ( ( (lv_tisi_0_0= ruleLaunch ) ) ( (lv_tisi_1_0= ruleClick ) )? ) ;
     public final EObject ruleModel() throws RecognitionException {
         EObject current = null;
 
         EObject lv_tisi_0_0 = null;
+
+        EObject lv_tisi_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalBrowserAutomation.g:77:2: ( ( (lv_tisi_0_0= ruleTest ) )* )
-            // InternalBrowserAutomation.g:78:2: ( (lv_tisi_0_0= ruleTest ) )*
+            // InternalBrowserAutomation.g:77:2: ( ( ( (lv_tisi_0_0= ruleLaunch ) ) ( (lv_tisi_1_0= ruleClick ) )? ) )
+            // InternalBrowserAutomation.g:78:2: ( ( (lv_tisi_0_0= ruleLaunch ) ) ( (lv_tisi_1_0= ruleClick ) )? )
             {
-            // InternalBrowserAutomation.g:78:2: ( (lv_tisi_0_0= ruleTest ) )*
-            loop1:
-            do {
-                int alt1=2;
-                int LA1_0 = input.LA(1);
+            // InternalBrowserAutomation.g:78:2: ( ( (lv_tisi_0_0= ruleLaunch ) ) ( (lv_tisi_1_0= ruleClick ) )? )
+            // InternalBrowserAutomation.g:79:3: ( (lv_tisi_0_0= ruleLaunch ) ) ( (lv_tisi_1_0= ruleClick ) )?
+            {
+            // InternalBrowserAutomation.g:79:3: ( (lv_tisi_0_0= ruleLaunch ) )
+            // InternalBrowserAutomation.g:80:4: (lv_tisi_0_0= ruleLaunch )
+            {
+            // InternalBrowserAutomation.g:80:4: (lv_tisi_0_0= ruleLaunch )
+            // InternalBrowserAutomation.g:81:5: lv_tisi_0_0= ruleLaunch
+            {
 
-                if ( (LA1_0==11) ) {
-                    alt1=1;
-                }
+            					newCompositeNode(grammarAccess.getModelAccess().getTisiLaunchParserRuleCall_0_0());
+            				
+            pushFollow(FOLLOW_3);
+            lv_tisi_0_0=ruleLaunch();
 
-
-                switch (alt1) {
-            	case 1 :
-            	    // InternalBrowserAutomation.g:79:3: (lv_tisi_0_0= ruleTest )
-            	    {
-            	    // InternalBrowserAutomation.g:79:3: (lv_tisi_0_0= ruleTest )
-            	    // InternalBrowserAutomation.g:80:4: lv_tisi_0_0= ruleTest
-            	    {
-
-            	    				newCompositeNode(grammarAccess.getModelAccess().getTisiTestParserRuleCall_0());
-            	    			
-            	    pushFollow(FOLLOW_3);
-            	    lv_tisi_0_0=ruleTest();
-
-            	    state._fsp--;
+            state._fsp--;
 
 
-            	    				if (current==null) {
-            	    					current = createModelElementForParent(grammarAccess.getModelRule());
-            	    				}
-            	    				add(
-            	    					current,
-            	    					"tisi",
-            	    					lv_tisi_0_0,
-            	    					"org.xtext.example.mydsl.BrowserAutomation.Test");
-            	    				afterParserOrEnumRuleCall();
-            	    			
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getModelRule());
+            					}
+            					add(
+            						current,
+            						"tisi",
+            						lv_tisi_0_0,
+            						"org.xtext.example.mydsl.BrowserAutomation.Launch");
+            					afterParserOrEnumRuleCall();
+            				
 
-            	    }
+            }
 
 
-            	    }
-            	    break;
+            }
 
-            	default :
-            	    break loop1;
-                }
-            } while (true);
+            // InternalBrowserAutomation.g:98:3: ( (lv_tisi_1_0= ruleClick ) )?
+            int alt1=2;
+            int LA1_0 = input.LA(1);
+
+            if ( (LA1_0==13) ) {
+                alt1=1;
+            }
+            switch (alt1) {
+                case 1 :
+                    // InternalBrowserAutomation.g:99:4: (lv_tisi_1_0= ruleClick )
+                    {
+                    // InternalBrowserAutomation.g:99:4: (lv_tisi_1_0= ruleClick )
+                    // InternalBrowserAutomation.g:100:5: lv_tisi_1_0= ruleClick
+                    {
+
+                    					newCompositeNode(grammarAccess.getModelAccess().getTisiClickParserRuleCall_1_0());
+                    				
+                    pushFollow(FOLLOW_2);
+                    lv_tisi_1_0=ruleClick();
+
+                    state._fsp--;
+
+
+                    					if (current==null) {
+                    						current = createModelElementForParent(grammarAccess.getModelRule());
+                    					}
+                    					add(
+                    						current,
+                    						"tisi",
+                    						lv_tisi_1_0,
+                    						"org.xtext.example.mydsl.BrowserAutomation.Click");
+                    					afterParserOrEnumRuleCall();
+                    				
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
 
 
             }
@@ -197,25 +227,25 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     // $ANTLR end "ruleModel"
 
 
-    // $ANTLR start "entryRuleTest"
-    // InternalBrowserAutomation.g:100:1: entryRuleTest returns [EObject current=null] : iv_ruleTest= ruleTest EOF ;
-    public final EObject entryRuleTest() throws RecognitionException {
+    // $ANTLR start "entryRuleLaunch"
+    // InternalBrowserAutomation.g:121:1: entryRuleLaunch returns [EObject current=null] : iv_ruleLaunch= ruleLaunch EOF ;
+    public final EObject entryRuleLaunch() throws RecognitionException {
         EObject current = null;
 
-        EObject iv_ruleTest = null;
+        EObject iv_ruleLaunch = null;
 
 
         try {
-            // InternalBrowserAutomation.g:100:45: (iv_ruleTest= ruleTest EOF )
-            // InternalBrowserAutomation.g:101:2: iv_ruleTest= ruleTest EOF
+            // InternalBrowserAutomation.g:121:47: (iv_ruleLaunch= ruleLaunch EOF )
+            // InternalBrowserAutomation.g:122:2: iv_ruleLaunch= ruleLaunch EOF
             {
-             newCompositeNode(grammarAccess.getTestRule()); 
+             newCompositeNode(grammarAccess.getLaunchRule()); 
             pushFollow(FOLLOW_1);
-            iv_ruleTest=ruleTest();
+            iv_ruleLaunch=ruleLaunch();
 
             state._fsp--;
 
-             current =iv_ruleTest; 
+             current =iv_ruleLaunch; 
             match(input,EOF,FOLLOW_2); 
 
             }
@@ -230,70 +260,58 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
         }
         return current;
     }
-    // $ANTLR end "entryRuleTest"
+    // $ANTLR end "entryRuleLaunch"
 
 
-    // $ANTLR start "ruleTest"
-    // InternalBrowserAutomation.g:107:1: ruleTest returns [EObject current=null] : (otherlv_0= 'ON' ( (lv_b_1_0= ruleBrowser ) ) otherlv_2= 'GOTO' ( (lv_u_3_0= ruleUrl ) ) otherlv_4= 'IS' otherlv_5= 'ATTRIBUT' ( (lv_a1_6_0= ruleAttribut ) ) otherlv_7= 'WHERE' otherlv_8= 'ATTRIBUT' ( (lv_a2_9_0= ruleAttribut ) ) otherlv_10= 'CONTAINS' otherlv_11= '\"' this_STRING_12= RULE_STRING otherlv_13= '\"' ) ;
-    public final EObject ruleTest() throws RecognitionException {
+    // $ANTLR start "ruleLaunch"
+    // InternalBrowserAutomation.g:128:1: ruleLaunch returns [EObject current=null] : (otherlv_0= 'GOTO' ( (lv_u_1_0= ruleUrl ) ) otherlv_2= 'ON' ( (lv_b_3_0= ruleBrowser ) ) ) ;
+    public final EObject ruleLaunch() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
-        Token otherlv_4=null;
-        Token otherlv_5=null;
-        Token otherlv_7=null;
-        Token otherlv_8=null;
-        Token otherlv_10=null;
-        Token otherlv_11=null;
-        Token this_STRING_12=null;
-        Token otherlv_13=null;
-        EObject lv_b_1_0 = null;
+        EObject lv_u_1_0 = null;
 
-        EObject lv_u_3_0 = null;
-
-        EObject lv_a1_6_0 = null;
-
-        EObject lv_a2_9_0 = null;
+        EObject lv_b_3_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalBrowserAutomation.g:113:2: ( (otherlv_0= 'ON' ( (lv_b_1_0= ruleBrowser ) ) otherlv_2= 'GOTO' ( (lv_u_3_0= ruleUrl ) ) otherlv_4= 'IS' otherlv_5= 'ATTRIBUT' ( (lv_a1_6_0= ruleAttribut ) ) otherlv_7= 'WHERE' otherlv_8= 'ATTRIBUT' ( (lv_a2_9_0= ruleAttribut ) ) otherlv_10= 'CONTAINS' otherlv_11= '\"' this_STRING_12= RULE_STRING otherlv_13= '\"' ) )
-            // InternalBrowserAutomation.g:114:2: (otherlv_0= 'ON' ( (lv_b_1_0= ruleBrowser ) ) otherlv_2= 'GOTO' ( (lv_u_3_0= ruleUrl ) ) otherlv_4= 'IS' otherlv_5= 'ATTRIBUT' ( (lv_a1_6_0= ruleAttribut ) ) otherlv_7= 'WHERE' otherlv_8= 'ATTRIBUT' ( (lv_a2_9_0= ruleAttribut ) ) otherlv_10= 'CONTAINS' otherlv_11= '\"' this_STRING_12= RULE_STRING otherlv_13= '\"' )
+            // InternalBrowserAutomation.g:134:2: ( (otherlv_0= 'GOTO' ( (lv_u_1_0= ruleUrl ) ) otherlv_2= 'ON' ( (lv_b_3_0= ruleBrowser ) ) ) )
+            // InternalBrowserAutomation.g:135:2: (otherlv_0= 'GOTO' ( (lv_u_1_0= ruleUrl ) ) otherlv_2= 'ON' ( (lv_b_3_0= ruleBrowser ) ) )
             {
-            // InternalBrowserAutomation.g:114:2: (otherlv_0= 'ON' ( (lv_b_1_0= ruleBrowser ) ) otherlv_2= 'GOTO' ( (lv_u_3_0= ruleUrl ) ) otherlv_4= 'IS' otherlv_5= 'ATTRIBUT' ( (lv_a1_6_0= ruleAttribut ) ) otherlv_7= 'WHERE' otherlv_8= 'ATTRIBUT' ( (lv_a2_9_0= ruleAttribut ) ) otherlv_10= 'CONTAINS' otherlv_11= '\"' this_STRING_12= RULE_STRING otherlv_13= '\"' )
-            // InternalBrowserAutomation.g:115:3: otherlv_0= 'ON' ( (lv_b_1_0= ruleBrowser ) ) otherlv_2= 'GOTO' ( (lv_u_3_0= ruleUrl ) ) otherlv_4= 'IS' otherlv_5= 'ATTRIBUT' ( (lv_a1_6_0= ruleAttribut ) ) otherlv_7= 'WHERE' otherlv_8= 'ATTRIBUT' ( (lv_a2_9_0= ruleAttribut ) ) otherlv_10= 'CONTAINS' otherlv_11= '\"' this_STRING_12= RULE_STRING otherlv_13= '\"'
+            // InternalBrowserAutomation.g:135:2: (otherlv_0= 'GOTO' ( (lv_u_1_0= ruleUrl ) ) otherlv_2= 'ON' ( (lv_b_3_0= ruleBrowser ) ) )
+            // InternalBrowserAutomation.g:136:3: otherlv_0= 'GOTO' ( (lv_u_1_0= ruleUrl ) ) otherlv_2= 'ON' ( (lv_b_3_0= ruleBrowser ) )
             {
             otherlv_0=(Token)match(input,11,FOLLOW_4); 
 
-            			newLeafNode(otherlv_0, grammarAccess.getTestAccess().getONKeyword_0());
+            			newLeafNode(otherlv_0, grammarAccess.getLaunchAccess().getGOTOKeyword_0());
             		
-            // InternalBrowserAutomation.g:119:3: ( (lv_b_1_0= ruleBrowser ) )
-            // InternalBrowserAutomation.g:120:4: (lv_b_1_0= ruleBrowser )
+            // InternalBrowserAutomation.g:140:3: ( (lv_u_1_0= ruleUrl ) )
+            // InternalBrowserAutomation.g:141:4: (lv_u_1_0= ruleUrl )
             {
-            // InternalBrowserAutomation.g:120:4: (lv_b_1_0= ruleBrowser )
-            // InternalBrowserAutomation.g:121:5: lv_b_1_0= ruleBrowser
+            // InternalBrowserAutomation.g:141:4: (lv_u_1_0= ruleUrl )
+            // InternalBrowserAutomation.g:142:5: lv_u_1_0= ruleUrl
             {
 
-            					newCompositeNode(grammarAccess.getTestAccess().getBBrowserParserRuleCall_1_0());
+            					newCompositeNode(grammarAccess.getLaunchAccess().getUUrlParserRuleCall_1_0());
             				
             pushFollow(FOLLOW_5);
-            lv_b_1_0=ruleBrowser();
+            lv_u_1_0=ruleUrl();
 
             state._fsp--;
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getTestRule());
+            						current = createModelElementForParent(grammarAccess.getLaunchRule());
             					}
             					set(
             						current,
-            						"b",
-            						lv_b_1_0,
-            						"org.xtext.example.mydsl.BrowserAutomation.Browser");
+            						"u",
+            						lv_u_1_0,
+            						"org.xtext.example.mydsl.BrowserAutomation.Url");
             					afterParserOrEnumRuleCall();
             				
 
@@ -304,31 +322,148 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             otherlv_2=(Token)match(input,12,FOLLOW_6); 
 
-            			newLeafNode(otherlv_2, grammarAccess.getTestAccess().getGOTOKeyword_2());
+            			newLeafNode(otherlv_2, grammarAccess.getLaunchAccess().getONKeyword_2());
             		
-            // InternalBrowserAutomation.g:142:3: ( (lv_u_3_0= ruleUrl ) )
-            // InternalBrowserAutomation.g:143:4: (lv_u_3_0= ruleUrl )
+            // InternalBrowserAutomation.g:163:3: ( (lv_b_3_0= ruleBrowser ) )
+            // InternalBrowserAutomation.g:164:4: (lv_b_3_0= ruleBrowser )
             {
-            // InternalBrowserAutomation.g:143:4: (lv_u_3_0= ruleUrl )
-            // InternalBrowserAutomation.g:144:5: lv_u_3_0= ruleUrl
+            // InternalBrowserAutomation.g:164:4: (lv_b_3_0= ruleBrowser )
+            // InternalBrowserAutomation.g:165:5: lv_b_3_0= ruleBrowser
             {
 
-            					newCompositeNode(grammarAccess.getTestAccess().getUUrlParserRuleCall_3_0());
+            					newCompositeNode(grammarAccess.getLaunchAccess().getBBrowserParserRuleCall_3_0());
+            				
+            pushFollow(FOLLOW_2);
+            lv_b_3_0=ruleBrowser();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getLaunchRule());
+            					}
+            					set(
+            						current,
+            						"b",
+            						lv_b_3_0,
+            						"org.xtext.example.mydsl.BrowserAutomation.Browser");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleLaunch"
+
+
+    // $ANTLR start "entryRuleClick"
+    // InternalBrowserAutomation.g:186:1: entryRuleClick returns [EObject current=null] : iv_ruleClick= ruleClick EOF ;
+    public final EObject entryRuleClick() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleClick = null;
+
+
+        try {
+            // InternalBrowserAutomation.g:186:46: (iv_ruleClick= ruleClick EOF )
+            // InternalBrowserAutomation.g:187:2: iv_ruleClick= ruleClick EOF
+            {
+             newCompositeNode(grammarAccess.getClickRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleClick=ruleClick();
+
+            state._fsp--;
+
+             current =iv_ruleClick; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleClick"
+
+
+    // $ANTLR start "ruleClick"
+    // InternalBrowserAutomation.g:193:1: ruleClick returns [EObject current=null] : (otherlv_0= 'CLICK' ( (lv_c_1_0= ruleComposant ) ) otherlv_2= 'WHERE' ( (lv_a_3_0= ruleAttribut ) ) otherlv_4= 'CONTAINS' this_STRING_5= RULE_STRING ) ;
+    public final EObject ruleClick() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        Token otherlv_4=null;
+        Token this_STRING_5=null;
+        EObject lv_c_1_0 = null;
+
+        EObject lv_a_3_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalBrowserAutomation.g:199:2: ( (otherlv_0= 'CLICK' ( (lv_c_1_0= ruleComposant ) ) otherlv_2= 'WHERE' ( (lv_a_3_0= ruleAttribut ) ) otherlv_4= 'CONTAINS' this_STRING_5= RULE_STRING ) )
+            // InternalBrowserAutomation.g:200:2: (otherlv_0= 'CLICK' ( (lv_c_1_0= ruleComposant ) ) otherlv_2= 'WHERE' ( (lv_a_3_0= ruleAttribut ) ) otherlv_4= 'CONTAINS' this_STRING_5= RULE_STRING )
+            {
+            // InternalBrowserAutomation.g:200:2: (otherlv_0= 'CLICK' ( (lv_c_1_0= ruleComposant ) ) otherlv_2= 'WHERE' ( (lv_a_3_0= ruleAttribut ) ) otherlv_4= 'CONTAINS' this_STRING_5= RULE_STRING )
+            // InternalBrowserAutomation.g:201:3: otherlv_0= 'CLICK' ( (lv_c_1_0= ruleComposant ) ) otherlv_2= 'WHERE' ( (lv_a_3_0= ruleAttribut ) ) otherlv_4= 'CONTAINS' this_STRING_5= RULE_STRING
+            {
+            otherlv_0=(Token)match(input,13,FOLLOW_4); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getClickAccess().getCLICKKeyword_0());
+            		
+            // InternalBrowserAutomation.g:205:3: ( (lv_c_1_0= ruleComposant ) )
+            // InternalBrowserAutomation.g:206:4: (lv_c_1_0= ruleComposant )
+            {
+            // InternalBrowserAutomation.g:206:4: (lv_c_1_0= ruleComposant )
+            // InternalBrowserAutomation.g:207:5: lv_c_1_0= ruleComposant
+            {
+
+            					newCompositeNode(grammarAccess.getClickAccess().getCComposantParserRuleCall_1_0());
             				
             pushFollow(FOLLOW_7);
-            lv_u_3_0=ruleUrl();
+            lv_c_1_0=ruleComposant();
 
             state._fsp--;
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getTestRule());
+            						current = createModelElementForParent(grammarAccess.getClickRule());
             					}
             					set(
             						current,
-            						"u",
-            						lv_u_3_0,
-            						"org.xtext.example.mydsl.BrowserAutomation.Url");
+            						"c",
+            						lv_c_1_0,
+            						"org.xtext.example.mydsl.BrowserAutomation.Composant");
             					afterParserOrEnumRuleCall();
             				
 
@@ -337,36 +472,32 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_4=(Token)match(input,13,FOLLOW_8); 
+            otherlv_2=(Token)match(input,14,FOLLOW_6); 
 
-            			newLeafNode(otherlv_4, grammarAccess.getTestAccess().getISKeyword_4());
+            			newLeafNode(otherlv_2, grammarAccess.getClickAccess().getWHEREKeyword_2());
             		
-            otherlv_5=(Token)match(input,14,FOLLOW_4); 
-
-            			newLeafNode(otherlv_5, grammarAccess.getTestAccess().getATTRIBUTKeyword_5());
-            		
-            // InternalBrowserAutomation.g:169:3: ( (lv_a1_6_0= ruleAttribut ) )
-            // InternalBrowserAutomation.g:170:4: (lv_a1_6_0= ruleAttribut )
+            // InternalBrowserAutomation.g:228:3: ( (lv_a_3_0= ruleAttribut ) )
+            // InternalBrowserAutomation.g:229:4: (lv_a_3_0= ruleAttribut )
             {
-            // InternalBrowserAutomation.g:170:4: (lv_a1_6_0= ruleAttribut )
-            // InternalBrowserAutomation.g:171:5: lv_a1_6_0= ruleAttribut
+            // InternalBrowserAutomation.g:229:4: (lv_a_3_0= ruleAttribut )
+            // InternalBrowserAutomation.g:230:5: lv_a_3_0= ruleAttribut
             {
 
-            					newCompositeNode(grammarAccess.getTestAccess().getA1AttributParserRuleCall_6_0());
+            					newCompositeNode(grammarAccess.getClickAccess().getAAttributParserRuleCall_3_0());
             				
-            pushFollow(FOLLOW_9);
-            lv_a1_6_0=ruleAttribut();
+            pushFollow(FOLLOW_8);
+            lv_a_3_0=ruleAttribut();
 
             state._fsp--;
 
 
             					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getTestRule());
+            						current = createModelElementForParent(grammarAccess.getClickRule());
             					}
             					set(
             						current,
-            						"a1",
-            						lv_a1_6_0,
+            						"a",
+            						lv_a_3_0,
             						"org.xtext.example.mydsl.BrowserAutomation.Attribut");
             					afterParserOrEnumRuleCall();
             				
@@ -376,60 +507,13 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
             }
 
-            otherlv_7=(Token)match(input,15,FOLLOW_8); 
+            otherlv_4=(Token)match(input,15,FOLLOW_4); 
 
-            			newLeafNode(otherlv_7, grammarAccess.getTestAccess().getWHEREKeyword_7());
+            			newLeafNode(otherlv_4, grammarAccess.getClickAccess().getCONTAINSKeyword_4());
             		
-            otherlv_8=(Token)match(input,14,FOLLOW_4); 
+            this_STRING_5=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
-            			newLeafNode(otherlv_8, grammarAccess.getTestAccess().getATTRIBUTKeyword_8());
-            		
-            // InternalBrowserAutomation.g:196:3: ( (lv_a2_9_0= ruleAttribut ) )
-            // InternalBrowserAutomation.g:197:4: (lv_a2_9_0= ruleAttribut )
-            {
-            // InternalBrowserAutomation.g:197:4: (lv_a2_9_0= ruleAttribut )
-            // InternalBrowserAutomation.g:198:5: lv_a2_9_0= ruleAttribut
-            {
-
-            					newCompositeNode(grammarAccess.getTestAccess().getA2AttributParserRuleCall_9_0());
-            				
-            pushFollow(FOLLOW_10);
-            lv_a2_9_0=ruleAttribut();
-
-            state._fsp--;
-
-
-            					if (current==null) {
-            						current = createModelElementForParent(grammarAccess.getTestRule());
-            					}
-            					set(
-            						current,
-            						"a2",
-            						lv_a2_9_0,
-            						"org.xtext.example.mydsl.BrowserAutomation.Attribut");
-            					afterParserOrEnumRuleCall();
-            				
-
-            }
-
-
-            }
-
-            otherlv_10=(Token)match(input,16,FOLLOW_11); 
-
-            			newLeafNode(otherlv_10, grammarAccess.getTestAccess().getCONTAINSKeyword_10());
-            		
-            otherlv_11=(Token)match(input,17,FOLLOW_6); 
-
-            			newLeafNode(otherlv_11, grammarAccess.getTestAccess().getQuotationMarkKeyword_11());
-            		
-            this_STRING_12=(Token)match(input,RULE_STRING,FOLLOW_11); 
-
-            			newLeafNode(this_STRING_12, grammarAccess.getTestAccess().getSTRINGTerminalRuleCall_12());
-            		
-            otherlv_13=(Token)match(input,17,FOLLOW_2); 
-
-            			newLeafNode(otherlv_13, grammarAccess.getTestAccess().getQuotationMarkKeyword_13());
+            			newLeafNode(this_STRING_5, grammarAccess.getClickAccess().getSTRINGTerminalRuleCall_5());
             		
 
             }
@@ -450,11 +534,201 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
         }
         return current;
     }
-    // $ANTLR end "ruleTest"
+    // $ANTLR end "ruleClick"
+
+
+    // $ANTLR start "entryRuleComposant"
+    // InternalBrowserAutomation.g:259:1: entryRuleComposant returns [EObject current=null] : iv_ruleComposant= ruleComposant EOF ;
+    public final EObject entryRuleComposant() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleComposant = null;
+
+
+        try {
+            // InternalBrowserAutomation.g:259:50: (iv_ruleComposant= ruleComposant EOF )
+            // InternalBrowserAutomation.g:260:2: iv_ruleComposant= ruleComposant EOF
+            {
+             newCompositeNode(grammarAccess.getComposantRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleComposant=ruleComposant();
+
+            state._fsp--;
+
+             current =iv_ruleComposant; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleComposant"
+
+
+    // $ANTLR start "ruleComposant"
+    // InternalBrowserAutomation.g:266:1: ruleComposant returns [EObject current=null] : ( (lv_name_0_0= RULE_STRING ) ) ;
+    public final EObject ruleComposant() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalBrowserAutomation.g:272:2: ( ( (lv_name_0_0= RULE_STRING ) ) )
+            // InternalBrowserAutomation.g:273:2: ( (lv_name_0_0= RULE_STRING ) )
+            {
+            // InternalBrowserAutomation.g:273:2: ( (lv_name_0_0= RULE_STRING ) )
+            // InternalBrowserAutomation.g:274:3: (lv_name_0_0= RULE_STRING )
+            {
+            // InternalBrowserAutomation.g:274:3: (lv_name_0_0= RULE_STRING )
+            // InternalBrowserAutomation.g:275:4: lv_name_0_0= RULE_STRING
+            {
+            lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            				newLeafNode(lv_name_0_0, grammarAccess.getComposantAccess().getNameSTRINGTerminalRuleCall_0());
+            			
+
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getComposantRule());
+            				}
+            				setWithLastConsumed(
+            					current,
+            					"name",
+            					lv_name_0_0,
+            					"org.eclipse.xtext.common.Terminals.STRING");
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleComposant"
+
+
+    // $ANTLR start "entryRuleAttribut"
+    // InternalBrowserAutomation.g:294:1: entryRuleAttribut returns [EObject current=null] : iv_ruleAttribut= ruleAttribut EOF ;
+    public final EObject entryRuleAttribut() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleAttribut = null;
+
+
+        try {
+            // InternalBrowserAutomation.g:294:49: (iv_ruleAttribut= ruleAttribut EOF )
+            // InternalBrowserAutomation.g:295:2: iv_ruleAttribut= ruleAttribut EOF
+            {
+             newCompositeNode(grammarAccess.getAttributRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleAttribut=ruleAttribut();
+
+            state._fsp--;
+
+             current =iv_ruleAttribut; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleAttribut"
+
+
+    // $ANTLR start "ruleAttribut"
+    // InternalBrowserAutomation.g:301:1: ruleAttribut returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    public final EObject ruleAttribut() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalBrowserAutomation.g:307:2: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // InternalBrowserAutomation.g:308:2: ( (lv_name_0_0= RULE_ID ) )
+            {
+            // InternalBrowserAutomation.g:308:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalBrowserAutomation.g:309:3: (lv_name_0_0= RULE_ID )
+            {
+            // InternalBrowserAutomation.g:309:3: (lv_name_0_0= RULE_ID )
+            // InternalBrowserAutomation.g:310:4: lv_name_0_0= RULE_ID
+            {
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+            				newLeafNode(lv_name_0_0, grammarAccess.getAttributAccess().getNameIDTerminalRuleCall_0());
+            			
+
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getAttributRule());
+            				}
+            				setWithLastConsumed(
+            					current,
+            					"name",
+            					lv_name_0_0,
+            					"org.eclipse.xtext.common.Terminals.ID");
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleAttribut"
 
 
     // $ANTLR start "entryRuleBrowser"
-    // InternalBrowserAutomation.g:235:1: entryRuleBrowser returns [EObject current=null] : iv_ruleBrowser= ruleBrowser EOF ;
+    // InternalBrowserAutomation.g:329:1: entryRuleBrowser returns [EObject current=null] : iv_ruleBrowser= ruleBrowser EOF ;
     public final EObject entryRuleBrowser() throws RecognitionException {
         EObject current = null;
 
@@ -462,8 +736,8 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
         try {
-            // InternalBrowserAutomation.g:235:48: (iv_ruleBrowser= ruleBrowser EOF )
-            // InternalBrowserAutomation.g:236:2: iv_ruleBrowser= ruleBrowser EOF
+            // InternalBrowserAutomation.g:329:48: (iv_ruleBrowser= ruleBrowser EOF )
+            // InternalBrowserAutomation.g:330:2: iv_ruleBrowser= ruleBrowser EOF
             {
              newCompositeNode(grammarAccess.getBrowserRule()); 
             pushFollow(FOLLOW_1);
@@ -490,7 +764,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleBrowser"
-    // InternalBrowserAutomation.g:242:1: ruleBrowser returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // InternalBrowserAutomation.g:336:1: ruleBrowser returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject ruleBrowser() throws RecognitionException {
         EObject current = null;
 
@@ -500,14 +774,14 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
         	enterRule();
 
         try {
-            // InternalBrowserAutomation.g:248:2: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // InternalBrowserAutomation.g:249:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalBrowserAutomation.g:342:2: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // InternalBrowserAutomation.g:343:2: ( (lv_name_0_0= RULE_ID ) )
             {
-            // InternalBrowserAutomation.g:249:2: ( (lv_name_0_0= RULE_ID ) )
-            // InternalBrowserAutomation.g:250:3: (lv_name_0_0= RULE_ID )
+            // InternalBrowserAutomation.g:343:2: ( (lv_name_0_0= RULE_ID ) )
+            // InternalBrowserAutomation.g:344:3: (lv_name_0_0= RULE_ID )
             {
-            // InternalBrowserAutomation.g:250:3: (lv_name_0_0= RULE_ID )
-            // InternalBrowserAutomation.g:251:4: lv_name_0_0= RULE_ID
+            // InternalBrowserAutomation.g:344:3: (lv_name_0_0= RULE_ID )
+            // InternalBrowserAutomation.g:345:4: lv_name_0_0= RULE_ID
             {
             lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_2); 
 
@@ -549,7 +823,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "entryRuleUrl"
-    // InternalBrowserAutomation.g:270:1: entryRuleUrl returns [EObject current=null] : iv_ruleUrl= ruleUrl EOF ;
+    // InternalBrowserAutomation.g:364:1: entryRuleUrl returns [EObject current=null] : iv_ruleUrl= ruleUrl EOF ;
     public final EObject entryRuleUrl() throws RecognitionException {
         EObject current = null;
 
@@ -557,8 +831,8 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
         try {
-            // InternalBrowserAutomation.g:270:44: (iv_ruleUrl= ruleUrl EOF )
-            // InternalBrowserAutomation.g:271:2: iv_ruleUrl= ruleUrl EOF
+            // InternalBrowserAutomation.g:364:44: (iv_ruleUrl= ruleUrl EOF )
+            // InternalBrowserAutomation.g:365:2: iv_ruleUrl= ruleUrl EOF
             {
              newCompositeNode(grammarAccess.getUrlRule()); 
             pushFollow(FOLLOW_1);
@@ -585,7 +859,7 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
 
     // $ANTLR start "ruleUrl"
-    // InternalBrowserAutomation.g:277:1: ruleUrl returns [EObject current=null] : ( (lv_name_0_0= RULE_STRING ) ) ;
+    // InternalBrowserAutomation.g:371:1: ruleUrl returns [EObject current=null] : ( (lv_name_0_0= RULE_STRING ) ) ;
     public final EObject ruleUrl() throws RecognitionException {
         EObject current = null;
 
@@ -595,14 +869,14 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
         	enterRule();
 
         try {
-            // InternalBrowserAutomation.g:283:2: ( ( (lv_name_0_0= RULE_STRING ) ) )
-            // InternalBrowserAutomation.g:284:2: ( (lv_name_0_0= RULE_STRING ) )
+            // InternalBrowserAutomation.g:377:2: ( ( (lv_name_0_0= RULE_STRING ) ) )
+            // InternalBrowserAutomation.g:378:2: ( (lv_name_0_0= RULE_STRING ) )
             {
-            // InternalBrowserAutomation.g:284:2: ( (lv_name_0_0= RULE_STRING ) )
-            // InternalBrowserAutomation.g:285:3: (lv_name_0_0= RULE_STRING )
+            // InternalBrowserAutomation.g:378:2: ( (lv_name_0_0= RULE_STRING ) )
+            // InternalBrowserAutomation.g:379:3: (lv_name_0_0= RULE_STRING )
             {
-            // InternalBrowserAutomation.g:285:3: (lv_name_0_0= RULE_STRING )
-            // InternalBrowserAutomation.g:286:4: lv_name_0_0= RULE_STRING
+            // InternalBrowserAutomation.g:379:3: (lv_name_0_0= RULE_STRING )
+            // InternalBrowserAutomation.g:380:4: lv_name_0_0= RULE_STRING
             {
             lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -642,101 +916,6 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
     }
     // $ANTLR end "ruleUrl"
 
-
-    // $ANTLR start "entryRuleAttribut"
-    // InternalBrowserAutomation.g:305:1: entryRuleAttribut returns [EObject current=null] : iv_ruleAttribut= ruleAttribut EOF ;
-    public final EObject entryRuleAttribut() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_ruleAttribut = null;
-
-
-        try {
-            // InternalBrowserAutomation.g:305:49: (iv_ruleAttribut= ruleAttribut EOF )
-            // InternalBrowserAutomation.g:306:2: iv_ruleAttribut= ruleAttribut EOF
-            {
-             newCompositeNode(grammarAccess.getAttributRule()); 
-            pushFollow(FOLLOW_1);
-            iv_ruleAttribut=ruleAttribut();
-
-            state._fsp--;
-
-             current =iv_ruleAttribut; 
-            match(input,EOF,FOLLOW_2); 
-
-            }
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRuleAttribut"
-
-
-    // $ANTLR start "ruleAttribut"
-    // InternalBrowserAutomation.g:312:1: ruleAttribut returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
-    public final EObject ruleAttribut() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_name_0_0=null;
-
-
-        	enterRule();
-
-        try {
-            // InternalBrowserAutomation.g:318:2: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // InternalBrowserAutomation.g:319:2: ( (lv_name_0_0= RULE_ID ) )
-            {
-            // InternalBrowserAutomation.g:319:2: ( (lv_name_0_0= RULE_ID ) )
-            // InternalBrowserAutomation.g:320:3: (lv_name_0_0= RULE_ID )
-            {
-            // InternalBrowserAutomation.g:320:3: (lv_name_0_0= RULE_ID )
-            // InternalBrowserAutomation.g:321:4: lv_name_0_0= RULE_ID
-            {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_2); 
-
-            				newLeafNode(lv_name_0_0, grammarAccess.getAttributAccess().getNameIDTerminalRuleCall_0());
-            			
-
-            				if (current==null) {
-            					current = createModelElement(grammarAccess.getAttributRule());
-            				}
-            				setWithLastConsumed(
-            					current,
-            					"name",
-            					lv_name_0_0,
-            					"org.eclipse.xtext.common.Terminals.ID");
-            			
-
-            }
-
-
-            }
-
-
-            }
-
-
-            	leaveRule();
-
-        }
-
-            catch (RecognitionException re) {
-                recover(input,re);
-                appendSkippedTokens();
-            }
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "ruleAttribut"
-
     // Delegated rules
 
 
@@ -744,14 +923,11 @@ public class InternalBrowserAutomationParser extends AbstractInternalAntlrParser
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000000802L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000002002L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000004000L});
-    public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000008000L});
-    public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000010000L});
-    public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000000004000L});
+    public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000000008000L});
 
 }

@@ -66,10 +66,13 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
     switch (eClass.getClassifierID())
     {
       case BrowserAutomationPackage.MODEL: return createModel();
-      case BrowserAutomationPackage.TEST: return createTest();
+      case BrowserAutomationPackage.LAUNCH: return createLaunch();
+      case BrowserAutomationPackage.CLICK: return createClick();
+      case BrowserAutomationPackage.COMPOSANT: return createComposant();
+      case BrowserAutomationPackage.ATTRIBUT: return createAttribut();
+      case BrowserAutomationPackage.CONTENT: return createContent();
       case BrowserAutomationPackage.BROWSER: return createBrowser();
       case BrowserAutomationPackage.URL: return createUrl();
-      case BrowserAutomationPackage.ATTRIBUT: return createAttribut();
       case BrowserAutomationPackage.GREETING: return createGreeting();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -94,10 +97,58 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
    * @generated
    */
   @Override
-  public Test createTest()
+  public Launch createLaunch()
   {
-    TestImpl test = new TestImpl();
-    return test;
+    LaunchImpl launch = new LaunchImpl();
+    return launch;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Click createClick()
+  {
+    ClickImpl click = new ClickImpl();
+    return click;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Composant createComposant()
+  {
+    ComposantImpl composant = new ComposantImpl();
+    return composant;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Attribut createAttribut()
+  {
+    AttributImpl attribut = new AttributImpl();
+    return attribut;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Content createContent()
+  {
+    ContentImpl content = new ContentImpl();
+    return content;
   }
 
   /**
@@ -122,18 +173,6 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
   {
     UrlImpl url = new UrlImpl();
     return url;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Attribut createAttribut()
-  {
-    AttributImpl attribut = new AttributImpl();
-    return attribut;
   }
 
   /**

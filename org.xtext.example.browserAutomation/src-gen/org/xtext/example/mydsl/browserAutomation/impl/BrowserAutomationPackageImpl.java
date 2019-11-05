@@ -14,9 +14,12 @@ import org.xtext.example.mydsl.browserAutomation.Attribut;
 import org.xtext.example.mydsl.browserAutomation.Browser;
 import org.xtext.example.mydsl.browserAutomation.BrowserAutomationFactory;
 import org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage;
+import org.xtext.example.mydsl.browserAutomation.Click;
+import org.xtext.example.mydsl.browserAutomation.Composant;
+import org.xtext.example.mydsl.browserAutomation.Content;
 import org.xtext.example.mydsl.browserAutomation.Greeting;
+import org.xtext.example.mydsl.browserAutomation.Launch;
 import org.xtext.example.mydsl.browserAutomation.Model;
-import org.xtext.example.mydsl.browserAutomation.Test;
 import org.xtext.example.mydsl.browserAutomation.Url;
 
 /**
@@ -39,7 +42,35 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass testEClass = null;
+  private EClass launchEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass clickEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass composantEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass attributEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass contentEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -54,13 +85,6 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   private EClass urlEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass attributEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -160,9 +184,9 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
-  public EClass getTest()
+  public EClass getLaunch()
   {
-    return testEClass;
+    return launchEClass;
   }
 
   /**
@@ -171,9 +195,9 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
-  public EReference getTest_B()
+  public EReference getLaunch_U()
   {
-    return (EReference)testEClass.getEStructuralFeatures().get(0);
+    return (EReference)launchEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -182,9 +206,9 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
-  public EReference getTest_U()
+  public EReference getLaunch_B()
   {
-    return (EReference)testEClass.getEStructuralFeatures().get(1);
+    return (EReference)launchEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -193,9 +217,9 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
-  public EReference getTest_A1()
+  public EClass getClick()
   {
-    return (EReference)testEClass.getEStructuralFeatures().get(2);
+    return clickEClass;
   }
 
   /**
@@ -204,9 +228,86 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
-  public EReference getTest_A2()
+  public EReference getClick_C()
   {
-    return (EReference)testEClass.getEStructuralFeatures().get(3);
+    return (EReference)clickEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getClick_A()
+  {
+    return (EReference)clickEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getComposant()
+  {
+    return composantEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getComposant_Name()
+  {
+    return (EAttribute)composantEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getAttribut()
+  {
+    return attributEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAttribut_Name()
+  {
+    return (EAttribute)attributEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getContent()
+  {
+    return contentEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getContent_Contenu()
+  {
+    return (EAttribute)contentEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -251,28 +352,6 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
   public EAttribute getUrl_Name()
   {
     return (EAttribute)urlEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getAttribut()
-  {
-    return attributEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getAttribut_Name()
-  {
-    return (EAttribute)attributEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -331,20 +410,28 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     modelEClass = createEClass(MODEL);
     createEReference(modelEClass, MODEL__TISI);
 
-    testEClass = createEClass(TEST);
-    createEReference(testEClass, TEST__B);
-    createEReference(testEClass, TEST__U);
-    createEReference(testEClass, TEST__A1);
-    createEReference(testEClass, TEST__A2);
+    launchEClass = createEClass(LAUNCH);
+    createEReference(launchEClass, LAUNCH__U);
+    createEReference(launchEClass, LAUNCH__B);
+
+    clickEClass = createEClass(CLICK);
+    createEReference(clickEClass, CLICK__C);
+    createEReference(clickEClass, CLICK__A);
+
+    composantEClass = createEClass(COMPOSANT);
+    createEAttribute(composantEClass, COMPOSANT__NAME);
+
+    attributEClass = createEClass(ATTRIBUT);
+    createEAttribute(attributEClass, ATTRIBUT__NAME);
+
+    contentEClass = createEClass(CONTENT);
+    createEAttribute(contentEClass, CONTENT__CONTENU);
 
     browserEClass = createEClass(BROWSER);
     createEAttribute(browserEClass, BROWSER__NAME);
 
     urlEClass = createEClass(URL);
     createEAttribute(urlEClass, URL__NAME);
-
-    attributEClass = createEClass(ATTRIBUT);
-    createEAttribute(attributEClass, ATTRIBUT__NAME);
 
     greetingEClass = createEClass(GREETING);
     createEAttribute(greetingEClass, GREETING__NAME);
@@ -382,22 +469,30 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Tisi(), this.getTest(), null, "tisi", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Tisi(), ecorePackage.getEObject(), null, "tisi", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(testEClass, Test.class, "Test", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTest_B(), this.getBrowser(), null, "b", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTest_U(), this.getUrl(), null, "u", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTest_A1(), this.getAttribut(), null, "a1", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getTest_A2(), this.getAttribut(), null, "a2", null, 0, 1, Test.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(launchEClass, Launch.class, "Launch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getLaunch_U(), this.getUrl(), null, "u", null, 0, 1, Launch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getLaunch_B(), this.getBrowser(), null, "b", null, 0, 1, Launch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(clickEClass, Click.class, "Click", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getClick_C(), this.getComposant(), null, "c", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getClick_A(), this.getAttribut(), null, "a", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(composantEClass, Composant.class, "Composant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getComposant_Name(), ecorePackage.getEString(), "name", null, 0, 1, Composant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(attributEClass, Attribut.class, "Attribut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAttribut_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(contentEClass, Content.class, "Content", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getContent_Contenu(), ecorePackage.getEString(), "contenu", null, 0, 1, Content.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(browserEClass, Browser.class, "Browser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getBrowser_Name(), ecorePackage.getEString(), "name", null, 0, 1, Browser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(urlEClass, Url.class, "Url", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getUrl_Name(), ecorePackage.getEString(), "name", null, 0, 1, Url.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(attributEClass, Attribut.class, "Attribut", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAttribut_Name(), ecorePackage.getEString(), "name", null, 0, 1, Attribut.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(greetingEClass, Greeting.class, "Greeting", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getGreeting_Name(), ecorePackage.getEString(), "name", null, 0, 1, Greeting.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

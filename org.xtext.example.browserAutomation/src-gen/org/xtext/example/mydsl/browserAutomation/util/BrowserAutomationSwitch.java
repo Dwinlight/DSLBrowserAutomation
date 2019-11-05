@@ -80,10 +80,38 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case BrowserAutomationPackage.TEST:
+      case BrowserAutomationPackage.LAUNCH:
       {
-        Test test = (Test)theEObject;
-        T result = caseTest(test);
+        Launch launch = (Launch)theEObject;
+        T result = caseLaunch(launch);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.CLICK:
+      {
+        Click click = (Click)theEObject;
+        T result = caseClick(click);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.COMPOSANT:
+      {
+        Composant composant = (Composant)theEObject;
+        T result = caseComposant(composant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.ATTRIBUT:
+      {
+        Attribut attribut = (Attribut)theEObject;
+        T result = caseAttribut(attribut);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.CONTENT:
+      {
+        Content content = (Content)theEObject;
+        T result = caseContent(content);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -98,13 +126,6 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
       {
         Url url = (Url)theEObject;
         T result = caseUrl(url);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case BrowserAutomationPackage.ATTRIBUT:
-      {
-        Attribut attribut = (Attribut)theEObject;
-        T result = caseAttribut(attribut);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -136,17 +157,81 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Test</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Launch</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Test</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Launch</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTest(Test object)
+  public T caseLaunch(Launch object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Click</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Click</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseClick(Click object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Composant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Composant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseComposant(Composant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Attribut</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Attribut</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAttribut(Attribut object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Content</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Content</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseContent(Content object)
   {
     return null;
   }
@@ -179,22 +264,6 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseUrl(Url object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Attribut</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Attribut</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseAttribut(Attribut object)
   {
     return null;
   }

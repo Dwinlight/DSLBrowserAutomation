@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -19,7 +20,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage;
 import org.xtext.example.mydsl.browserAutomation.Model;
-import org.xtext.example.mydsl.browserAutomation.Test;
 
 /**
  * <!-- begin-user-doc -->
@@ -44,7 +44,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    * @ordered
    */
-  protected EList<Test> tisi;
+  protected EList<EObject> tisi;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,11 +73,11 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * @generated
    */
   @Override
-  public EList<Test> getTisi()
+  public EList<EObject> getTisi()
   {
     if (tisi == null)
     {
-      tisi = new EObjectContainmentEList<Test>(Test.class, this, BrowserAutomationPackage.MODEL__TISI);
+      tisi = new EObjectContainmentEList<EObject>(EObject.class, this, BrowserAutomationPackage.MODEL__TISI);
     }
     return tisi;
   }
@@ -127,7 +127,7 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
     {
       case BrowserAutomationPackage.MODEL__TISI:
         getTisi().clear();
-        getTisi().addAll((Collection<? extends Test>)newValue);
+        getTisi().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

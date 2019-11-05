@@ -27,7 +27,7 @@ public interface Model extends EObject
 {
   /**
    * Returns the value of the '<em><b>Tisi</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.example.mydsl.browserAutomation.Test}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Tisi</em>' containment reference list.
@@ -35,6 +35,6 @@ public interface Model extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<Test> getTisi();
+  EList<EObject> getTisi();
 
 } // Model

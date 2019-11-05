@@ -86,23 +86,14 @@ public interface BrowserAutomationPackage extends EPackage
   int MODEL_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.TestImpl <em>Test</em>}' class.
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.LaunchImpl <em>Launch</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.browserAutomation.impl.TestImpl
-   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getTest()
+   * @see org.xtext.example.mydsl.browserAutomation.impl.LaunchImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getLaunch()
    * @generated
    */
-  int TEST = 1;
-
-  /**
-   * The feature id for the '<em><b>B</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int TEST__B = 0;
+  int LAUNCH = 1;
 
   /**
    * The feature id for the '<em><b>U</b></em>' containment reference.
@@ -111,44 +102,72 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int TEST__U = 1;
+  int LAUNCH__U = 0;
 
   /**
-   * The feature id for the '<em><b>A1</b></em>' containment reference.
+   * The feature id for the '<em><b>B</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEST__A1 = 2;
+  int LAUNCH__B = 1;
 
   /**
-   * The feature id for the '<em><b>A2</b></em>' containment reference.
+   * The number of structural features of the '<em>Launch</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEST__A2 = 3;
+  int LAUNCH_FEATURE_COUNT = 2;
 
   /**
-   * The number of structural features of the '<em>Test</em>' class.
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl <em>Click</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.ClickImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getClick()
+   * @generated
+   */
+  int CLICK = 2;
+
+  /**
+   * The feature id for the '<em><b>C</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TEST_FEATURE_COUNT = 4;
+  int CLICK__C = 0;
 
   /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.BrowserImpl <em>Browser</em>}' class.
+   * The feature id for the '<em><b>A</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserImpl
-   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getBrowser()
+   * @generated
+   * @ordered
+   */
+  int CLICK__A = 1;
+
+  /**
+   * The number of structural features of the '<em>Click</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLICK_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ComposantImpl <em>Composant</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.ComposantImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getComposant()
    * @generated
    */
-  int BROWSER = 2;
+  int COMPOSANT = 3;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -157,44 +176,16 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int BROWSER__NAME = 0;
+  int COMPOSANT__NAME = 0;
 
   /**
-   * The number of structural features of the '<em>Browser</em>' class.
+   * The number of structural features of the '<em>Composant</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int BROWSER_FEATURE_COUNT = 1;
-
-  /**
-   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.UrlImpl <em>Url</em>}' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see org.xtext.example.mydsl.browserAutomation.impl.UrlImpl
-   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getUrl()
-   * @generated
-   */
-  int URL = 3;
-
-  /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int URL__NAME = 0;
-
-  /**
-   * The number of structural features of the '<em>Url</em>' class.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int URL_FEATURE_COUNT = 1;
+  int COMPOSANT_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.AttributImpl <em>Attribut</em>}' class.
@@ -225,6 +216,90 @@ public interface BrowserAutomationPackage extends EPackage
   int ATTRIBUT_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ContentImpl <em>Content</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.ContentImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getContent()
+   * @generated
+   */
+  int CONTENT = 5;
+
+  /**
+   * The feature id for the '<em><b>Contenu</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT__CONTENU = 0;
+
+  /**
+   * The number of structural features of the '<em>Content</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CONTENT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.BrowserImpl <em>Browser</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getBrowser()
+   * @generated
+   */
+  int BROWSER = 6;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BROWSER__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Browser</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int BROWSER_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.UrlImpl <em>Url</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.UrlImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getUrl()
+   * @generated
+   */
+  int URL = 7;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int URL__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Url</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int URL_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.GreetingImpl <em>Greeting</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -232,7 +307,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getGreeting()
    * @generated
    */
-  int GREETING = 5;
+  int GREETING = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -275,58 +350,131 @@ public interface BrowserAutomationPackage extends EPackage
   EReference getModel_Tisi();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Test <em>Test</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Launch <em>Launch</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Test</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Test
+   * @return the meta object for class '<em>Launch</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Launch
    * @generated
    */
-  EClass getTest();
+  EClass getLaunch();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Test#getB <em>B</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>B</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Test#getB()
-   * @see #getTest()
-   * @generated
-   */
-  EReference getTest_B();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Test#getU <em>U</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Launch#getU <em>U</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the meta object for the containment reference '<em>U</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Test#getU()
-   * @see #getTest()
+   * @see org.xtext.example.mydsl.browserAutomation.Launch#getU()
+   * @see #getLaunch()
    * @generated
    */
-  EReference getTest_U();
+  EReference getLaunch_U();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Test#getA1 <em>A1</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Launch#getB <em>B</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A1</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Test#getA1()
-   * @see #getTest()
+   * @return the meta object for the containment reference '<em>B</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Launch#getB()
+   * @see #getLaunch()
    * @generated
    */
-  EReference getTest_A1();
+  EReference getLaunch_B();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Test#getA2 <em>A2</em>}'.
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Click <em>Click</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>A2</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Test#getA2()
-   * @see #getTest()
+   * @return the meta object for class '<em>Click</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Click
    * @generated
    */
-  EReference getTest_A2();
+  EClass getClick();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Click#getC <em>C</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>C</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Click#getC()
+   * @see #getClick()
+   * @generated
+   */
+  EReference getClick_C();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Click#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Click#getA()
+   * @see #getClick()
+   * @generated
+   */
+  EReference getClick_A();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Composant <em>Composant</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Composant</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Composant
+   * @generated
+   */
+  EClass getComposant();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Composant#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Composant#getName()
+   * @see #getComposant()
+   * @generated
+   */
+  EAttribute getComposant_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Attribut <em>Attribut</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Attribut</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Attribut
+   * @generated
+   */
+  EClass getAttribut();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Attribut#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Attribut#getName()
+   * @see #getAttribut()
+   * @generated
+   */
+  EAttribute getAttribut_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Content <em>Content</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Content</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Content
+   * @generated
+   */
+  EClass getContent();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Content#getContenu <em>Contenu</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Contenu</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Content#getContenu()
+   * @see #getContent()
+   * @generated
+   */
+  EAttribute getContent_Contenu();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Browser <em>Browser</em>}'.
@@ -369,27 +517,6 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    */
   EAttribute getUrl_Name();
-
-  /**
-   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Attribut <em>Attribut</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for class '<em>Attribut</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Attribut
-   * @generated
-   */
-  EClass getAttribut();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Attribut#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Attribut#getName()
-   * @see #getAttribut()
-   * @generated
-   */
-  EAttribute getAttribut_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Greeting <em>Greeting</em>}'.
@@ -454,22 +581,14 @@ public interface BrowserAutomationPackage extends EPackage
     EReference MODEL__TISI = eINSTANCE.getModel_Tisi();
 
     /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.TestImpl <em>Test</em>}' class.
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.LaunchImpl <em>Launch</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.browserAutomation.impl.TestImpl
-     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getTest()
+     * @see org.xtext.example.mydsl.browserAutomation.impl.LaunchImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getLaunch()
      * @generated
      */
-    EClass TEST = eINSTANCE.getTest();
-
-    /**
-     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference TEST__B = eINSTANCE.getTest_B();
+    EClass LAUNCH = eINSTANCE.getLaunch();
 
     /**
      * The meta object literal for the '<em><b>U</b></em>' containment reference feature.
@@ -477,23 +596,95 @@ public interface BrowserAutomationPackage extends EPackage
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TEST__U = eINSTANCE.getTest_U();
+    EReference LAUNCH__U = eINSTANCE.getLaunch_U();
 
     /**
-     * The meta object literal for the '<em><b>A1</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>B</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TEST__A1 = eINSTANCE.getTest_A1();
+    EReference LAUNCH__B = eINSTANCE.getLaunch_B();
 
     /**
-     * The meta object literal for the '<em><b>A2</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl <em>Click</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.ClickImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getClick()
+     * @generated
+     */
+    EClass CLICK = eINSTANCE.getClick();
+
+    /**
+     * The meta object literal for the '<em><b>C</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TEST__A2 = eINSTANCE.getTest_A2();
+    EReference CLICK__C = eINSTANCE.getClick_C();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CLICK__A = eINSTANCE.getClick_A();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ComposantImpl <em>Composant</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.ComposantImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getComposant()
+     * @generated
+     */
+    EClass COMPOSANT = eINSTANCE.getComposant();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute COMPOSANT__NAME = eINSTANCE.getComposant_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.AttributImpl <em>Attribut</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.AttributImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getAttribut()
+     * @generated
+     */
+    EClass ATTRIBUT = eINSTANCE.getAttribut();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ATTRIBUT__NAME = eINSTANCE.getAttribut_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ContentImpl <em>Content</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.ContentImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getContent()
+     * @generated
+     */
+    EClass CONTENT = eINSTANCE.getContent();
+
+    /**
+     * The meta object literal for the '<em><b>Contenu</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CONTENT__CONTENU = eINSTANCE.getContent_Contenu();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.BrowserImpl <em>Browser</em>}' class.
@@ -530,24 +721,6 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EAttribute URL__NAME = eINSTANCE.getUrl_Name();
-
-    /**
-     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.AttributImpl <em>Attribut</em>}' class.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @see org.xtext.example.mydsl.browserAutomation.impl.AttributImpl
-     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getAttribut()
-     * @generated
-     */
-    EClass ATTRIBUT = eINSTANCE.getAttribut();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute ATTRIBUT__NAME = eINSTANCE.getAttribut_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.GreetingImpl <em>Greeting</em>}' class.

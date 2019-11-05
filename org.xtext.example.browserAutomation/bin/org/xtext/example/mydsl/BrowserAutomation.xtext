@@ -3,12 +3,38 @@ grammar org.xtext.example.mydsl.BrowserAutomation with org.eclipse.xtext.common.
 generate browserAutomation "http://www.xtext.org/example/mydsl/BrowserAutomation"
 
 Model:
-	(tisi+=Test)*;
+	(tisi+=Launch) (tisi+=Click)?
+	
+	;
 	
 	
-Test:
-	'ON' b=Browser 'GOTO' u=Url 'IS' 'ATTRIBUT' a1=Attribut 'WHERE' 'ATTRIBUT' a2=Attribut 'CONTAINS' '"'STRING'"' 
+Launch:
+	'GOTO' u=Url 'ON' b=Browser   
+	//'CLICK' l1=Link 'WHERE' l2=Content 'CONTAINS' STRING 
+	//'IS'  l=Link 'WHERE' c= Content 'CONTAINS' STRING
 ;
+
+Click:
+	'CLICK' c=Composant 'WHERE' a=Attribut 'CONTAINS' STRING
+;
+
+
+
+Composant:
+	name = STRING;
+	
+Attribut:
+	name = ID;
+
+
+Content:
+	contenu = STRING;
+
+
+
+
+
+
 
 Browser:
 	name = ID
@@ -16,9 +42,7 @@ Browser:
 Url:
 	name = STRING
 ;
-Attribut:
-	name = ID
-;
+
 
 
 	
