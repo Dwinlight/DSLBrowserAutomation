@@ -1,0 +1,5 @@
+###Test7###
+GOTO "http://www.imt-atlantique.fr/fr" ON firefox
+$titre = GET 1  content WHERE  class EQUALS "actu_home_ctner_inner_cell1_titre"
+CLICK link WHERE  title EQUALS $titre
+FIND  content CONTAINS $titre
