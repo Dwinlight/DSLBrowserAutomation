@@ -14,26 +14,26 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.mydsl.browserAutomation.Attribut;
 import org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage;
-import org.xtext.example.mydsl.browserAutomation.Click;
 import org.xtext.example.mydsl.browserAutomation.Composant;
+import org.xtext.example.mydsl.browserAutomation.Find;
 import org.xtext.example.mydsl.browserAutomation.VarRef;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Click</b></em>'.
+ * An implementation of the model object '<em><b>Find</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl#getC <em>C</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl#getA <em>A</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl#getV <em>V</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl#getC <em>C</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl#getA <em>A</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl#getV <em>V</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ClickImpl extends MinimalEObjectImpl.Container implements Click
+public class FindImpl extends MinimalEObjectImpl.Container implements Find
 {
   /**
    * The cached value of the '{@link #getC() <em>C</em>}' containment reference.
@@ -70,7 +70,7 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
    * <!-- end-user-doc -->
    * @generated
    */
-  protected ClickImpl()
+  protected FindImpl()
   {
     super();
   }
@@ -83,7 +83,7 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   @Override
   protected EClass eStaticClass()
   {
-    return BrowserAutomationPackage.Literals.CLICK;
+    return BrowserAutomationPackage.Literals.FIND;
   }
 
   /**
@@ -108,7 +108,7 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
     c = newC;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK__C, oldC, newC);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.FIND__C, oldC, newC);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -126,14 +126,14 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
     {
       NotificationChain msgs = null;
       if (c != null)
-        msgs = ((InternalEObject)c).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK__C, null, msgs);
+        msgs = ((InternalEObject)c).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.FIND__C, null, msgs);
       if (newC != null)
-        msgs = ((InternalEObject)newC).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK__C, null, msgs);
+        msgs = ((InternalEObject)newC).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.FIND__C, null, msgs);
       msgs = basicSetC(newC, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK__C, newC, newC));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.FIND__C, newC, newC));
   }
 
   /**
@@ -158,7 +158,7 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
     a = newA;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK__A, oldA, newA);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.FIND__A, oldA, newA);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -176,14 +176,14 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
     {
       NotificationChain msgs = null;
       if (a != null)
-        msgs = ((InternalEObject)a).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK__A, null, msgs);
+        msgs = ((InternalEObject)a).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.FIND__A, null, msgs);
       if (newA != null)
-        msgs = ((InternalEObject)newA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK__A, null, msgs);
+        msgs = ((InternalEObject)newA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.FIND__A, null, msgs);
       msgs = basicSetA(newA, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK__A, newA, newA));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.FIND__A, newA, newA));
   }
 
   /**
@@ -208,7 +208,7 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
     v = newV;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK__V, oldV, newV);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.FIND__V, oldV, newV);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -226,14 +226,14 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
     {
       NotificationChain msgs = null;
       if (v != null)
-        msgs = ((InternalEObject)v).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK__V, null, msgs);
+        msgs = ((InternalEObject)v).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.FIND__V, null, msgs);
       if (newV != null)
-        msgs = ((InternalEObject)newV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.CLICK__V, null, msgs);
+        msgs = ((InternalEObject)newV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.FIND__V, null, msgs);
       msgs = basicSetV(newV, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.CLICK__V, newV, newV));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.FIND__V, newV, newV));
   }
 
   /**
@@ -246,11 +246,11 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.CLICK__C:
+      case BrowserAutomationPackage.FIND__C:
         return basicSetC(null, msgs);
-      case BrowserAutomationPackage.CLICK__A:
+      case BrowserAutomationPackage.FIND__A:
         return basicSetA(null, msgs);
-      case BrowserAutomationPackage.CLICK__V:
+      case BrowserAutomationPackage.FIND__V:
         return basicSetV(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -266,11 +266,11 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.CLICK__C:
+      case BrowserAutomationPackage.FIND__C:
         return getC();
-      case BrowserAutomationPackage.CLICK__A:
+      case BrowserAutomationPackage.FIND__A:
         return getA();
-      case BrowserAutomationPackage.CLICK__V:
+      case BrowserAutomationPackage.FIND__V:
         return getV();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -286,13 +286,13 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.CLICK__C:
+      case BrowserAutomationPackage.FIND__C:
         setC((Composant)newValue);
         return;
-      case BrowserAutomationPackage.CLICK__A:
+      case BrowserAutomationPackage.FIND__A:
         setA((Attribut)newValue);
         return;
-      case BrowserAutomationPackage.CLICK__V:
+      case BrowserAutomationPackage.FIND__V:
         setV((VarRef)newValue);
         return;
     }
@@ -309,13 +309,13 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.CLICK__C:
+      case BrowserAutomationPackage.FIND__C:
         setC((Composant)null);
         return;
-      case BrowserAutomationPackage.CLICK__A:
+      case BrowserAutomationPackage.FIND__A:
         setA((Attribut)null);
         return;
-      case BrowserAutomationPackage.CLICK__V:
+      case BrowserAutomationPackage.FIND__V:
         setV((VarRef)null);
         return;
     }
@@ -332,14 +332,14 @@ public class ClickImpl extends MinimalEObjectImpl.Container implements Click
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.CLICK__C:
+      case BrowserAutomationPackage.FIND__C:
         return c != null;
-      case BrowserAutomationPackage.CLICK__A:
+      case BrowserAutomationPackage.FIND__A:
         return a != null;
-      case BrowserAutomationPackage.CLICK__V:
+      case BrowserAutomationPackage.FIND__V:
         return v != null;
     }
     return super.eIsSet(featureID);
   }
 
-} //ClickImpl
+} //FindImpl

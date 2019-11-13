@@ -42,6 +42,15 @@ public interface BrowserAutomationFactory extends EFactory
   Launch createLaunch();
 
   /**
+   * Returns a new object of class '<em>Find</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Find</em>'.
+   * @generated
+   */
+  Find createFind();
+
+  /**
    * Returns a new object of class '<em>Click</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -49,6 +58,42 @@ public interface BrowserAutomationFactory extends EFactory
    * @generated
    */
   Click createClick();
+
+  /**
+   * Returns a new object of class '<em>Set</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Set</em>'.
+   * @generated
+   */
+  Set createSet();
+
+  /**
+   * Returns a new object of class '<em>Affectation</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Affectation</em>'.
+   * @generated
+   */
+  Affectation createAffectation();
+
+  /**
+   * Returns a new object of class '<em>Variable</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Variable</em>'.
+   * @generated
+   */
+  Variable createVariable();
+
+  /**
+   * Returns a new object of class '<em>Var Ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Var Ref</em>'.
+   * @generated
+   */
+  VarRef createVarRef();
 
   /**
    * Returns a new object of class '<em>Composant</em>'.

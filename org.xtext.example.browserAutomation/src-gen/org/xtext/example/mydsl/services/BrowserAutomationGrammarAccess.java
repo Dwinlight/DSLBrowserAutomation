@@ -6,7 +6,9 @@ package org.xtext.example.mydsl.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
+import org.eclipse.xtext.CrossReference;
 import org.eclipse.xtext.Grammar;
 import org.eclipse.xtext.GrammarUtil;
 import org.eclipse.xtext.Group;
@@ -27,13 +29,21 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Assignment cTisiAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final RuleCall cTisiLaunchParserRuleCall_0_0 = (RuleCall)cTisiAssignment_0.eContents().get(0);
 		private final Assignment cTisiAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTisiClickParserRuleCall_1_0 = (RuleCall)cTisiAssignment_1.eContents().get(0);
+		private final RuleCall cTisiAffectationParserRuleCall_1_0 = (RuleCall)cTisiAssignment_1.eContents().get(0);
+		private final Assignment cTisiAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTisiLaunchParserRuleCall_2_0 = (RuleCall)cTisiAssignment_2.eContents().get(0);
+		private final Assignment cTisiAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTisiSetParserRuleCall_3_0 = (RuleCall)cTisiAssignment_3.eContents().get(0);
+		private final Assignment cTisiAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTisiClickParserRuleCall_4_0 = (RuleCall)cTisiAssignment_4.eContents().get(0);
+		private final Assignment cTisiAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTisiFindParserRuleCall_5_0 = (RuleCall)cTisiAssignment_5.eContents().get(0);
 		
 		//Model:
-		//	tisi+=Launch tisi+=Click?;
+		//	tisi+=Launch tisi+=Affectation* tisi+=Launch? tisi+=Set* tisi+=Click* tisi+=Find*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//tisi+=Launch tisi+=Click?
+		//tisi+=Launch tisi+=Affectation* tisi+=Launch? tisi+=Set* tisi+=Click* tisi+=Find*
 		public Group getGroup() { return cGroup; }
 		
 		//tisi+=Launch
@@ -42,11 +52,35 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//Launch
 		public RuleCall getTisiLaunchParserRuleCall_0_0() { return cTisiLaunchParserRuleCall_0_0; }
 		
-		//tisi+=Click?
+		//tisi+=Affectation*
 		public Assignment getTisiAssignment_1() { return cTisiAssignment_1; }
 		
+		//Affectation
+		public RuleCall getTisiAffectationParserRuleCall_1_0() { return cTisiAffectationParserRuleCall_1_0; }
+		
+		//tisi+=Launch?
+		public Assignment getTisiAssignment_2() { return cTisiAssignment_2; }
+		
+		//Launch
+		public RuleCall getTisiLaunchParserRuleCall_2_0() { return cTisiLaunchParserRuleCall_2_0; }
+		
+		//tisi+=Set*
+		public Assignment getTisiAssignment_3() { return cTisiAssignment_3; }
+		
+		//Set
+		public RuleCall getTisiSetParserRuleCall_3_0() { return cTisiSetParserRuleCall_3_0; }
+		
+		//tisi+=Click*
+		public Assignment getTisiAssignment_4() { return cTisiAssignment_4; }
+		
 		//Click
-		public RuleCall getTisiClickParserRuleCall_1_0() { return cTisiClickParserRuleCall_1_0; }
+		public RuleCall getTisiClickParserRuleCall_4_0() { return cTisiClickParserRuleCall_4_0; }
+		
+		//tisi+=Find*
+		public Assignment getTisiAssignment_5() { return cTisiAssignment_5; }
+		
+		//Find
+		public RuleCall getTisiFindParserRuleCall_5_0() { return cTisiFindParserRuleCall_5_0; }
 	}
 	public class LaunchElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Launch");
@@ -86,6 +120,69 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//Browser
 		public RuleCall getBBrowserParserRuleCall_3_0() { return cBBrowserParserRuleCall_3_0; }
 	}
+	public class FindElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Find");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFINDKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cCAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cCComposantParserRuleCall_1_0 = (RuleCall)cCAssignment_1.eContents().get(0);
+		private final Keyword cWHEREKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cAAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cAAttributParserRuleCall_3_0 = (RuleCall)cAAssignment_3.eContents().get(0);
+		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
+		private final Keyword cCONTAINSKeyword_4_0 = (Keyword)cAlternatives_4.eContents().get(0);
+		private final Keyword cEQUALSKeyword_4_1 = (Keyword)cAlternatives_4.eContents().get(1);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final RuleCall cSTRINGTerminalRuleCall_5_0 = (RuleCall)cAlternatives_5.eContents().get(0);
+		private final Assignment cVAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
+		private final RuleCall cVVarRefParserRuleCall_5_1_0 = (RuleCall)cVAssignment_5_1.eContents().get(0);
+		
+		//Find:
+		//	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
+		public Group getGroup() { return cGroup; }
+		
+		//'FIND'
+		public Keyword getFINDKeyword_0() { return cFINDKeyword_0; }
+		
+		//c=Composant
+		public Assignment getCAssignment_1() { return cCAssignment_1; }
+		
+		//Composant
+		public RuleCall getCComposantParserRuleCall_1_0() { return cCComposantParserRuleCall_1_0; }
+		
+		//'WHERE'
+		public Keyword getWHEREKeyword_2() { return cWHEREKeyword_2; }
+		
+		//a=Attribut
+		public Assignment getAAssignment_3() { return cAAssignment_3; }
+		
+		//Attribut
+		public RuleCall getAAttributParserRuleCall_3_0() { return cAAttributParserRuleCall_3_0; }
+		
+		//('CONTAINS' | 'EQUALS')
+		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+		
+		//'CONTAINS'
+		public Keyword getCONTAINSKeyword_4_0() { return cCONTAINSKeyword_4_0; }
+		
+		//'EQUALS'
+		public Keyword getEQUALSKeyword_4_1() { return cEQUALSKeyword_4_1; }
+		
+		//(STRING | v=VarRef)
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_5_0() { return cSTRINGTerminalRuleCall_5_0; }
+		
+		//v=VarRef
+		public Assignment getVAssignment_5_1() { return cVAssignment_5_1; }
+		
+		//VarRef
+		public RuleCall getVVarRefParserRuleCall_5_1_0() { return cVVarRefParserRuleCall_5_1_0; }
+	}
 	public class ClickElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Click");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -95,14 +192,19 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Keyword cWHEREKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Assignment cAAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cAAttributParserRuleCall_3_0 = (RuleCall)cAAssignment_3.eContents().get(0);
-		private final Keyword cCONTAINSKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final RuleCall cSTRINGTerminalRuleCall_5 = (RuleCall)cGroup.eContents().get(5);
+		private final Alternatives cAlternatives_4 = (Alternatives)cGroup.eContents().get(4);
+		private final Keyword cCONTAINSKeyword_4_0 = (Keyword)cAlternatives_4.eContents().get(0);
+		private final Keyword cEQUALSKeyword_4_1 = (Keyword)cAlternatives_4.eContents().get(1);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final RuleCall cSTRINGTerminalRuleCall_5_0 = (RuleCall)cAlternatives_5.eContents().get(0);
+		private final Assignment cVAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
+		private final RuleCall cVVarRefParserRuleCall_5_1_0 = (RuleCall)cVAssignment_5_1.eContents().get(0);
 		
 		//Click:
-		//	'CLICK' c=Composant 'WHERE' a=Attribut 'CONTAINS' STRING;
+		//	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'CLICK' c=Composant 'WHERE' a=Attribut 'CONTAINS' STRING
+		//'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
 		public Group getGroup() { return cGroup; }
 		
 		//'CLICK'
@@ -123,26 +225,237 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//Attribut
 		public RuleCall getAAttributParserRuleCall_3_0() { return cAAttributParserRuleCall_3_0; }
 		
+		//('CONTAINS' | 'EQUALS')
+		public Alternatives getAlternatives_4() { return cAlternatives_4; }
+		
 		//'CONTAINS'
-		public Keyword getCONTAINSKeyword_4() { return cCONTAINSKeyword_4; }
+		public Keyword getCONTAINSKeyword_4_0() { return cCONTAINSKeyword_4_0; }
+		
+		//'EQUALS'
+		public Keyword getEQUALSKeyword_4_1() { return cEQUALSKeyword_4_1; }
+		
+		//(STRING | v=VarRef)
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 		
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_5() { return cSTRINGTerminalRuleCall_5; }
+		public RuleCall getSTRINGTerminalRuleCall_5_0() { return cSTRINGTerminalRuleCall_5_0; }
+		
+		//v=VarRef
+		public Assignment getVAssignment_5_1() { return cVAssignment_5_1; }
+		
+		//VarRef
+		public RuleCall getVVarRefParserRuleCall_5_1_0() { return cVVarRefParserRuleCall_5_1_0; }
+	}
+	public class SetElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Set");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSETKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cAAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cAAttributParserRuleCall_1_0 = (RuleCall)cAAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final RuleCall cSTRINGTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
+		private final Assignment cVAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final RuleCall cVVarRefParserRuleCall_2_1_0 = (RuleCall)cVAssignment_2_1.eContents().get(0);
+		private final Keyword cWHEREKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cA1Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cA1AttributParserRuleCall_4_0 = (RuleCall)cA1Assignment_4.eContents().get(0);
+		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
+		private final Keyword cCONTAINSKeyword_5_0 = (Keyword)cAlternatives_5.eContents().get(0);
+		private final Keyword cEQUALSKeyword_5_1 = (Keyword)cAlternatives_5.eContents().get(1);
+		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
+		private final RuleCall cSTRINGTerminalRuleCall_6_0 = (RuleCall)cAlternatives_6.eContents().get(0);
+		private final Assignment cVAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
+		private final RuleCall cVVarRefParserRuleCall_6_1_0 = (RuleCall)cVAssignment_6_1.eContents().get(0);
+		
+		//Set:
+		//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
+		public Group getGroup() { return cGroup; }
+		
+		//'SET'
+		public Keyword getSETKeyword_0() { return cSETKeyword_0; }
+		
+		//a=Attribut
+		public Assignment getAAssignment_1() { return cAAssignment_1; }
+		
+		//Attribut
+		public RuleCall getAAttributParserRuleCall_1_0() { return cAAttributParserRuleCall_1_0; }
+		
+		//(STRING | v=VarRef)
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2_0() { return cSTRINGTerminalRuleCall_2_0; }
+		
+		//v=VarRef
+		public Assignment getVAssignment_2_1() { return cVAssignment_2_1; }
+		
+		//VarRef
+		public RuleCall getVVarRefParserRuleCall_2_1_0() { return cVVarRefParserRuleCall_2_1_0; }
+		
+		//'WHERE'
+		public Keyword getWHEREKeyword_3() { return cWHEREKeyword_3; }
+		
+		//a1=Attribut
+		public Assignment getA1Assignment_4() { return cA1Assignment_4; }
+		
+		//Attribut
+		public RuleCall getA1AttributParserRuleCall_4_0() { return cA1AttributParserRuleCall_4_0; }
+		
+		//('CONTAINS' | 'EQUALS')
+		public Alternatives getAlternatives_5() { return cAlternatives_5; }
+		
+		//'CONTAINS'
+		public Keyword getCONTAINSKeyword_5_0() { return cCONTAINSKeyword_5_0; }
+		
+		//'EQUALS'
+		public Keyword getEQUALSKeyword_5_1() { return cEQUALSKeyword_5_1; }
+		
+		//(STRING | v=VarRef)
+		public Alternatives getAlternatives_6() { return cAlternatives_6; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_6_0() { return cSTRINGTerminalRuleCall_6_0; }
+		
+		//v=VarRef
+		public Assignment getVAssignment_6_1() { return cVAssignment_6_1; }
+		
+		//VarRef
+		public RuleCall getVVarRefParserRuleCall_6_1_0() { return cVVarRefParserRuleCall_6_1_0; }
+	}
+	public class AffectationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Affectation");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cVariableParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
+		private final Keyword cGETKeyword_2_0_0 = (Keyword)cGroup_2_0.eContents().get(0);
+		private final Assignment cAAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
+		private final RuleCall cAAttributParserRuleCall_2_0_1_0 = (RuleCall)cAAssignment_2_0_1.eContents().get(0);
+		private final Keyword cWHEREKeyword_2_0_2 = (Keyword)cGroup_2_0.eContents().get(2);
+		private final Assignment cA2Assignment_2_0_3 = (Assignment)cGroup_2_0.eContents().get(3);
+		private final RuleCall cA2AttributParserRuleCall_2_0_3_0 = (RuleCall)cA2Assignment_2_0_3.eContents().get(0);
+		private final Alternatives cAlternatives_2_0_4 = (Alternatives)cGroup_2_0.eContents().get(4);
+		private final Keyword cCONTAINSKeyword_2_0_4_0 = (Keyword)cAlternatives_2_0_4.eContents().get(0);
+		private final Keyword cEQUALSKeyword_2_0_4_1 = (Keyword)cAlternatives_2_0_4.eContents().get(1);
+		private final Alternatives cAlternatives_2_0_5 = (Alternatives)cGroup_2_0.eContents().get(5);
+		private final RuleCall cSTRINGTerminalRuleCall_2_0_5_0 = (RuleCall)cAlternatives_2_0_5.eContents().get(0);
+		private final Assignment cVAssignment_2_0_5_1 = (Assignment)cAlternatives_2_0_5.eContents().get(1);
+		private final RuleCall cVVarRefParserRuleCall_2_0_5_1_0 = (RuleCall)cVAssignment_2_0_5_1.eContents().get(0);
+		private final RuleCall cSTRINGTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
+		
+		//Affectation:
+		//	Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING);
+		@Override public ParserRule getRule() { return rule; }
+		
+		//Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING)
+		public Group getGroup() { return cGroup; }
+		
+		//Variable
+		public RuleCall getVariableParserRuleCall_0() { return cVariableParserRuleCall_0; }
+		
+		//'='
+		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
+		
+		//('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING)
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		
+		//'GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
+		public Group getGroup_2_0() { return cGroup_2_0; }
+		
+		//'GET'
+		public Keyword getGETKeyword_2_0_0() { return cGETKeyword_2_0_0; }
+		
+		//a=Attribut
+		public Assignment getAAssignment_2_0_1() { return cAAssignment_2_0_1; }
+		
+		//Attribut
+		public RuleCall getAAttributParserRuleCall_2_0_1_0() { return cAAttributParserRuleCall_2_0_1_0; }
+		
+		//'WHERE'
+		public Keyword getWHEREKeyword_2_0_2() { return cWHEREKeyword_2_0_2; }
+		
+		//a2=Attribut
+		public Assignment getA2Assignment_2_0_3() { return cA2Assignment_2_0_3; }
+		
+		//Attribut
+		public RuleCall getA2AttributParserRuleCall_2_0_3_0() { return cA2AttributParserRuleCall_2_0_3_0; }
+		
+		//('CONTAINS' | 'EQUALS')
+		public Alternatives getAlternatives_2_0_4() { return cAlternatives_2_0_4; }
+		
+		//'CONTAINS'
+		public Keyword getCONTAINSKeyword_2_0_4_0() { return cCONTAINSKeyword_2_0_4_0; }
+		
+		//'EQUALS'
+		public Keyword getEQUALSKeyword_2_0_4_1() { return cEQUALSKeyword_2_0_4_1; }
+		
+		//(STRING | v=VarRef)
+		public Alternatives getAlternatives_2_0_5() { return cAlternatives_2_0_5; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2_0_5_0() { return cSTRINGTerminalRuleCall_2_0_5_0; }
+		
+		//v=VarRef
+		public Assignment getVAssignment_2_0_5_1() { return cVAssignment_2_0_5_1; }
+		
+		//VarRef
+		public RuleCall getVVarRefParserRuleCall_2_0_5_1_0() { return cVVarRefParserRuleCall_2_0_5_1_0; }
+		
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2_1() { return cSTRINGTerminalRuleCall_2_1; }
+	}
+	public class VariableElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Variable");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		
+		//Variable:
+		//	name=ID;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//name=ID
+		public Assignment getNameAssignment() { return cNameAssignment; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
+	}
+	public class VarRefElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.VarRef");
+		private final Assignment cVarAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cVarVariableCrossReference_0 = (CrossReference)cVarAssignment.eContents().get(0);
+		private final RuleCall cVarVariableIDTerminalRuleCall_0_1 = (RuleCall)cVarVariableCrossReference_0.eContents().get(1);
+		
+		//VarRef:
+		//	var=[Variable];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//var=[Variable]
+		public Assignment getVarAssignment() { return cVarAssignment; }
+		
+		//[Variable]
+		public CrossReference getVarVariableCrossReference_0() { return cVarVariableCrossReference_0; }
+		
+		//ID
+		public RuleCall getVarVariableIDTerminalRuleCall_0_1() { return cVarVariableIDTerminalRuleCall_0_1; }
 	}
 	public class ComposantElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Composant");
 		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cNameSTRINGTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
 		
 		//Composant:
-		//	name=STRING;
+		//	name=ID;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//name=STRING
+		//name=ID
 		public Assignment getNameAssignment() { return cNameAssignment; }
 		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_0() { return cNameSTRINGTerminalRuleCall_0; }
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
 	}
 	public class AttributElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Attribut");
@@ -235,7 +548,12 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	
 	private final ModelElements pModel;
 	private final LaunchElements pLaunch;
+	private final FindElements pFind;
 	private final ClickElements pClick;
+	private final SetElements pSet;
+	private final AffectationElements pAffectation;
+	private final VariableElements pVariable;
+	private final VarRefElements pVarRef;
 	private final ComposantElements pComposant;
 	private final AttributElements pAttribut;
 	private final ContentElements pContent;
@@ -254,7 +572,12 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
 		this.pLaunch = new LaunchElements();
+		this.pFind = new FindElements();
 		this.pClick = new ClickElements();
+		this.pSet = new SetElements();
+		this.pAffectation = new AffectationElements();
+		this.pVariable = new VariableElements();
+		this.pVarRef = new VarRefElements();
 		this.pComposant = new ComposantElements();
 		this.pAttribut = new AttributElements();
 		this.pContent = new ContentElements();
@@ -291,7 +614,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 
 	
 	//Model:
-	//	tisi+=Launch tisi+=Click?;
+	//	tisi+=Launch tisi+=Affectation* tisi+=Launch? tisi+=Set* tisi+=Click* tisi+=Find*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -313,8 +636,18 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		return getLaunchAccess().getRule();
 	}
 	
+	//Find:
+	//	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+	public FindElements getFindAccess() {
+		return pFind;
+	}
+	
+	public ParserRule getFindRule() {
+		return getFindAccess().getRule();
+	}
+	
 	//Click:
-	//	'CLICK' c=Composant 'WHERE' a=Attribut 'CONTAINS' STRING;
+	//	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
 	public ClickElements getClickAccess() {
 		return pClick;
 	}
@@ -323,8 +656,48 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		return getClickAccess().getRule();
 	}
 	
+	//Set:
+	//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+	public SetElements getSetAccess() {
+		return pSet;
+	}
+	
+	public ParserRule getSetRule() {
+		return getSetAccess().getRule();
+	}
+	
+	//Affectation:
+	//	Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING);
+	public AffectationElements getAffectationAccess() {
+		return pAffectation;
+	}
+	
+	public ParserRule getAffectationRule() {
+		return getAffectationAccess().getRule();
+	}
+	
+	//Variable:
+	//	name=ID;
+	public VariableElements getVariableAccess() {
+		return pVariable;
+	}
+	
+	public ParserRule getVariableRule() {
+		return getVariableAccess().getRule();
+	}
+	
+	//VarRef:
+	//	var=[Variable];
+	public VarRefElements getVarRefAccess() {
+		return pVarRef;
+	}
+	
+	public ParserRule getVarRefRule() {
+		return getVarRefAccess().getRule();
+	}
+	
 	//Composant:
-	//	name=STRING;
+	//	name=ID;
 	public ComposantElements getComposantAccess() {
 		return pComposant;
 	}

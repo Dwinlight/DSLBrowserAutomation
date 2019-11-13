@@ -87,10 +87,46 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case BrowserAutomationPackage.FIND:
+      {
+        Find find = (Find)theEObject;
+        T result = caseFind(find);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case BrowserAutomationPackage.CLICK:
       {
         Click click = (Click)theEObject;
         T result = caseClick(click);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.SET:
+      {
+        Set set = (Set)theEObject;
+        T result = caseSet(set);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.AFFECTATION:
+      {
+        Affectation affectation = (Affectation)theEObject;
+        T result = caseAffectation(affectation);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.VARIABLE:
+      {
+        Variable variable = (Variable)theEObject;
+        T result = caseVariable(variable);
+        if (result == null) result = caseAffectation(variable);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case BrowserAutomationPackage.VAR_REF:
+      {
+        VarRef varRef = (VarRef)theEObject;
+        T result = caseVarRef(varRef);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -173,6 +209,22 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Find</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Find</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFind(Find object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Click</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -184,6 +236,70 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseClick(Click object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Set</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Set</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSet(Set object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Affectation</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Affectation</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAffectation(Affectation object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Variable</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Variable</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVariable(Variable object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Var Ref</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Var Ref</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVarRef(VarRef object)
   {
     return null;
   }

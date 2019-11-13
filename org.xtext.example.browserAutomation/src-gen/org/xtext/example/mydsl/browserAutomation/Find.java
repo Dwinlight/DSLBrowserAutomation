@@ -7,23 +7,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Click</b></em>'.
+ * A representation of the model object '<em><b>Find</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.Click#getC <em>C</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.Click#getA <em>A</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.Click#getV <em>V</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Find#getC <em>C</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Find#getA <em>A</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Find#getV <em>V</em>}</li>
  * </ul>
  *
- * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getClick()
+ * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getFind()
  * @model
  * @generated
  */
-public interface Click extends EObject
+public interface Find extends EObject
 {
   /**
    * Returns the value of the '<em><b>C</b></em>' containment reference.
@@ -31,14 +31,14 @@ public interface Click extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>C</em>' containment reference.
    * @see #setC(Composant)
-   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getClick_C()
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getFind_C()
    * @model containment="true"
    * @generated
    */
   Composant getC();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Click#getC <em>C</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Find#getC <em>C</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>C</em>' containment reference.
@@ -53,14 +53,14 @@ public interface Click extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>A</em>' containment reference.
    * @see #setA(Attribut)
-   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getClick_A()
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getFind_A()
    * @model containment="true"
    * @generated
    */
   Attribut getA();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Click#getA <em>A</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Find#getA <em>A</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>A</em>' containment reference.
@@ -75,14 +75,14 @@ public interface Click extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>V</em>' containment reference.
    * @see #setV(VarRef)
-   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getClick_V()
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getFind_V()
    * @model containment="true"
    * @generated
    */
   VarRef getV();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Click#getV <em>V</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Find#getV <em>V</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>V</em>' containment reference.
@@ -91,4 +91,4 @@ public interface Click extends EObject
    */
   void setV(VarRef value);
 
-} // Click
+} // Find

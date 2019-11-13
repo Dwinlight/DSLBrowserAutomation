@@ -67,7 +67,12 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
     {
       case BrowserAutomationPackage.MODEL: return createModel();
       case BrowserAutomationPackage.LAUNCH: return createLaunch();
+      case BrowserAutomationPackage.FIND: return createFind();
       case BrowserAutomationPackage.CLICK: return createClick();
+      case BrowserAutomationPackage.SET: return createSet();
+      case BrowserAutomationPackage.AFFECTATION: return createAffectation();
+      case BrowserAutomationPackage.VARIABLE: return createVariable();
+      case BrowserAutomationPackage.VAR_REF: return createVarRef();
       case BrowserAutomationPackage.COMPOSANT: return createComposant();
       case BrowserAutomationPackage.ATTRIBUT: return createAttribut();
       case BrowserAutomationPackage.CONTENT: return createContent();
@@ -109,10 +114,70 @@ public class BrowserAutomationFactoryImpl extends EFactoryImpl implements Browse
    * @generated
    */
   @Override
+  public Find createFind()
+  {
+    FindImpl find = new FindImpl();
+    return find;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Click createClick()
   {
     ClickImpl click = new ClickImpl();
     return click;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Set createSet()
+  {
+    SetImpl set = new SetImpl();
+    return set;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Affectation createAffectation()
+  {
+    AffectationImpl affectation = new AffectationImpl();
+    return affectation;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Variable createVariable()
+  {
+    VariableImpl variable = new VariableImpl();
+    return variable;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public VarRef createVarRef()
+  {
+    VarRefImpl varRef = new VarRefImpl();
+    return varRef;
   }
 
   /**

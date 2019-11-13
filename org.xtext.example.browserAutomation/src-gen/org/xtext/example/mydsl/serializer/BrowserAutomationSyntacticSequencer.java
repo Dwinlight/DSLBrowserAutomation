@@ -10,6 +10,9 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
+import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 import org.xtext.example.mydsl.services.BrowserAutomationGrammarAccess;
@@ -18,10 +21,18 @@ import org.xtext.example.mydsl.services.BrowserAutomationGrammarAccess;
 public class BrowserAutomationSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected BrowserAutomationGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_Affectation_CONTAINSKeyword_2_0_4_0_or_EQUALSKeyword_2_0_4_1;
+	protected AbstractElementAlias match_Click_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1;
+	protected AbstractElementAlias match_Find_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1;
+	protected AbstractElementAlias match_Set_CONTAINSKeyword_5_0_or_EQUALSKeyword_5_1;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (BrowserAutomationGrammarAccess) access;
+		match_Affectation_CONTAINSKeyword_2_0_4_0_or_EQUALSKeyword_2_0_4_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getAffectationAccess().getCONTAINSKeyword_2_0_4_0()), new TokenAlias(false, false, grammarAccess.getAffectationAccess().getEQUALSKeyword_2_0_4_1()));
+		match_Click_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getClickAccess().getCONTAINSKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getClickAccess().getEQUALSKeyword_4_1()));
+		match_Find_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getFindAccess().getCONTAINSKeyword_4_0()), new TokenAlias(false, false, grammarAccess.getFindAccess().getEQUALSKeyword_4_1()));
+		match_Set_CONTAINSKeyword_5_0_or_EQUALSKeyword_5_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getSetAccess().getCONTAINSKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getSetAccess().getEQUALSKeyword_5_1()));
 	}
 	
 	@Override
@@ -49,8 +60,64 @@ public class BrowserAutomationSyntacticSequencer extends AbstractSyntacticSequen
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			acceptNodes(getLastNavigableState(), syntaxNodes);
+			if (match_Affectation_CONTAINSKeyword_2_0_4_0_or_EQUALSKeyword_2_0_4_1.equals(syntax))
+				emit_Affectation_CONTAINSKeyword_2_0_4_0_or_EQUALSKeyword_2_0_4_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Click_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1.equals(syntax))
+				emit_Click_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Find_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1.equals(syntax))
+				emit_Find_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Set_CONTAINSKeyword_5_0_or_EQUALSKeyword_5_1.equals(syntax))
+				emit_Set_CONTAINSKeyword_5_0_or_EQUALSKeyword_5_1(semanticObject, getLastNavigableState(), syntaxNodes);
+			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     'CONTAINS' | 'EQUALS'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     a2=Attribut (ambiguity) STRING (rule end)
+	 *     a2=Attribut (ambiguity) v=VarRef
+	 */
+	protected void emit_Affectation_CONTAINSKeyword_2_0_4_0_or_EQUALSKeyword_2_0_4_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'CONTAINS' | 'EQUALS'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     a=Attribut (ambiguity) STRING (rule end)
+	 *     a=Attribut (ambiguity) v=VarRef
+	 */
+	protected void emit_Click_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'CONTAINS' | 'EQUALS'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     a=Attribut (ambiguity) STRING (rule end)
+	 *     a=Attribut (ambiguity) v=VarRef
+	 */
+	protected void emit_Find_CONTAINSKeyword_4_0_or_EQUALSKeyword_4_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'CONTAINS' | 'EQUALS'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     a1=Attribut (ambiguity) STRING (rule end)
+	 *     a1=Attribut (ambiguity) v=VarRef
+	 */
+	protected void emit_Set_CONTAINSKeyword_5_0_or_EQUALSKeyword_5_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 }

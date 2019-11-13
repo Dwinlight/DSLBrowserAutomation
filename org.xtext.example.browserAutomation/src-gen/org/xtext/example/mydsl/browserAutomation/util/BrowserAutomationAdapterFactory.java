@@ -86,9 +86,34 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
         return createLaunchAdapter();
       }
       @Override
+      public Adapter caseFind(Find object)
+      {
+        return createFindAdapter();
+      }
+      @Override
       public Adapter caseClick(Click object)
       {
         return createClickAdapter();
+      }
+      @Override
+      public Adapter caseSet(Set object)
+      {
+        return createSetAdapter();
+      }
+      @Override
+      public Adapter caseAffectation(Affectation object)
+      {
+        return createAffectationAdapter();
+      }
+      @Override
+      public Adapter caseVariable(Variable object)
+      {
+        return createVariableAdapter();
+      }
+      @Override
+      public Adapter caseVarRef(VarRef object)
+      {
+        return createVarRefAdapter();
       }
       @Override
       public Adapter caseComposant(Composant object)
@@ -173,6 +198,21 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.browserAutomation.Find <em>Find</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.browserAutomation.Find
+   * @generated
+   */
+  public Adapter createFindAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.browserAutomation.Click <em>Click</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -183,6 +223,66 @@ public class BrowserAutomationAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createClickAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.browserAutomation.Set <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.browserAutomation.Set
+   * @generated
+   */
+  public Adapter createSetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.browserAutomation.Affectation <em>Affectation</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.browserAutomation.Affectation
+   * @generated
+   */
+  public Adapter createAffectationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.browserAutomation.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.browserAutomation.Variable
+   * @generated
+   */
+  public Adapter createVariableAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.browserAutomation.VarRef <em>Var Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.browserAutomation.VarRef
+   * @generated
+   */
+  public Adapter createVarRefAdapter()
   {
     return null;
   }

@@ -123,6 +123,52 @@ public interface BrowserAutomationPackage extends EPackage
   int LAUNCH_FEATURE_COUNT = 2;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl <em>Find</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.FindImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getFind()
+   * @generated
+   */
+  int FIND = 2;
+
+  /**
+   * The feature id for the '<em><b>C</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND__C = 0;
+
+  /**
+   * The feature id for the '<em><b>A</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND__A = 1;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND__V = 2;
+
+  /**
+   * The number of structural features of the '<em>Find</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND_FEATURE_COUNT = 3;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl <em>Click</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -130,7 +176,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getClick()
    * @generated
    */
-  int CLICK = 2;
+  int CLICK = 3;
 
   /**
    * The feature id for the '<em><b>C</b></em>' containment reference.
@@ -151,13 +197,170 @@ public interface BrowserAutomationPackage extends EPackage
   int CLICK__A = 1;
 
   /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLICK__V = 2;
+
+  /**
    * The number of structural features of the '<em>Click</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLICK_FEATURE_COUNT = 2;
+  int CLICK_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl <em>Set</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.SetImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getSet()
+   * @generated
+   */
+  int SET = 4;
+
+  /**
+   * The feature id for the '<em><b>A</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET__A = 0;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET__V = 1;
+
+  /**
+   * The feature id for the '<em><b>A1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET__A1 = 2;
+
+  /**
+   * The number of structural features of the '<em>Set</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl <em>Affectation</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getAffectation()
+   * @generated
+   */
+  int AFFECTATION = 5;
+
+  /**
+   * The number of structural features of the '<em>Affectation</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AFFECTATION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.VariableImpl <em>Variable</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.VariableImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getVariable()
+   * @generated
+   */
+  int VARIABLE = 6;
+
+  /**
+   * The feature id for the '<em><b>A</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__A = AFFECTATION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>A2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__A2 = AFFECTATION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>V</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__V = AFFECTATION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE__NAME = AFFECTATION_FEATURE_COUNT + 3;
+
+  /**
+   * The number of structural features of the '<em>Variable</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VARIABLE_FEATURE_COUNT = AFFECTATION_FEATURE_COUNT + 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.VarRefImpl <em>Var Ref</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.browserAutomation.impl.VarRefImpl
+   * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getVarRef()
+   * @generated
+   */
+  int VAR_REF = 7;
+
+  /**
+   * The feature id for the '<em><b>Var</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_REF__VAR = 0;
+
+  /**
+   * The number of structural features of the '<em>Var Ref</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VAR_REF_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ComposantImpl <em>Composant</em>}' class.
@@ -167,7 +370,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getComposant()
    * @generated
    */
-  int COMPOSANT = 3;
+  int COMPOSANT = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -195,7 +398,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getAttribut()
    * @generated
    */
-  int ATTRIBUT = 4;
+  int ATTRIBUT = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -223,7 +426,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getContent()
    * @generated
    */
-  int CONTENT = 5;
+  int CONTENT = 10;
 
   /**
    * The feature id for the '<em><b>Contenu</b></em>' attribute.
@@ -251,7 +454,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getBrowser()
    * @generated
    */
-  int BROWSER = 6;
+  int BROWSER = 11;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -279,7 +482,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getUrl()
    * @generated
    */
-  int URL = 7;
+  int URL = 12;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -307,7 +510,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getGreeting()
    * @generated
    */
-  int GREETING = 8;
+  int GREETING = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -382,6 +585,49 @@ public interface BrowserAutomationPackage extends EPackage
   EReference getLaunch_B();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Find <em>Find</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Find</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Find
+   * @generated
+   */
+  EClass getFind();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Find#getC <em>C</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>C</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Find#getC()
+   * @see #getFind()
+   * @generated
+   */
+  EReference getFind_C();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Find#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Find#getA()
+   * @see #getFind()
+   * @generated
+   */
+  EReference getFind_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Find#getV <em>V</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>V</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Find#getV()
+   * @see #getFind()
+   * @generated
+   */
+  EReference getFind_V();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Click <em>Click</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -412,6 +658,145 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    */
   EReference getClick_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Click#getV <em>V</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>V</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Click#getV()
+   * @see #getClick()
+   * @generated
+   */
+  EReference getClick_V();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Set <em>Set</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Set</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Set
+   * @generated
+   */
+  EClass getSet();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Set#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Set#getA()
+   * @see #getSet()
+   * @generated
+   */
+  EReference getSet_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Set#getV <em>V</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>V</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Set#getV()
+   * @see #getSet()
+   * @generated
+   */
+  EReference getSet_V();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Set#getA1 <em>A1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A1</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Set#getA1()
+   * @see #getSet()
+   * @generated
+   */
+  EReference getSet_A1();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Affectation <em>Affectation</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Affectation</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Affectation
+   * @generated
+   */
+  EClass getAffectation();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Variable <em>Variable</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Variable</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Variable
+   * @generated
+   */
+  EClass getVariable();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Variable#getA <em>A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Variable#getA()
+   * @see #getVariable()
+   * @generated
+   */
+  EReference getVariable_A();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Variable#getA2 <em>A2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>A2</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Variable#getA2()
+   * @see #getVariable()
+   * @generated
+   */
+  EReference getVariable_A2();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Variable#getV <em>V</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>V</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Variable#getV()
+   * @see #getVariable()
+   * @generated
+   */
+  EReference getVariable_V();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Variable#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Variable#getName()
+   * @see #getVariable()
+   * @generated
+   */
+  EAttribute getVariable_Name();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.VarRef <em>Var Ref</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Var Ref</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.VarRef
+   * @generated
+   */
+  EClass getVarRef();
+
+  /**
+   * Returns the meta object for the reference '{@link org.xtext.example.mydsl.browserAutomation.VarRef#getVar <em>Var</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Var</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.VarRef#getVar()
+   * @see #getVarRef()
+   * @generated
+   */
+  EReference getVarRef_Var();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Composant <em>Composant</em>}'.
@@ -607,6 +992,40 @@ public interface BrowserAutomationPackage extends EPackage
     EReference LAUNCH__B = eINSTANCE.getLaunch_B();
 
     /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl <em>Find</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.FindImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getFind()
+     * @generated
+     */
+    EClass FIND = eINSTANCE.getFind();
+
+    /**
+     * The meta object literal for the '<em><b>C</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIND__C = eINSTANCE.getFind_C();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIND__A = eINSTANCE.getFind_A();
+
+    /**
+     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FIND__V = eINSTANCE.getFind_V();
+
+    /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl <em>Click</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -631,6 +1050,118 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EReference CLICK__A = eINSTANCE.getClick_A();
+
+    /**
+     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference CLICK__V = eINSTANCE.getClick_V();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl <em>Set</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.SetImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getSet()
+     * @generated
+     */
+    EClass SET = eINSTANCE.getSet();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SET__A = eINSTANCE.getSet_A();
+
+    /**
+     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SET__V = eINSTANCE.getSet_V();
+
+    /**
+     * The meta object literal for the '<em><b>A1</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SET__A1 = eINSTANCE.getSet_A1();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl <em>Affectation</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getAffectation()
+     * @generated
+     */
+    EClass AFFECTATION = eINSTANCE.getAffectation();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.VariableImpl <em>Variable</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.VariableImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getVariable()
+     * @generated
+     */
+    EClass VARIABLE = eINSTANCE.getVariable();
+
+    /**
+     * The meta object literal for the '<em><b>A</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE__A = eINSTANCE.getVariable_A();
+
+    /**
+     * The meta object literal for the '<em><b>A2</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE__A2 = eINSTANCE.getVariable_A2();
+
+    /**
+     * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VARIABLE__V = eINSTANCE.getVariable_V();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VARIABLE__NAME = eINSTANCE.getVariable_Name();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.VarRefImpl <em>Var Ref</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.example.mydsl.browserAutomation.impl.VarRefImpl
+     * @see org.xtext.example.mydsl.browserAutomation.impl.BrowserAutomationPackageImpl#getVarRef()
+     * @generated
+     */
+    EClass VAR_REF = eINSTANCE.getVarRef();
+
+    /**
+     * The meta object literal for the '<em><b>Var</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VAR_REF__VAR = eINSTANCE.getVarRef_Var();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ComposantImpl <em>Composant</em>}' class.

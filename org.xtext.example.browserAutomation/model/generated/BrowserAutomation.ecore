@@ -10,11 +10,38 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="u" eType="#//Url" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="b" eType="#//Browser" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Find">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="c" eType="#//Composant"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//Attribut"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//VarRef" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Click">
     <eStructuralFeatures xsi:type="ecore:EReference" name="c" eType="#//Composant"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//Attribut"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//VarRef" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Set">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//Attribut"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//VarRef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a1" eType="#//Attribut"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Affectation"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Affectation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//Attribut"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="a2" eType="#//Attribut"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//VarRef" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VarRef">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="var" eType="#//Variable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Composant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
