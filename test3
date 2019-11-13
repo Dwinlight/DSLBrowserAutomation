@@ -1,0 +1,5 @@
+###Test3###
+GOTO "http://www.imt-atlantique.fr/fr" ON firefox
+CLICK link WHERE  content CONTAINS "Toutes les actualités" 
+CLICK image WHERE  alt EQUALS "Accueil"
+FIND link WHERE content CONTAINS "Accueil"

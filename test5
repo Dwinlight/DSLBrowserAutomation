@@ -1,0 +1,8 @@
+###Test5###
+GOTO "http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation" ON firefox
+SET  checked false WHERE  type EQUALS "checkbox" 
+SET  checked true WHERE  Content CONTAINS "Temps plein" //GET retourne le 1er respectant la condition
+SET  checked true  WHERE Content CONTAINS "A domicile"
+SET checked true WHERE  Content CONTAINS "Anglais"
+CLICK button WHERE value CONTAINS "Appliquer les critères"
+FIND Body CONTENT "No found course matching your criteria."

@@ -1,0 +1,6 @@
+###Test4###
+GOTO "http://www.imt-atlantique.fr/fr/rechercher" ON firefox
+SET  value "Donald Trump" WHERE  id EQUALS "edit-search-api-fulltext"
+CLICK button WHERE value CONTAINS "Appliquer les filtres"
+FIND  content CONTAINS "Aucun résultat ne correspond à votre recherche"
+
