@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getA <em>A</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getV <em>V</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getA1 <em>A1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getS1 <em>S1</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet()
@@ -90,5 +91,27 @@ public interface Set extends EObject
    * @generated
    */
   void setA1(Attribut value);
+
+  /**
+   * Returns the value of the '<em><b>S1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>S1</em>' attribute.
+   * @see #setS1(String)
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet_S1()
+   * @model
+   * @generated
+   */
+  String getS1();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Set#getS1 <em>S1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>S1</em>' attribute.
+   * @see #getS1()
+   * @generated
+   */
+  void setS1(String value);
 
 } // Set

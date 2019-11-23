@@ -16,7 +16,12 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi <em>Tisi</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi1 <em>Tisi1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi2 <em>Tisi2</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi3 <em>Tisi3</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi4 <em>Tisi4</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi5 <em>Tisi5</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi6 <em>Tisi6</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel()
@@ -26,15 +31,75 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Tisi</b></em>' containment reference list.
-   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+   * Returns the value of the '<em><b>Tisi1</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.browserAutomation.Launch}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Tisi</em>' containment reference list.
-   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel_Tisi()
+   * @return the value of the '<em>Tisi1</em>' containment reference list.
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel_Tisi1()
    * @model containment="true"
    * @generated
    */
-  EList<EObject> getTisi();
+  EList<Launch> getTisi1();
+
+  /**
+   * Returns the value of the '<em><b>Tisi2</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.browserAutomation.Affectation}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tisi2</em>' containment reference list.
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel_Tisi2()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Affectation> getTisi2();
+
+  /**
+   * Returns the value of the '<em><b>Tisi3</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.browserAutomation.Launch}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tisi3</em>' containment reference list.
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel_Tisi3()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Launch> getTisi3();
+
+  /**
+   * Returns the value of the '<em><b>Tisi4</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.browserAutomation.Set}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tisi4</em>' containment reference list.
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel_Tisi4()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Set> getTisi4();
+
+  /**
+   * Returns the value of the '<em><b>Tisi5</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.browserAutomation.Click}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tisi5</em>' containment reference list.
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel_Tisi5()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Click> getTisi5();
+
+  /**
+   * Returns the value of the '<em><b>Tisi6</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.example.mydsl.browserAutomation.Find}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Tisi6</em>' containment reference list.
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getModel_Tisi6()
+   * @model containment="true"
+   * @generated
+   */
+  EList<Find> getTisi6();
 
 } // Model

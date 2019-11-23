@@ -26,61 +26,61 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	public class ModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cTisiAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cTisiLaunchParserRuleCall_0_0 = (RuleCall)cTisiAssignment_0.eContents().get(0);
-		private final Assignment cTisiAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cTisiAffectationParserRuleCall_1_0 = (RuleCall)cTisiAssignment_1.eContents().get(0);
-		private final Assignment cTisiAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cTisiLaunchParserRuleCall_2_0 = (RuleCall)cTisiAssignment_2.eContents().get(0);
-		private final Assignment cTisiAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cTisiSetParserRuleCall_3_0 = (RuleCall)cTisiAssignment_3.eContents().get(0);
-		private final Assignment cTisiAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTisiClickParserRuleCall_4_0 = (RuleCall)cTisiAssignment_4.eContents().get(0);
-		private final Assignment cTisiAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTisiFindParserRuleCall_5_0 = (RuleCall)cTisiAssignment_5.eContents().get(0);
+		private final Assignment cTisi1Assignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cTisi1LaunchParserRuleCall_0_0 = (RuleCall)cTisi1Assignment_0.eContents().get(0);
+		private final Assignment cTisi2Assignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTisi2AffectationParserRuleCall_1_0 = (RuleCall)cTisi2Assignment_1.eContents().get(0);
+		private final Assignment cTisi3Assignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTisi3LaunchParserRuleCall_2_0 = (RuleCall)cTisi3Assignment_2.eContents().get(0);
+		private final Assignment cTisi4Assignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTisi4SetParserRuleCall_3_0 = (RuleCall)cTisi4Assignment_3.eContents().get(0);
+		private final Assignment cTisi5Assignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTisi5ClickParserRuleCall_4_0 = (RuleCall)cTisi5Assignment_4.eContents().get(0);
+		private final Assignment cTisi6Assignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTisi6FindParserRuleCall_5_0 = (RuleCall)cTisi6Assignment_5.eContents().get(0);
 		
 		//Model:
-		//	tisi+=Launch tisi+=Affectation* tisi+=Launch? tisi+=Set* tisi+=Click* tisi+=Find*;
+		//	tisi1+=Launch tisi2+=Affectation* tisi3+=Launch? tisi4+=Set* tisi5+=Click* tisi6+=Find*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//tisi+=Launch tisi+=Affectation* tisi+=Launch? tisi+=Set* tisi+=Click* tisi+=Find*
+		//tisi1+=Launch tisi2+=Affectation* tisi3+=Launch? tisi4+=Set* tisi5+=Click* tisi6+=Find*
 		public Group getGroup() { return cGroup; }
 		
-		//tisi+=Launch
-		public Assignment getTisiAssignment_0() { return cTisiAssignment_0; }
+		//tisi1+=Launch
+		public Assignment getTisi1Assignment_0() { return cTisi1Assignment_0; }
 		
 		//Launch
-		public RuleCall getTisiLaunchParserRuleCall_0_0() { return cTisiLaunchParserRuleCall_0_0; }
+		public RuleCall getTisi1LaunchParserRuleCall_0_0() { return cTisi1LaunchParserRuleCall_0_0; }
 		
-		//tisi+=Affectation*
-		public Assignment getTisiAssignment_1() { return cTisiAssignment_1; }
+		//tisi2+=Affectation*
+		public Assignment getTisi2Assignment_1() { return cTisi2Assignment_1; }
 		
 		//Affectation
-		public RuleCall getTisiAffectationParserRuleCall_1_0() { return cTisiAffectationParserRuleCall_1_0; }
+		public RuleCall getTisi2AffectationParserRuleCall_1_0() { return cTisi2AffectationParserRuleCall_1_0; }
 		
-		//tisi+=Launch?
-		public Assignment getTisiAssignment_2() { return cTisiAssignment_2; }
+		//tisi3+=Launch?
+		public Assignment getTisi3Assignment_2() { return cTisi3Assignment_2; }
 		
 		//Launch
-		public RuleCall getTisiLaunchParserRuleCall_2_0() { return cTisiLaunchParserRuleCall_2_0; }
+		public RuleCall getTisi3LaunchParserRuleCall_2_0() { return cTisi3LaunchParserRuleCall_2_0; }
 		
-		//tisi+=Set*
-		public Assignment getTisiAssignment_3() { return cTisiAssignment_3; }
+		//tisi4+=Set*
+		public Assignment getTisi4Assignment_3() { return cTisi4Assignment_3; }
 		
 		//Set
-		public RuleCall getTisiSetParserRuleCall_3_0() { return cTisiSetParserRuleCall_3_0; }
+		public RuleCall getTisi4SetParserRuleCall_3_0() { return cTisi4SetParserRuleCall_3_0; }
 		
-		//tisi+=Click*
-		public Assignment getTisiAssignment_4() { return cTisiAssignment_4; }
+		//tisi5+=Click*
+		public Assignment getTisi5Assignment_4() { return cTisi5Assignment_4; }
 		
 		//Click
-		public RuleCall getTisiClickParserRuleCall_4_0() { return cTisiClickParserRuleCall_4_0; }
+		public RuleCall getTisi5ClickParserRuleCall_4_0() { return cTisi5ClickParserRuleCall_4_0; }
 		
-		//tisi+=Find*
-		public Assignment getTisiAssignment_5() { return cTisiAssignment_5; }
+		//tisi6+=Find*
+		public Assignment getTisi6Assignment_5() { return cTisi6Assignment_5; }
 		
 		//Find
-		public RuleCall getTisiFindParserRuleCall_5_0() { return cTisiFindParserRuleCall_5_0; }
+		public RuleCall getTisi6FindParserRuleCall_5_0() { return cTisi6FindParserRuleCall_5_0; }
 	}
 	public class LaunchElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Launch");
@@ -133,15 +133,16 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Keyword cCONTAINSKeyword_4_0 = (Keyword)cAlternatives_4.eContents().get(0);
 		private final Keyword cEQUALSKeyword_4_1 = (Keyword)cAlternatives_4.eContents().get(1);
 		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
-		private final RuleCall cSTRINGTerminalRuleCall_5_0 = (RuleCall)cAlternatives_5.eContents().get(0);
+		private final Assignment cSAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final RuleCall cSSTRINGTerminalRuleCall_5_0_0 = (RuleCall)cSAssignment_5_0.eContents().get(0);
 		private final Assignment cVAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
 		private final RuleCall cVVarRefParserRuleCall_5_1_0 = (RuleCall)cVAssignment_5_1.eContents().get(0);
 		
 		//Find:
-		//	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+		//	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (s=STRING | v=VarRef);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
+		//'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (s=STRING | v=VarRef)
 		public Group getGroup() { return cGroup; }
 		
 		//'FIND'
@@ -171,11 +172,14 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//'EQUALS'
 		public Keyword getEQUALSKeyword_4_1() { return cEQUALSKeyword_4_1; }
 		
-		//(STRING | v=VarRef)
+		//(s=STRING | v=VarRef)
 		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 		
+		//s=STRING
+		public Assignment getSAssignment_5_0() { return cSAssignment_5_0; }
+		
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_5_0() { return cSTRINGTerminalRuleCall_5_0; }
+		public RuleCall getSSTRINGTerminalRuleCall_5_0_0() { return cSSTRINGTerminalRuleCall_5_0_0; }
 		
 		//v=VarRef
 		public Assignment getVAssignment_5_1() { return cVAssignment_5_1; }
@@ -196,15 +200,16 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Keyword cCONTAINSKeyword_4_0 = (Keyword)cAlternatives_4.eContents().get(0);
 		private final Keyword cEQUALSKeyword_4_1 = (Keyword)cAlternatives_4.eContents().get(1);
 		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
-		private final RuleCall cSTRINGTerminalRuleCall_5_0 = (RuleCall)cAlternatives_5.eContents().get(0);
+		private final Assignment cSAssignment_5_0 = (Assignment)cAlternatives_5.eContents().get(0);
+		private final RuleCall cSSTRINGTerminalRuleCall_5_0_0 = (RuleCall)cSAssignment_5_0.eContents().get(0);
 		private final Assignment cVAssignment_5_1 = (Assignment)cAlternatives_5.eContents().get(1);
 		private final RuleCall cVVarRefParserRuleCall_5_1_0 = (RuleCall)cVAssignment_5_1.eContents().get(0);
 		
 		//Click:
-		//	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+		//	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (s=STRING | v=VarRef);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
+		//'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (s=STRING | v=VarRef)
 		public Group getGroup() { return cGroup; }
 		
 		//'CLICK'
@@ -234,11 +239,14 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//'EQUALS'
 		public Keyword getEQUALSKeyword_4_1() { return cEQUALSKeyword_4_1; }
 		
-		//(STRING | v=VarRef)
+		//(s=STRING | v=VarRef)
 		public Alternatives getAlternatives_5() { return cAlternatives_5; }
 		
+		//s=STRING
+		public Assignment getSAssignment_5_0() { return cSAssignment_5_0; }
+		
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_5_0() { return cSTRINGTerminalRuleCall_5_0; }
+		public RuleCall getSSTRINGTerminalRuleCall_5_0_0() { return cSSTRINGTerminalRuleCall_5_0_0; }
 		
 		//v=VarRef
 		public Assignment getVAssignment_5_1() { return cVAssignment_5_1; }
@@ -263,15 +271,16 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Keyword cCONTAINSKeyword_5_0 = (Keyword)cAlternatives_5.eContents().get(0);
 		private final Keyword cEQUALSKeyword_5_1 = (Keyword)cAlternatives_5.eContents().get(1);
 		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
-		private final RuleCall cSTRINGTerminalRuleCall_6_0 = (RuleCall)cAlternatives_6.eContents().get(0);
+		private final Assignment cS1Assignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
+		private final RuleCall cS1STRINGTerminalRuleCall_6_0_0 = (RuleCall)cS1Assignment_6_0.eContents().get(0);
 		private final Assignment cVAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
 		private final RuleCall cVVarRefParserRuleCall_6_1_0 = (RuleCall)cVAssignment_6_1.eContents().get(0);
 		
 		//Set:
-		//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+		//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
+		//'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef)
 		public Group getGroup() { return cGroup; }
 		
 		//'SET'
@@ -313,11 +322,14 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//'EQUALS'
 		public Keyword getEQUALSKeyword_5_1() { return cEQUALSKeyword_5_1; }
 		
-		//(STRING | v=VarRef)
+		//(s1=STRING | v=VarRef)
 		public Alternatives getAlternatives_6() { return cAlternatives_6; }
 		
+		//s1=STRING
+		public Assignment getS1Assignment_6_0() { return cS1Assignment_6_0; }
+		
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_6_0() { return cSTRINGTerminalRuleCall_6_0; }
+		public RuleCall getS1STRINGTerminalRuleCall_6_0_0() { return cS1STRINGTerminalRuleCall_6_0_0; }
 		
 		//v=VarRef
 		public Assignment getVAssignment_6_1() { return cVAssignment_6_1; }
@@ -614,7 +626,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 
 	
 	//Model:
-	//	tisi+=Launch tisi+=Affectation* tisi+=Launch? tisi+=Set* tisi+=Click* tisi+=Find*;
+	//	tisi1+=Launch tisi2+=Affectation* tisi3+=Launch? tisi4+=Set* tisi5+=Click* tisi6+=Find*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -637,7 +649,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 	
 	//Find:
-	//	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+	//	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (s=STRING | v=VarRef);
 	public FindElements getFindAccess() {
 		return pFind;
 	}
@@ -647,7 +659,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 	
 	//Click:
-	//	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+	//	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS' | 'EQUALS') (s=STRING | v=VarRef);
 	public ClickElements getClickAccess() {
 		return pClick;
 	}
@@ -657,7 +669,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 	
 	//Set:
-	//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef);
+	//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef);
 	public SetElements getSetAccess() {
 		return pSet;
 	}

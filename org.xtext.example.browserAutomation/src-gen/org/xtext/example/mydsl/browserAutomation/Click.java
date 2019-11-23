@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Click#getC <em>C</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Click#getA <em>A</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Click#getS <em>S</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Click#getV <em>V</em>}</li>
  * </ul>
  *
@@ -68,6 +69,28 @@ public interface Click extends EObject
    * @generated
    */
   void setA(Attribut value);
+
+  /**
+   * Returns the value of the '<em><b>S</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>S</em>' attribute.
+   * @see #setS(String)
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getClick_S()
+   * @model
+   * @generated
+   */
+  String getS();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Click#getS <em>S</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>S</em>' attribute.
+   * @see #getS()
+   * @generated
+   */
+  void setS(String value);
 
   /**
    * Returns the value of the '<em><b>V</b></em>' containment reference.

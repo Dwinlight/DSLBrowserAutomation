@@ -3,7 +3,7 @@ grammar org.xtext.example.mydsl.BrowserAutomation with org.eclipse.xtext.common.
 generate browserAutomation "http://www.xtext.org/example/mydsl/BrowserAutomation"
 
 Model:
-	(tisi+=Launch) (tisi+=Affectation)* (tisi+=Launch)? (tisi+=Set)* (tisi+=Click)* (tisi+=Find)*
+	(tisi1+=Launch) (tisi2+=Affectation)* (tisi3+=Launch)? (tisi4+=Set)* (tisi5+=Click)* (tisi6+=Find)*
 	;
 	
 	
@@ -14,14 +14,14 @@ Launch:
 ;
 
 Find:
-	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS'|'EQUALS') (STRING|v= VarRef)
+	'FIND' c=Composant 'WHERE' a=Attribut ('CONTAINS'|'EQUALS') (s=STRING|v= VarRef)
 ;
 
 Click:
-	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS'|'EQUALS') (STRING|v= VarRef)
+	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS'|'EQUALS') (s=STRING|v= VarRef)
 ;
 Set:
-	'SET' a=Attribut (STRING|v= VarRef) 'WHERE' a1=Attribut ('CONTAINS'|'EQUALS') (STRING|v= VarRef)
+	'SET' a=Attribut (STRING|v= VarRef) 'WHERE' a1=Attribut ('CONTAINS'|'EQUALS') (s1=STRING|v= VarRef)
 ;
 Affectation:
 	

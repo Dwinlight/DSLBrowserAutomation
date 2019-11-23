@@ -147,7 +147,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 *     Click returns Click
 	 *
 	 * Constraint:
-	 *     (c=Composant a=Attribut v=VarRef?)
+	 *     (c=Composant a=Attribut (s=STRING | v=VarRef))
 	 */
 	protected void sequence_Click(ISerializationContext context, Click semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -195,7 +195,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 *     Find returns Find
 	 *
 	 * Constraint:
-	 *     (c=Composant a=Attribut v=VarRef?)
+	 *     (c=Composant a=Attribut (s=STRING | v=VarRef))
 	 */
 	protected void sequence_Find(ISerializationContext context, Find semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -247,12 +247,12 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 *
 	 * Constraint:
 	 *     (
-	 *         tisi+=Launch 
-	 *         tisi+=Affectation* 
-	 *         tisi+=Launch? 
-	 *         tisi+=Set* 
-	 *         tisi+=Click* 
-	 *         tisi+=Find*
+	 *         tisi1+=Launch 
+	 *         tisi2+=Affectation* 
+	 *         tisi3+=Launch? 
+	 *         tisi4+=Set* 
+	 *         tisi5+=Click* 
+	 *         tisi6+=Find*
 	 *     )
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
@@ -265,7 +265,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 *     Set returns Set
 	 *
 	 * Constraint:
-	 *     (a=Attribut v=VarRef? a1=Attribut v=VarRef?)
+	 *     (a=Attribut v=VarRef? a1=Attribut (s1=STRING | v=VarRef))
 	 */
 	protected void sequence_Set(ISerializationContext context, org.xtext.example.mydsl.browserAutomation.Set semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

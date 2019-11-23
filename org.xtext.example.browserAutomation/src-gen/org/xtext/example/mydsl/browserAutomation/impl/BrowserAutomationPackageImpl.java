@@ -213,9 +213,64 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
-  public EReference getModel_Tisi()
+  public EReference getModel_Tisi1()
   {
     return (EReference)modelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getModel_Tisi2()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getModel_Tisi3()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getModel_Tisi4()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getModel_Tisi5()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getModel_Tisi6()
+  {
+    return (EReference)modelEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -290,9 +345,20 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
+  public EAttribute getFind_S()
+  {
+    return (EAttribute)findEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getFind_V()
   {
-    return (EReference)findEClass.getEStructuralFeatures().get(2);
+    return (EReference)findEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -334,9 +400,20 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
    * @generated
    */
   @Override
+  public EAttribute getClick_S()
+  {
+    return (EAttribute)clickEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getClick_V()
   {
-    return (EReference)clickEClass.getEStructuralFeatures().get(2);
+    return (EReference)clickEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -381,6 +458,17 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
   public EReference getSet_A1()
   {
     return (EReference)setEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getSet_S1()
+  {
+    return (EAttribute)setEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -635,7 +723,12 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
     // Create classes and their features
     modelEClass = createEClass(MODEL);
-    createEReference(modelEClass, MODEL__TISI);
+    createEReference(modelEClass, MODEL__TISI1);
+    createEReference(modelEClass, MODEL__TISI2);
+    createEReference(modelEClass, MODEL__TISI3);
+    createEReference(modelEClass, MODEL__TISI4);
+    createEReference(modelEClass, MODEL__TISI5);
+    createEReference(modelEClass, MODEL__TISI6);
 
     launchEClass = createEClass(LAUNCH);
     createEReference(launchEClass, LAUNCH__U);
@@ -644,17 +737,20 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     findEClass = createEClass(FIND);
     createEReference(findEClass, FIND__C);
     createEReference(findEClass, FIND__A);
+    createEAttribute(findEClass, FIND__S);
     createEReference(findEClass, FIND__V);
 
     clickEClass = createEClass(CLICK);
     createEReference(clickEClass, CLICK__C);
     createEReference(clickEClass, CLICK__A);
+    createEAttribute(clickEClass, CLICK__S);
     createEReference(clickEClass, CLICK__V);
 
     setEClass = createEClass(SET);
     createEReference(setEClass, SET__A);
     createEReference(setEClass, SET__V);
     createEReference(setEClass, SET__A1);
+    createEAttribute(setEClass, SET__S1);
 
     affectationEClass = createEClass(AFFECTATION);
 
@@ -719,7 +815,12 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getModel_Tisi(), ecorePackage.getEObject(), null, "tisi", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Tisi1(), this.getLaunch(), null, "tisi1", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Tisi2(), this.getAffectation(), null, "tisi2", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Tisi3(), this.getLaunch(), null, "tisi3", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Tisi4(), this.getSet(), null, "tisi4", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Tisi5(), this.getClick(), null, "tisi5", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getModel_Tisi6(), this.getFind(), null, "tisi6", null, 0, -1, Model.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(launchEClass, Launch.class, "Launch", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getLaunch_U(), this.getUrl(), null, "u", null, 0, 1, Launch.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -728,17 +829,20 @@ public class BrowserAutomationPackageImpl extends EPackageImpl implements Browse
     initEClass(findEClass, Find.class, "Find", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getFind_C(), this.getComposant(), null, "c", null, 0, 1, Find.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFind_A(), this.getAttribut(), null, "a", null, 0, 1, Find.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFind_S(), ecorePackage.getEString(), "s", null, 0, 1, Find.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFind_V(), this.getVarRef(), null, "v", null, 0, 1, Find.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(clickEClass, Click.class, "Click", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getClick_C(), this.getComposant(), null, "c", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getClick_A(), this.getAttribut(), null, "a", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getClick_S(), ecorePackage.getEString(), "s", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getClick_V(), this.getVarRef(), null, "v", null, 0, 1, Click.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(setEClass, Set.class, "Set", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getSet_A(), this.getAttribut(), null, "a", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSet_V(), this.getVarRef(), null, "v", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getSet_A1(), this.getAttribut(), null, "a1", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSet_S1(), ecorePackage.getEString(), "s1", null, 0, 1, Set.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(affectationEClass, Affectation.class, "Affectation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

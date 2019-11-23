@@ -7,7 +7,12 @@
   <genPackages prefix="BrowserAutomation" basePackage="org.xtext.example.mydsl" disposableProviderFactory="true"
       fileExtensions="oss117" ecorePackage="BrowserAutomation.ecore#/">
     <genClasses ecoreClass="BrowserAutomation.ecore#//Model">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi1"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi2"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi3"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi4"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi5"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Model/tisi6"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Launch">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Launch/u"/>
@@ -16,17 +21,20 @@
     <genClasses ecoreClass="BrowserAutomation.ecore#//Find">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Find/c"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Find/a"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Find/s"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Find/v"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Click">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Click/c"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Click/a"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Click/s"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Click/v"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Set">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Set/a"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Set/v"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference BrowserAutomation.ecore#//Set/a1"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute BrowserAutomation.ecore#//Set/s1"/>
     </genClasses>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Affectation"/>
     <genClasses ecoreClass="BrowserAutomation.ecore#//Variable">

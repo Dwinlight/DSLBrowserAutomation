@@ -7,6 +7,9 @@ import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.AbstractGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess2
 import org.eclipse.xtext.generator.IGeneratorContext
+import org.xtext.example.mydsl.browserAutomation.Launch
+import org.xtext.example.mydsl.browserAutomation.Find
+import org.xtext.example.mydsl.browserAutomation.Model
 
 /**
  * Generates code from your model files on save.
@@ -16,10 +19,54 @@ import org.eclipse.xtext.generator.IGeneratorContext
 class BrowserAutomationGenerator extends AbstractGenerator {
 
 	override void doGenerate(Resource resource, IFileSystemAccess2 fsa, IGeneratorContext context) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(Greeting)
-//				.map[name]
-//				.join(', '))
+	fsa.generateFile('Test.java', 
+			resource.allContents
+			.filter(Model)
+			.head			
+			.generateModel)
 	}
+	
+	def  generateModel(Model m)'''import org.junit.jupiter.api.Test;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+	import org.openqa.selenium.support.ui.ExpectedConditions;
+	import org.openqa.selenium.support.ui.WebDriverWait;
+	
+	import java.util.HashMap;
+	
+	import static org.junit.jupiter.api.Assertions.assertNotNull;
+	import static org.junit.jupiter.api.Assertions.assertTrue;
+	
+	
+	
+	
+	
+	
+	 @Test
+	 public void test() {
+	 System.setProperty("webdriver.gecko.driver","C:/Users/cocop/Downloads/geckodriver-v0.26.0-win64/geckodriver.exe");
+	 WebDriver driver = new FirefoxDriver();
+	 «generateLaunch(m.tisi1.get(0))»
+	 new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='agree-button eu-cookie-compliance-default-button']"))).click(); //ACCEPT COOKIE
+	  «generateFind(m.tisi6.get(0))»
+	 driver.close();
+			}
+		}
+	'''
+	    
+		
+	
+	def generateLaunch(Launch l )'''
+	driver.get("«l.u.name»");
+	'''
+	def generateFind(Find f)'''
+	«IF f!==null »
+	WebElement textDemo0 = driver.findElement(By.xpath("//*[contains(text(),«f.s»)]"));
+	assertNotNull(textDemo0);
+	«ENDIF»    
+	'''
 }
+
+

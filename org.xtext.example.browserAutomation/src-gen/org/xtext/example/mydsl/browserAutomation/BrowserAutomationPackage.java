@@ -68,13 +68,58 @@ public interface BrowserAutomationPackage extends EPackage
   int MODEL = 0;
 
   /**
-   * The feature id for the '<em><b>Tisi</b></em>' containment reference list.
+   * The feature id for the '<em><b>Tisi1</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MODEL__TISI = 0;
+  int MODEL__TISI1 = 0;
+
+  /**
+   * The feature id for the '<em><b>Tisi2</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__TISI2 = 1;
+
+  /**
+   * The feature id for the '<em><b>Tisi3</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__TISI3 = 2;
+
+  /**
+   * The feature id for the '<em><b>Tisi4</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__TISI4 = 3;
+
+  /**
+   * The feature id for the '<em><b>Tisi5</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__TISI5 = 4;
+
+  /**
+   * The feature id for the '<em><b>Tisi6</b></em>' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MODEL__TISI6 = 5;
 
   /**
    * The number of structural features of the '<em>Model</em>' class.
@@ -83,7 +128,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MODEL_FEATURE_COUNT = 1;
+  int MODEL_FEATURE_COUNT = 6;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.LaunchImpl <em>Launch</em>}' class.
@@ -151,13 +196,22 @@ public interface BrowserAutomationPackage extends EPackage
   int FIND__A = 1;
 
   /**
+   * The feature id for the '<em><b>S</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FIND__S = 2;
+
+  /**
    * The feature id for the '<em><b>V</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FIND__V = 2;
+  int FIND__V = 3;
 
   /**
    * The number of structural features of the '<em>Find</em>' class.
@@ -166,7 +220,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int FIND_FEATURE_COUNT = 3;
+  int FIND_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.ClickImpl <em>Click</em>}' class.
@@ -197,13 +251,22 @@ public interface BrowserAutomationPackage extends EPackage
   int CLICK__A = 1;
 
   /**
+   * The feature id for the '<em><b>S</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CLICK__S = 2;
+
+  /**
    * The feature id for the '<em><b>V</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int CLICK__V = 2;
+  int CLICK__V = 3;
 
   /**
    * The number of structural features of the '<em>Click</em>' class.
@@ -212,7 +275,7 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    * @ordered
    */
-  int CLICK_FEATURE_COUNT = 3;
+  int CLICK_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl <em>Set</em>}' class.
@@ -252,13 +315,22 @@ public interface BrowserAutomationPackage extends EPackage
   int SET__A1 = 2;
 
   /**
+   * The feature id for the '<em><b>S1</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SET__S1 = 3;
+
+  /**
    * The number of structural features of the '<em>Set</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SET_FEATURE_COUNT = 3;
+  int SET_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl <em>Affectation</em>}' class.
@@ -542,15 +614,70 @@ public interface BrowserAutomationPackage extends EPackage
   EClass getModel();
 
   /**
-   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi <em>Tisi</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi1 <em>Tisi1</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Tisi</em>'.
-   * @see org.xtext.example.mydsl.browserAutomation.Model#getTisi()
+   * @return the meta object for the containment reference list '<em>Tisi1</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Model#getTisi1()
    * @see #getModel()
    * @generated
    */
-  EReference getModel_Tisi();
+  EReference getModel_Tisi1();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi2 <em>Tisi2</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Tisi2</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Model#getTisi2()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Tisi2();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi3 <em>Tisi3</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Tisi3</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Model#getTisi3()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Tisi3();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi4 <em>Tisi4</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Tisi4</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Model#getTisi4()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Tisi4();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi5 <em>Tisi5</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Tisi5</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Model#getTisi5()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Tisi5();
+
+  /**
+   * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.browserAutomation.Model#getTisi6 <em>Tisi6</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference list '<em>Tisi6</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Model#getTisi6()
+   * @see #getModel()
+   * @generated
+   */
+  EReference getModel_Tisi6();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Launch <em>Launch</em>}'.
@@ -617,6 +744,17 @@ public interface BrowserAutomationPackage extends EPackage
   EReference getFind_A();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Find#getS <em>S</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>S</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Find#getS()
+   * @see #getFind()
+   * @generated
+   */
+  EAttribute getFind_S();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Find#getV <em>V</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -658,6 +796,17 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    */
   EReference getClick_A();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Click#getS <em>S</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>S</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Click#getS()
+   * @see #getClick()
+   * @generated
+   */
+  EAttribute getClick_S();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.browserAutomation.Click#getV <em>V</em>}'.
@@ -712,6 +861,17 @@ public interface BrowserAutomationPackage extends EPackage
    * @generated
    */
   EReference getSet_A1();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.browserAutomation.Set#getS1 <em>S1</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>S1</em>'.
+   * @see org.xtext.example.mydsl.browserAutomation.Set#getS1()
+   * @see #getSet()
+   * @generated
+   */
+  EAttribute getSet_S1();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.browserAutomation.Affectation <em>Affectation</em>}'.
@@ -958,12 +1118,52 @@ public interface BrowserAutomationPackage extends EPackage
     EClass MODEL = eINSTANCE.getModel();
 
     /**
-     * The meta object literal for the '<em><b>Tisi</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Tisi1</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference MODEL__TISI = eINSTANCE.getModel_Tisi();
+    EReference MODEL__TISI1 = eINSTANCE.getModel_Tisi1();
+
+    /**
+     * The meta object literal for the '<em><b>Tisi2</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__TISI2 = eINSTANCE.getModel_Tisi2();
+
+    /**
+     * The meta object literal for the '<em><b>Tisi3</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__TISI3 = eINSTANCE.getModel_Tisi3();
+
+    /**
+     * The meta object literal for the '<em><b>Tisi4</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__TISI4 = eINSTANCE.getModel_Tisi4();
+
+    /**
+     * The meta object literal for the '<em><b>Tisi5</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__TISI5 = eINSTANCE.getModel_Tisi5();
+
+    /**
+     * The meta object literal for the '<em><b>Tisi6</b></em>' containment reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference MODEL__TISI6 = eINSTANCE.getModel_Tisi6();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.LaunchImpl <em>Launch</em>}' class.
@@ -1018,6 +1218,14 @@ public interface BrowserAutomationPackage extends EPackage
     EReference FIND__A = eINSTANCE.getFind_A();
 
     /**
+     * The meta object literal for the '<em><b>S</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FIND__S = eINSTANCE.getFind_S();
+
+    /**
      * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1050,6 +1258,14 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EReference CLICK__A = eINSTANCE.getClick_A();
+
+    /**
+     * The meta object literal for the '<em><b>S</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CLICK__S = eINSTANCE.getClick_S();
 
     /**
      * The meta object literal for the '<em><b>V</b></em>' containment reference feature.
@@ -1092,6 +1308,14 @@ public interface BrowserAutomationPackage extends EPackage
      * @generated
      */
     EReference SET__A1 = eINSTANCE.getSet_A1();
+
+    /**
+     * The meta object literal for the '<em><b>S1</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute SET__S1 = eINSTANCE.getSet_S1();
 
     /**
      * The meta object literal for the '{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl <em>Affectation</em>}' class.

@@ -28,6 +28,7 @@ import org.xtext.example.mydsl.browserAutomation.VarRef;
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl#getC <em>C</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl#getA <em>A</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl#getS <em>S</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.FindImpl#getV <em>V</em>}</li>
  * </ul>
  *
@@ -54,6 +55,26 @@ public class FindImpl extends MinimalEObjectImpl.Container implements Find
    * @ordered
    */
   protected Attribut a;
+
+  /**
+   * The default value of the '{@link #getS() <em>S</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS()
+   * @generated
+   * @ordered
+   */
+  protected static final String S_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getS() <em>S</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS()
+   * @generated
+   * @ordered
+   */
+  protected String s = S_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getV() <em>V</em>}' containment reference.
@@ -192,6 +213,31 @@ public class FindImpl extends MinimalEObjectImpl.Container implements Find
    * @generated
    */
   @Override
+  public String getS()
+  {
+    return s;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setS(String newS)
+  {
+    String oldS = s;
+    s = newS;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.FIND__S, oldS, s));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public VarRef getV()
   {
     return v;
@@ -270,6 +316,8 @@ public class FindImpl extends MinimalEObjectImpl.Container implements Find
         return getC();
       case BrowserAutomationPackage.FIND__A:
         return getA();
+      case BrowserAutomationPackage.FIND__S:
+        return getS();
       case BrowserAutomationPackage.FIND__V:
         return getV();
     }
@@ -291,6 +339,9 @@ public class FindImpl extends MinimalEObjectImpl.Container implements Find
         return;
       case BrowserAutomationPackage.FIND__A:
         setA((Attribut)newValue);
+        return;
+      case BrowserAutomationPackage.FIND__S:
+        setS((String)newValue);
         return;
       case BrowserAutomationPackage.FIND__V:
         setV((VarRef)newValue);
@@ -315,6 +366,9 @@ public class FindImpl extends MinimalEObjectImpl.Container implements Find
       case BrowserAutomationPackage.FIND__A:
         setA((Attribut)null);
         return;
+      case BrowserAutomationPackage.FIND__S:
+        setS(S_EDEFAULT);
+        return;
       case BrowserAutomationPackage.FIND__V:
         setV((VarRef)null);
         return;
@@ -336,10 +390,29 @@ public class FindImpl extends MinimalEObjectImpl.Container implements Find
         return c != null;
       case BrowserAutomationPackage.FIND__A:
         return a != null;
+      case BrowserAutomationPackage.FIND__S:
+        return S_EDEFAULT == null ? s != null : !S_EDEFAULT.equals(s);
       case BrowserAutomationPackage.FIND__V:
         return v != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (s: ");
+    result.append(s);
+    result.append(')');
+    return result.toString();
   }
 
 } //FindImpl

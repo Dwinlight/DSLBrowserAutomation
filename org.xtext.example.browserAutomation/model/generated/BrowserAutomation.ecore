@@ -3,8 +3,18 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="browserAutomation" nsURI="http://www.xtext.org/example/mydsl/BrowserAutomation"
     nsPrefix="browserAutomation">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tisi" upperBound="-1" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tisi1" upperBound="-1"
+        eType="#//Launch" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tisi2" upperBound="-1"
+        eType="#//Affectation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tisi3" upperBound="-1"
+        eType="#//Launch" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tisi4" upperBound="-1"
+        eType="#//Set" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tisi5" upperBound="-1"
+        eType="#//Click" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tisi6" upperBound="-1"
+        eType="#//Find" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Launch">
     <eStructuralFeatures xsi:type="ecore:EReference" name="u" eType="#//Url" containment="true"/>
@@ -15,6 +25,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//Attribut"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//VarRef" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Click">
@@ -22,6 +33,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="a" eType="#//Attribut"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//VarRef" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Set">
@@ -30,6 +42,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//VarRef" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="a1" eType="#//Attribut"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="s1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Affectation"/>
   <eClassifiers xsi:type="ecore:EClass" name="Variable" eSuperTypes="#//Affectation">

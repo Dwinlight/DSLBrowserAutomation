@@ -79,17 +79,17 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getTisiLaunchParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getModelAccess().getTisi1LaunchParserRuleCall_0_0());
 				}
-				lv_tisi_0_0=ruleLaunch
+				lv_tisi1_0_0=ruleLaunch
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"tisi",
-						lv_tisi_0_0,
+						"tisi1",
+						lv_tisi1_0_0,
 						"org.xtext.example.mydsl.BrowserAutomation.Launch");
 					afterParserOrEnumRuleCall();
 				}
@@ -98,17 +98,17 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getTisiAffectationParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getModelAccess().getTisi2AffectationParserRuleCall_1_0());
 				}
-				lv_tisi_1_0=ruleAffectation
+				lv_tisi2_1_0=ruleAffectation
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"tisi",
-						lv_tisi_1_0,
+						"tisi2",
+						lv_tisi2_1_0,
 						"org.xtext.example.mydsl.BrowserAutomation.Affectation");
 					afterParserOrEnumRuleCall();
 				}
@@ -117,17 +117,17 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getTisiLaunchParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getModelAccess().getTisi3LaunchParserRuleCall_2_0());
 				}
-				lv_tisi_2_0=ruleLaunch
+				lv_tisi3_2_0=ruleLaunch
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"tisi",
-						lv_tisi_2_0,
+						"tisi3",
+						lv_tisi3_2_0,
 						"org.xtext.example.mydsl.BrowserAutomation.Launch");
 					afterParserOrEnumRuleCall();
 				}
@@ -136,17 +136,17 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getTisiSetParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getModelAccess().getTisi4SetParserRuleCall_3_0());
 				}
-				lv_tisi_3_0=ruleSet
+				lv_tisi4_3_0=ruleSet
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"tisi",
-						lv_tisi_3_0,
+						"tisi4",
+						lv_tisi4_3_0,
 						"org.xtext.example.mydsl.BrowserAutomation.Set");
 					afterParserOrEnumRuleCall();
 				}
@@ -155,17 +155,17 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getTisiClickParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getModelAccess().getTisi5ClickParserRuleCall_4_0());
 				}
-				lv_tisi_4_0=ruleClick
+				lv_tisi5_4_0=ruleClick
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"tisi",
-						lv_tisi_4_0,
+						"tisi5",
+						lv_tisi5_4_0,
 						"org.xtext.example.mydsl.BrowserAutomation.Click");
 					afterParserOrEnumRuleCall();
 				}
@@ -174,17 +174,17 @@ ruleModel returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getModelAccess().getTisiFindParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getModelAccess().getTisi6FindParserRuleCall_5_0());
 				}
-				lv_tisi_5_0=ruleFind
+				lv_tisi6_5_0=ruleFind
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
 					add(
 						$current,
-						"tisi",
-						lv_tisi_5_0,
+						"tisi6",
+						lv_tisi6_5_0,
 						"org.xtext.example.mydsl.BrowserAutomation.Find");
 					afterParserOrEnumRuleCall();
 				}
@@ -332,10 +332,24 @@ ruleFind returns [EObject current=null]
 			}
 		)
 		(
-			this_STRING_6=RULE_STRING
-			{
-				newLeafNode(this_STRING_6, grammarAccess.getFindAccess().getSTRINGTerminalRuleCall_5_0());
-			}
+			(
+				(
+					lv_s_6_0=RULE_STRING
+					{
+						newLeafNode(lv_s_6_0, grammarAccess.getFindAccess().getSSTRINGTerminalRuleCall_5_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getFindRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"s",
+							lv_s_6_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
 			    |
 			(
 				(
@@ -434,10 +448,24 @@ ruleClick returns [EObject current=null]
 			}
 		)
 		(
-			this_STRING_6=RULE_STRING
-			{
-				newLeafNode(this_STRING_6, grammarAccess.getClickAccess().getSTRINGTerminalRuleCall_5_0());
-			}
+			(
+				(
+					lv_s_6_0=RULE_STRING
+					{
+						newLeafNode(lv_s_6_0, grammarAccess.getClickAccess().getSSTRINGTerminalRuleCall_5_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getClickRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"s",
+							lv_s_6_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
 			    |
 			(
 				(
@@ -562,10 +590,24 @@ ruleSet returns [EObject current=null]
 			}
 		)
 		(
-			this_STRING_8=RULE_STRING
-			{
-				newLeafNode(this_STRING_8, grammarAccess.getSetAccess().getSTRINGTerminalRuleCall_6_0());
-			}
+			(
+				(
+					lv_s1_8_0=RULE_STRING
+					{
+						newLeafNode(lv_s1_8_0, grammarAccess.getSetAccess().getS1STRINGTerminalRuleCall_6_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getSetRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"s1",
+							lv_s1_8_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
 			    |
 			(
 				(

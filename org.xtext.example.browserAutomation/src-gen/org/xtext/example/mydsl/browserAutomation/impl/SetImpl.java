@@ -28,6 +28,7 @@ import org.xtext.example.mydsl.browserAutomation.VarRef;
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getA <em>A</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getV <em>V</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getA1 <em>A1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getS1 <em>S1</em>}</li>
  * </ul>
  *
  * @generated
@@ -63,6 +64,26 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @ordered
    */
   protected Attribut a1;
+
+  /**
+   * The default value of the '{@link #getS1() <em>S1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS1()
+   * @generated
+   * @ordered
+   */
+  protected static final String S1_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getS1() <em>S1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS1()
+   * @generated
+   * @ordered
+   */
+  protected String s1 = S1_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -241,6 +262,31 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @generated
    */
   @Override
+  public String getS1()
+  {
+    return s1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setS1(String newS1)
+  {
+    String oldS1 = s1;
+    s1 = newS1;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__S1, oldS1, s1));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -271,6 +317,8 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
         return getV();
       case BrowserAutomationPackage.SET__A1:
         return getA1();
+      case BrowserAutomationPackage.SET__S1:
+        return getS1();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -293,6 +341,9 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
         return;
       case BrowserAutomationPackage.SET__A1:
         setA1((Attribut)newValue);
+        return;
+      case BrowserAutomationPackage.SET__S1:
+        setS1((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -317,6 +368,9 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
       case BrowserAutomationPackage.SET__A1:
         setA1((Attribut)null);
         return;
+      case BrowserAutomationPackage.SET__S1:
+        setS1(S1_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -337,8 +391,27 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
         return v != null;
       case BrowserAutomationPackage.SET__A1:
         return a1 != null;
+      case BrowserAutomationPackage.SET__S1:
+        return S1_EDEFAULT == null ? s1 != null : !S1_EDEFAULT.equals(s1);
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (s1: ");
+    result.append(s1);
+    result.append(')');
+    return result.toString();
   }
 
 } //SetImpl
