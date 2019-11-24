@@ -1,6 +1,3 @@
 ###Test1###
 GOTO "http://www.imt-atlantique.fr/fr" ON firefox 
 FIND link WHERE  content CONTAINS "Toutes les actualités"
-
-
-
