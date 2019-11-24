@@ -1,6 +1,6 @@
 ###Test6###
- GOTO "http://www.imt-atlantique.fr/fr/rechercher" ON firefox
+GOTO "http://www.imt-atlantique.fr/fr/rechercher" ON firefox
 SET  value "2007" WHERE  id EQUALS "edit-search-api-fulltext"
 CLICK li WHERE  content EQUALS "Le mois dernier"
 CLICK button WHERE value CONTAINS "Appliquer les critères"
-FIND  content CONTAINS "Aucun résultat ne correspond à votre recherche"
+FIND page WHERE content CONTAINS "Aucun résultat ne correspond à votre recherche"²
