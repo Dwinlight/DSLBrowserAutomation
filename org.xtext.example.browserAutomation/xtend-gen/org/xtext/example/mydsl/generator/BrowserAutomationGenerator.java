@@ -98,6 +98,15 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
     _builder.append(_generateLaunch, "\t ");
     _builder.newLineIfNotEmpty();
     {
+      EList<Affectation> _tisi2 = m.getTisi2();
+      for(final Affectation a : _tisi2) {
+        _builder.append("\t ");
+        CharSequence _generateAffectation = this.generateAffectation(a);
+        _builder.append(_generateAffectation, "\t ");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
       EList<Set> _tisi4 = m.getTisi4();
       for(final Set s : _tisi4) {
         _builder.append("\t ");
