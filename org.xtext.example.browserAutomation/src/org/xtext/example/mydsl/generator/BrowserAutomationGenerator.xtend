@@ -10,6 +10,7 @@ import org.eclipse.xtext.generator.IGeneratorContext
 import org.xtext.example.mydsl.browserAutomation.Launch
 import org.xtext.example.mydsl.browserAutomation.Find
 import org.xtext.example.mydsl.browserAutomation.Model
+import org.xtext.example.mydsl.browserAutomation.Click
 
 /**
  * Generates code from your model files on save.
@@ -50,6 +51,9 @@ class BrowserAutomationGenerator extends AbstractGenerator {
 	 WebDriver driver = new FirefoxDriver();
 	 «generateLaunch(m.tisi1.get(0))»
 	 new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='agree-button eu-cookie-compliance-default-button']"))).click(); //ACCEPT COOKIE
+	  «FOR c : m.tisi5»
+	     «generateClick(c)»
+	  «ENDFOR»    
 	  «generateFind(m.tisi6.get(0))»
 	 driver.close();
 			}
@@ -63,9 +67,19 @@ class BrowserAutomationGenerator extends AbstractGenerator {
 	'''
 	def generateFind(Find f)'''
 	«IF f!==null »
-	WebElement textDemo0 = driver.findElement(By.xpath("//*[contains(text(),«f.s»)]"));
-	assertNotNull(textDemo0);
+	      assertTrue(driver.getPageSource().contains("«f.s»"));
 	«ENDIF»    
+	'''
+	def generateClick(Click click)'''
+	«IF click.c == 'link' »
+	     WebElement button = driver.findElement(By.xpath(String.format("//a[contains(.,«click.s»)]")));
+	     driver.get(button.getAttribute("href"));
+	«ENDIF»   
+	
+	«IF click.c == 'image' »
+		driver.findElement(By.xpath(String.format("//img[contains(@«click.a»,«click.s»)]"))).click();
+	«ENDIF»     
+	 	
 	'''
 }
 

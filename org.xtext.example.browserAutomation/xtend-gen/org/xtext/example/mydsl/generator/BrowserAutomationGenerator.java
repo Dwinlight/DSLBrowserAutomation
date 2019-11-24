@@ -3,13 +3,18 @@
  */
 package org.xtext.example.mydsl.generator;
 
+import com.google.common.base.Objects;
 import com.google.common.collect.Iterators;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.mydsl.browserAutomation.Attribut;
+import org.xtext.example.mydsl.browserAutomation.Click;
+import org.xtext.example.mydsl.browserAutomation.Composant;
 import org.xtext.example.mydsl.browserAutomation.Find;
 import org.xtext.example.mydsl.browserAutomation.Launch;
 import org.xtext.example.mydsl.browserAutomation.Model;
@@ -93,6 +98,15 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
     _builder.append("\t ");
     _builder.append("new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//button[@class=\'agree-button eu-cookie-compliance-default-button\']\"))).click(); //ACCEPT COOKIE");
     _builder.newLine();
+    {
+      EList<Click> _tisi5 = m.getTisi5();
+      for(final Click c : _tisi5) {
+        _builder.append("\t  ");
+        CharSequence _generateClick = this.generateClick(c);
+        _builder.append(_generateClick, "\t  ");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("\t  ");
     CharSequence _generateFind = this.generateFind(m.getTisi6().get(0));
     _builder.append(_generateFind, "\t  ");
@@ -123,15 +137,48 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
     StringConcatenation _builder = new StringConcatenation();
     {
       if ((f != null)) {
-        _builder.append("WebElement textDemo0 = driver.findElement(By.xpath(\"//*[contains(text(),");
+        _builder.append("assertTrue(driver.getPageSource().contains(\"");
         String _s = f.getS();
         _builder.append(_s);
-        _builder.append(")]\"));");
+        _builder.append("\"));");
         _builder.newLineIfNotEmpty();
-        _builder.append("assertNotNull(textDemo0);");
+      }
+    }
+    return _builder;
+  }
+  
+  public CharSequence generateClick(final Click click) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      Composant _c = click.getC();
+      boolean _equals = Objects.equal(_c, "link");
+      if (_equals) {
+        _builder.append("WebElement button = driver.findElement(By.xpath(String.format(\"//a[contains(.,");
+        String _s = click.getS();
+        _builder.append(_s);
+        _builder.append(")]\")));");
+        _builder.newLineIfNotEmpty();
+        _builder.append("driver.get(button.getAttribute(\"href\"));");
         _builder.newLine();
       }
     }
+    _builder.newLine();
+    {
+      Composant _c_1 = click.getC();
+      boolean _equals_1 = Objects.equal(_c_1, "image");
+      if (_equals_1) {
+        _builder.append("driver.findElement(By.xpath(String.format(\"//img[contains(@");
+        Attribut _a = click.getA();
+        _builder.append(_a);
+        _builder.append(",");
+        String _s_1 = click.getS();
+        _builder.append(_s_1);
+        _builder.append(")]\"))).click();");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append(" \t");
+    _builder.newLine();
     return _builder;
   }
 }
