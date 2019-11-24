@@ -15,9 +15,11 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getA <em>A</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getV <em>V</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getA1 <em>A1</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getS1 <em>S1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getV1 <em>V1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getA1 <em>A1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getS2 <em>S2</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.Set#getV2 <em>V2</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet()
@@ -49,26 +51,48 @@ public interface Set extends EObject
   void setA(Attribut value);
 
   /**
-   * Returns the value of the '<em><b>V</b></em>' containment reference.
+   * Returns the value of the '<em><b>S1</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>V</em>' containment reference.
-   * @see #setV(VarRef)
-   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet_V()
+   * @return the value of the '<em>S1</em>' attribute.
+   * @see #setS1(String)
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet_S1()
+   * @model
+   * @generated
+   */
+  String getS1();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Set#getS1 <em>S1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>S1</em>' attribute.
+   * @see #getS1()
+   * @generated
+   */
+  void setS1(String value);
+
+  /**
+   * Returns the value of the '<em><b>V1</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>V1</em>' containment reference.
+   * @see #setV1(VarRef)
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet_V1()
    * @model containment="true"
    * @generated
    */
-  VarRef getV();
+  VarRef getV1();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Set#getV <em>V</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Set#getV1 <em>V1</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>V</em>' containment reference.
-   * @see #getV()
+   * @param value the new value of the '<em>V1</em>' containment reference.
+   * @see #getV1()
    * @generated
    */
-  void setV(VarRef value);
+  void setV1(VarRef value);
 
   /**
    * Returns the value of the '<em><b>A1</b></em>' containment reference.
@@ -93,25 +117,47 @@ public interface Set extends EObject
   void setA1(Attribut value);
 
   /**
-   * Returns the value of the '<em><b>S1</b></em>' attribute.
+   * Returns the value of the '<em><b>S2</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>S1</em>' attribute.
-   * @see #setS1(String)
-   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet_S1()
+   * @return the value of the '<em>S2</em>' attribute.
+   * @see #setS2(String)
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet_S2()
    * @model
    * @generated
    */
-  String getS1();
+  String getS2();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Set#getS1 <em>S1</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Set#getS2 <em>S2</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>S1</em>' attribute.
-   * @see #getS1()
+   * @param value the new value of the '<em>S2</em>' attribute.
+   * @see #getS2()
    * @generated
    */
-  void setS1(String value);
+  void setS2(String value);
+
+  /**
+   * Returns the value of the '<em><b>V2</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>V2</em>' containment reference.
+   * @see #setV2(VarRef)
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getSet_V2()
+   * @model containment="true"
+   * @generated
+   */
+  VarRef getV2();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.Set#getV2 <em>V2</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>V2</em>' containment reference.
+   * @see #getV2()
+   * @generated
+   */
+  void setV2(VarRef value);
 
 } // Set

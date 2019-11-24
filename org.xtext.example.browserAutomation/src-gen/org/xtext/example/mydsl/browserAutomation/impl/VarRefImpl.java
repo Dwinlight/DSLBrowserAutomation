@@ -23,7 +23,7 @@ import org.xtext.example.mydsl.browserAutomation.Variable;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.VarRefImpl#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.VarRefImpl#getVa <em>Va</em>}</li>
  * </ul>
  *
  * @generated
@@ -31,14 +31,14 @@ import org.xtext.example.mydsl.browserAutomation.Variable;
 public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
 {
   /**
-   * The cached value of the '{@link #getVar() <em>Var</em>}' reference.
+   * The cached value of the '{@link #getVa() <em>Va</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVar()
+   * @see #getVa()
    * @generated
    * @ordered
    */
-  protected Variable var;
+  protected Variable va;
 
   /**
    * <!-- begin-user-doc -->
@@ -67,19 +67,19 @@ public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
    * @generated
    */
   @Override
-  public Variable getVar()
+  public Variable getVa()
   {
-    if (var != null && var.eIsProxy())
+    if (va != null && va.eIsProxy())
     {
-      InternalEObject oldVar = (InternalEObject)var;
-      var = (Variable)eResolveProxy(oldVar);
-      if (var != oldVar)
+      InternalEObject oldVa = (InternalEObject)va;
+      va = (Variable)eResolveProxy(oldVa);
+      if (va != oldVa)
       {
         if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, BrowserAutomationPackage.VAR_REF__VAR, oldVar, var));
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, BrowserAutomationPackage.VAR_REF__VA, oldVa, va));
       }
     }
-    return var;
+    return va;
   }
 
   /**
@@ -87,9 +87,9 @@ public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
    * <!-- end-user-doc -->
    * @generated
    */
-  public Variable basicGetVar()
+  public Variable basicGetVa()
   {
-    return var;
+    return va;
   }
 
   /**
@@ -98,12 +98,12 @@ public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
    * @generated
    */
   @Override
-  public void setVar(Variable newVar)
+  public void setVa(Variable newVa)
   {
-    Variable oldVar = var;
-    var = newVar;
+    Variable oldVa = va;
+    va = newVa;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VAR_REF__VAR, oldVar, var));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.VAR_REF__VA, oldVa, va));
   }
 
   /**
@@ -116,9 +116,9 @@ public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.VAR_REF__VAR:
-        if (resolve) return getVar();
-        return basicGetVar();
+      case BrowserAutomationPackage.VAR_REF__VA:
+        if (resolve) return getVa();
+        return basicGetVa();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -133,8 +133,8 @@ public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.VAR_REF__VAR:
-        setVar((Variable)newValue);
+      case BrowserAutomationPackage.VAR_REF__VA:
+        setVa((Variable)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -150,8 +150,8 @@ public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.VAR_REF__VAR:
-        setVar((Variable)null);
+      case BrowserAutomationPackage.VAR_REF__VA:
+        setVa((Variable)null);
         return;
     }
     super.eUnset(featureID);
@@ -167,8 +167,8 @@ public class VarRefImpl extends MinimalEObjectImpl.Container implements VarRef
   {
     switch (featureID)
     {
-      case BrowserAutomationPackage.VAR_REF__VAR:
-        return var != null;
+      case BrowserAutomationPackage.VAR_REF__VA:
+        return va != null;
     }
     return super.eIsSet(featureID);
   }

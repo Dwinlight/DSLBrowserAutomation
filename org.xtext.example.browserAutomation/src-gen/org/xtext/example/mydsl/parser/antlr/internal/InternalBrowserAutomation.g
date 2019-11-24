@@ -530,25 +530,39 @@ ruleSet returns [EObject current=null]
 			)
 		)
 		(
-			this_STRING_2=RULE_STRING
-			{
-				newLeafNode(this_STRING_2, grammarAccess.getSetAccess().getSTRINGTerminalRuleCall_2_0());
-			}
+			(
+				(
+					lv_s1_2_0=RULE_STRING
+					{
+						newLeafNode(lv_s1_2_0, grammarAccess.getSetAccess().getS1STRINGTerminalRuleCall_2_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getSetRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"s1",
+							lv_s1_2_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
 			    |
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getSetAccess().getVVarRefParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getSetAccess().getV1VarRefParserRuleCall_2_1_0());
 					}
-					lv_v_3_0=ruleVarRef
+					lv_v1_3_0=ruleVarRef
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getSetRule());
 						}
 						set(
 							$current,
-							"v",
-							lv_v_3_0,
+							"v1",
+							lv_v1_3_0,
 							"org.xtext.example.mydsl.BrowserAutomation.VarRef");
 						afterParserOrEnumRuleCall();
 					}
@@ -592,9 +606,9 @@ ruleSet returns [EObject current=null]
 		(
 			(
 				(
-					lv_s1_8_0=RULE_STRING
+					lv_s2_8_0=RULE_STRING
 					{
-						newLeafNode(lv_s1_8_0, grammarAccess.getSetAccess().getS1STRINGTerminalRuleCall_6_0_0());
+						newLeafNode(lv_s2_8_0, grammarAccess.getSetAccess().getS2STRINGTerminalRuleCall_6_0_0());
 					}
 					{
 						if ($current==null) {
@@ -602,8 +616,8 @@ ruleSet returns [EObject current=null]
 						}
 						setWithLastConsumed(
 							$current,
-							"s1",
-							lv_s1_8_0,
+							"s2",
+							lv_s2_8_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
@@ -612,17 +626,17 @@ ruleSet returns [EObject current=null]
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getSetAccess().getVVarRefParserRuleCall_6_1_0());
+						newCompositeNode(grammarAccess.getSetAccess().getV2VarRefParserRuleCall_6_1_0());
 					}
-					lv_v_9_0=ruleVarRef
+					lv_v2_9_0=ruleVarRef
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getSetRule());
 						}
 						set(
 							$current,
-							"v",
-							lv_v_9_0,
+							"v2",
+							lv_v2_9_0,
 							"org.xtext.example.mydsl.BrowserAutomation.VarRef");
 						afterParserOrEnumRuleCall();
 					}
@@ -648,14 +662,25 @@ ruleAffectation returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		{
-			newCompositeNode(grammarAccess.getAffectationAccess().getVariableParserRuleCall_0());
-		}
-		this_Variable_0=ruleVariable
-		{
-			$current = $this_Variable_0.current;
-			afterParserOrEnumRuleCall();
-		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getAffectationAccess().getV_nameVariableParserRuleCall_0_0());
+				}
+				lv_v_name_0_0=ruleVariable
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getAffectationRule());
+					}
+					set(
+						$current,
+						"v_name",
+						lv_v_name_0_0,
+						"org.xtext.example.mydsl.BrowserAutomation.Variable");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
 		otherlv_1='='
 		{
 			newLeafNode(otherlv_1, grammarAccess.getAffectationAccess().getEqualsSignKeyword_1());
@@ -720,10 +745,24 @@ ruleAffectation returns [EObject current=null]
 					}
 				)
 				(
-					this_STRING_8=RULE_STRING
-					{
-						newLeafNode(this_STRING_8, grammarAccess.getAffectationAccess().getSTRINGTerminalRuleCall_2_0_5_0());
-					}
+					(
+						(
+							lv_s1_8_0=RULE_STRING
+							{
+								newLeafNode(lv_s1_8_0, grammarAccess.getAffectationAccess().getS1STRINGTerminalRuleCall_2_0_5_0_0());
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getAffectationRule());
+								}
+								setWithLastConsumed(
+									$current,
+									"s1",
+									lv_s1_8_0,
+									"org.eclipse.xtext.common.Terminals.STRING");
+							}
+						)
+					)
 					    |
 					(
 						(
@@ -814,7 +853,7 @@ ruleVarRef returns [EObject current=null]
 			}
 			otherlv_0=RULE_ID
 			{
-				newLeafNode(otherlv_0, grammarAccess.getVarRefAccess().getVarVariableCrossReference_0());
+				newLeafNode(otherlv_0, grammarAccess.getVarRefAccess().getVaVariableCrossReference_0());
 			}
 		)
 	)

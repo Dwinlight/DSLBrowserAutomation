@@ -261,9 +261,10 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Assignment cAAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cAAttributParserRuleCall_1_0 = (RuleCall)cAAssignment_1.eContents().get(0);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final RuleCall cSTRINGTerminalRuleCall_2_0 = (RuleCall)cAlternatives_2.eContents().get(0);
-		private final Assignment cVAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cVVarRefParserRuleCall_2_1_0 = (RuleCall)cVAssignment_2_1.eContents().get(0);
+		private final Assignment cS1Assignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
+		private final RuleCall cS1STRINGTerminalRuleCall_2_0_0 = (RuleCall)cS1Assignment_2_0.eContents().get(0);
+		private final Assignment cV1Assignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final RuleCall cV1VarRefParserRuleCall_2_1_0 = (RuleCall)cV1Assignment_2_1.eContents().get(0);
 		private final Keyword cWHEREKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cA1Assignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cA1AttributParserRuleCall_4_0 = (RuleCall)cA1Assignment_4.eContents().get(0);
@@ -271,16 +272,16 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Keyword cCONTAINSKeyword_5_0 = (Keyword)cAlternatives_5.eContents().get(0);
 		private final Keyword cEQUALSKeyword_5_1 = (Keyword)cAlternatives_5.eContents().get(1);
 		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
-		private final Assignment cS1Assignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
-		private final RuleCall cS1STRINGTerminalRuleCall_6_0_0 = (RuleCall)cS1Assignment_6_0.eContents().get(0);
-		private final Assignment cVAssignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
-		private final RuleCall cVVarRefParserRuleCall_6_1_0 = (RuleCall)cVAssignment_6_1.eContents().get(0);
+		private final Assignment cS2Assignment_6_0 = (Assignment)cAlternatives_6.eContents().get(0);
+		private final RuleCall cS2STRINGTerminalRuleCall_6_0_0 = (RuleCall)cS2Assignment_6_0.eContents().get(0);
+		private final Assignment cV2Assignment_6_1 = (Assignment)cAlternatives_6.eContents().get(1);
+		private final RuleCall cV2VarRefParserRuleCall_6_1_0 = (RuleCall)cV2Assignment_6_1.eContents().get(0);
 		
 		//Set:
-		//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef);
+		//	'SET' a=Attribut (s1=STRING | v1=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s2=STRING | v2=VarRef);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef)
+		//'SET' a=Attribut (s1=STRING | v1=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s2=STRING | v2=VarRef)
 		public Group getGroup() { return cGroup; }
 		
 		//'SET'
@@ -292,17 +293,20 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//Attribut
 		public RuleCall getAAttributParserRuleCall_1_0() { return cAAttributParserRuleCall_1_0; }
 		
-		//(STRING | v=VarRef)
+		//(s1=STRING | v1=VarRef)
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_2_0() { return cSTRINGTerminalRuleCall_2_0; }
+		//s1=STRING
+		public Assignment getS1Assignment_2_0() { return cS1Assignment_2_0; }
 		
-		//v=VarRef
-		public Assignment getVAssignment_2_1() { return cVAssignment_2_1; }
+		//STRING
+		public RuleCall getS1STRINGTerminalRuleCall_2_0_0() { return cS1STRINGTerminalRuleCall_2_0_0; }
+		
+		//v1=VarRef
+		public Assignment getV1Assignment_2_1() { return cV1Assignment_2_1; }
 		
 		//VarRef
-		public RuleCall getVVarRefParserRuleCall_2_1_0() { return cVVarRefParserRuleCall_2_1_0; }
+		public RuleCall getV1VarRefParserRuleCall_2_1_0() { return cV1VarRefParserRuleCall_2_1_0; }
 		
 		//'WHERE'
 		public Keyword getWHEREKeyword_3() { return cWHEREKeyword_3; }
@@ -322,25 +326,26 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//'EQUALS'
 		public Keyword getEQUALSKeyword_5_1() { return cEQUALSKeyword_5_1; }
 		
-		//(s1=STRING | v=VarRef)
+		//(s2=STRING | v2=VarRef)
 		public Alternatives getAlternatives_6() { return cAlternatives_6; }
 		
-		//s1=STRING
-		public Assignment getS1Assignment_6_0() { return cS1Assignment_6_0; }
+		//s2=STRING
+		public Assignment getS2Assignment_6_0() { return cS2Assignment_6_0; }
 		
 		//STRING
-		public RuleCall getS1STRINGTerminalRuleCall_6_0_0() { return cS1STRINGTerminalRuleCall_6_0_0; }
+		public RuleCall getS2STRINGTerminalRuleCall_6_0_0() { return cS2STRINGTerminalRuleCall_6_0_0; }
 		
-		//v=VarRef
-		public Assignment getVAssignment_6_1() { return cVAssignment_6_1; }
+		//v2=VarRef
+		public Assignment getV2Assignment_6_1() { return cV2Assignment_6_1; }
 		
 		//VarRef
-		public RuleCall getVVarRefParserRuleCall_6_1_0() { return cVVarRefParserRuleCall_6_1_0; }
+		public RuleCall getV2VarRefParserRuleCall_6_1_0() { return cV2VarRefParserRuleCall_6_1_0; }
 	}
 	public class AffectationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Affectation");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final RuleCall cVariableParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Assignment cV_nameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cV_nameVariableParserRuleCall_0_0 = (RuleCall)cV_nameAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
 		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
@@ -354,28 +359,32 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		private final Keyword cCONTAINSKeyword_2_0_4_0 = (Keyword)cAlternatives_2_0_4.eContents().get(0);
 		private final Keyword cEQUALSKeyword_2_0_4_1 = (Keyword)cAlternatives_2_0_4.eContents().get(1);
 		private final Alternatives cAlternatives_2_0_5 = (Alternatives)cGroup_2_0.eContents().get(5);
-		private final RuleCall cSTRINGTerminalRuleCall_2_0_5_0 = (RuleCall)cAlternatives_2_0_5.eContents().get(0);
+		private final Assignment cS1Assignment_2_0_5_0 = (Assignment)cAlternatives_2_0_5.eContents().get(0);
+		private final RuleCall cS1STRINGTerminalRuleCall_2_0_5_0_0 = (RuleCall)cS1Assignment_2_0_5_0.eContents().get(0);
 		private final Assignment cVAssignment_2_0_5_1 = (Assignment)cAlternatives_2_0_5.eContents().get(1);
 		private final RuleCall cVVarRefParserRuleCall_2_0_5_1_0 = (RuleCall)cVAssignment_2_0_5_1.eContents().get(0);
 		private final RuleCall cSTRINGTerminalRuleCall_2_1 = (RuleCall)cAlternatives_2.eContents().get(1);
 		
 		//Affectation:
-		//	Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING);
+		//	v_name=Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef) | STRING);
 		@Override public ParserRule getRule() { return rule; }
 		
-		//Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING)
+		//v_name=Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef) | STRING)
 		public Group getGroup() { return cGroup; }
 		
+		//v_name=Variable
+		public Assignment getV_nameAssignment_0() { return cV_nameAssignment_0; }
+		
 		//Variable
-		public RuleCall getVariableParserRuleCall_0() { return cVariableParserRuleCall_0; }
+		public RuleCall getV_nameVariableParserRuleCall_0_0() { return cV_nameVariableParserRuleCall_0_0; }
 		
 		//'='
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 		
-		//('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING)
+		//('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef) | STRING)
 		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 		
-		//'GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef)
+		//'GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef)
 		public Group getGroup_2_0() { return cGroup_2_0; }
 		
 		//'GET'
@@ -405,11 +414,14 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 		//'EQUALS'
 		public Keyword getEQUALSKeyword_2_0_4_1() { return cEQUALSKeyword_2_0_4_1; }
 		
-		//(STRING | v=VarRef)
+		//(s1=STRING | v=VarRef)
 		public Alternatives getAlternatives_2_0_5() { return cAlternatives_2_0_5; }
 		
+		//s1=STRING
+		public Assignment getS1Assignment_2_0_5_0() { return cS1Assignment_2_0_5_0; }
+		
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_2_0_5_0() { return cSTRINGTerminalRuleCall_2_0_5_0; }
+		public RuleCall getS1STRINGTerminalRuleCall_2_0_5_0_0() { return cS1STRINGTerminalRuleCall_2_0_5_0_0; }
 		
 		//v=VarRef
 		public Assignment getVAssignment_2_0_5_1() { return cVAssignment_2_0_5_1; }
@@ -437,22 +449,22 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 	public class VarRefElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.VarRef");
-		private final Assignment cVarAssignment = (Assignment)rule.eContents().get(1);
-		private final CrossReference cVarVariableCrossReference_0 = (CrossReference)cVarAssignment.eContents().get(0);
-		private final RuleCall cVarVariableIDTerminalRuleCall_0_1 = (RuleCall)cVarVariableCrossReference_0.eContents().get(1);
+		private final Assignment cVaAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cVaVariableCrossReference_0 = (CrossReference)cVaAssignment.eContents().get(0);
+		private final RuleCall cVaVariableIDTerminalRuleCall_0_1 = (RuleCall)cVaVariableCrossReference_0.eContents().get(1);
 		
 		//VarRef:
-		//	var=[Variable];
+		//	va=[Variable];
 		@Override public ParserRule getRule() { return rule; }
 		
-		//var=[Variable]
-		public Assignment getVarAssignment() { return cVarAssignment; }
+		//va=[Variable]
+		public Assignment getVaAssignment() { return cVaAssignment; }
 		
 		//[Variable]
-		public CrossReference getVarVariableCrossReference_0() { return cVarVariableCrossReference_0; }
+		public CrossReference getVaVariableCrossReference_0() { return cVaVariableCrossReference_0; }
 		
 		//ID
-		public RuleCall getVarVariableIDTerminalRuleCall_0_1() { return cVarVariableIDTerminalRuleCall_0_1; }
+		public RuleCall getVaVariableIDTerminalRuleCall_0_1() { return cVaVariableIDTerminalRuleCall_0_1; }
 	}
 	public class ComposantElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.BrowserAutomation.Composant");
@@ -669,7 +681,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 	
 	//Set:
-	//	'SET' a=Attribut (STRING | v=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef);
+	//	'SET' a=Attribut (s1=STRING | v1=VarRef) 'WHERE' a1=Attribut ('CONTAINS' | 'EQUALS') (s2=STRING | v2=VarRef);
 	public SetElements getSetAccess() {
 		return pSet;
 	}
@@ -679,7 +691,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 	
 	//Affectation:
-	//	Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (STRING | v=VarRef) | STRING);
+	//	v_name=Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS' | 'EQUALS') (s1=STRING | v=VarRef) | STRING);
 	public AffectationElements getAffectationAccess() {
 		return pAffectation;
 	}
@@ -699,7 +711,7 @@ public class BrowserAutomationGrammarAccess extends AbstractGrammarElementFinder
 	}
 	
 	//VarRef:
-	//	var=[Variable];
+	//	va=[Variable];
 	public VarRefElements getVarRefAccess() {
 		return pVarRef;
 	}

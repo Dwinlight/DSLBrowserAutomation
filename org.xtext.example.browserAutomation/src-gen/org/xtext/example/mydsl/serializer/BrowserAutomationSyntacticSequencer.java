@@ -77,7 +77,7 @@ public class BrowserAutomationSyntacticSequencer extends AbstractSyntacticSequen
 	 *     'CONTAINS' | 'EQUALS'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     a2=Attribut (ambiguity) STRING (rule end)
+	 *     a2=Attribut (ambiguity) s1=STRING
 	 *     a2=Attribut (ambiguity) v=VarRef
 	 */
 	protected void emit_Affectation_CONTAINSKeyword_2_0_4_0_or_EQUALSKeyword_2_0_4_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -113,8 +113,8 @@ public class BrowserAutomationSyntacticSequencer extends AbstractSyntacticSequen
 	 *     'CONTAINS' | 'EQUALS'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     a1=Attribut (ambiguity) s1=STRING
-	 *     a1=Attribut (ambiguity) v=VarRef
+	 *     a1=Attribut (ambiguity) s2=STRING
+	 *     a1=Attribut (ambiguity) v2=VarRef
 	 */
 	protected void emit_Set_CONTAINSKeyword_5_0_or_EQUALSKeyword_5_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

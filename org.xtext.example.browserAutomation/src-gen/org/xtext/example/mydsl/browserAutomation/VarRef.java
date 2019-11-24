@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.VarRef#getVar <em>Var</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.VarRef#getVa <em>Va</em>}</li>
  * </ul>
  *
  * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getVarRef()
@@ -24,25 +24,25 @@ import org.eclipse.emf.ecore.EObject;
 public interface VarRef extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Var</b></em>' reference.
+   * Returns the value of the '<em><b>Va</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Var</em>' reference.
-   * @see #setVar(Variable)
-   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getVarRef_Var()
+   * @return the value of the '<em>Va</em>' reference.
+   * @see #setVa(Variable)
+   * @see org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage#getVarRef_Va()
    * @model
    * @generated
    */
-  Variable getVar();
+  Variable getVa();
 
   /**
-   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.VarRef#getVar <em>Var</em>}' reference.
+   * Sets the value of the '{@link org.xtext.example.mydsl.browserAutomation.VarRef#getVa <em>Va</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Var</em>' reference.
-   * @see #getVar()
+   * @param value the new value of the '<em>Va</em>' reference.
+   * @see #getVa()
    * @generated
    */
-  void setVar(Variable value);
+  void setVa(Variable value);
 
 } // VarRef

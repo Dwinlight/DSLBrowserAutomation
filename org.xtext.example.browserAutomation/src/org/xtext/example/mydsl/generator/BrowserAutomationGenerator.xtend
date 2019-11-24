@@ -11,6 +11,9 @@ import org.xtext.example.mydsl.browserAutomation.Launch
 import org.xtext.example.mydsl.browserAutomation.Find
 import org.xtext.example.mydsl.browserAutomation.Model
 import org.xtext.example.mydsl.browserAutomation.Click
+import org.xtext.example.mydsl.browserAutomation.Set
+import org.xtext.example.mydsl.browserAutomation.Affectation
+import org.xtext.example.mydsl.browserAutomation.VarRef
 
 /**
  * Generates code from your model files on save.
@@ -50,11 +53,15 @@ class BrowserAutomationGenerator extends AbstractGenerator {
 	 System.setProperty("webdriver.gecko.driver","C:/Users/cocop/Downloads/geckodriver-v0.26.0-win64/geckodriver.exe");
 	 WebDriver driver = new FirefoxDriver();
 	 «generateLaunch(m.tisi1.get(0))»
-	 new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[@class='agree-button eu-cookie-compliance-default-button']"))).click(); //ACCEPT COOKIE
-	  «FOR c : m.tisi5»
-	     «generateClick(c)»
-	  «ENDFOR»    
-	  «generateFind(m.tisi6.get(0))»
+	 «FOR s : m.tisi4»
+	 «generateSet(s,m.tisi4.indexOf(s))»
+	 «ENDFOR»    
+	 «FOR c : m.tisi5»
+	    «generateClick(c)»
+	 «ENDFOR» 
+	 «FOR f : m.tisi6»
+	  	«generateFind(f)»
+	 «ENDFOR»       
 	 driver.close();
 			}
 		}
@@ -66,20 +73,52 @@ class BrowserAutomationGenerator extends AbstractGenerator {
 	driver.get("«l.u.name»");
 	'''
 	def generateFind(Find f)'''
-	«IF f!==null »
-	      assertTrue(driver.getPageSource().contains("«f.s»"));
-	«ENDIF»    
+	«IF f.v === null »
+	new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(.,'«f.s»')]")));
+	assertTrue(driver.getPageSource().contains("«f.s»"));
+	«ENDIF»
+	«IF f.v instanceof VarRef »
+	new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(.,'«f.s»')]")));
+    assertTrue(driver.getPageSource().contains("«f.v.va.name»"));
+    «ENDIF»   
 	'''
 	def generateClick(Click click)'''
-	«IF click.c == 'link' »
+	«IF click.c.name == 'link' && click.v === null »
 	     WebElement button = driver.findElement(By.xpath(String.format("//a[contains(.,«click.s»)]")));
 	     driver.get(button.getAttribute("href"));
+	«ENDIF» 
+	
+	«IF click.c.name == 'link' && click.v instanceof VarRef »
+		    WebElement button = driver.findElement(By.xpath("//a[@«click.a.name»='"+«click.v.va.name»+"']"));
+		    driver.get(button.getAttribute("href"));
 	«ENDIF»   
 	
-	«IF click.c == 'image' »
+	«IF click.c.name == 'image' »
 		driver.findElement(By.xpath(String.format("//img[contains(@«click.a»,«click.s»)]"))).click();
-	«ENDIF»     
+	«ENDIF»
+	«IF click.c.name == 'button' »
+	driver.findElement(By.xpath("//input[@«click.a.name»='«click.s»']")).submit();	
+	«ENDIF»         
 	 	
+	'''
+	
+	def generateSet(Set s,int i)'''
+	«IF s.a1.name == 'id' »
+	WebElement input = driver.findElement(By.id("«s.s2»"));
+	input.sendKeys("«s.s1»");
+	«ENDIF» 
+	«IF s.a1.name == 'Content' »
+	String id«i» = driver.findElement(By.xpath("//label[contains(., '«s.s2»')]")).getAttribute("for");
+	driver.findElement(By.id(id«i»)).sendKeys(Keys.SPACE);
+    «ENDIF»
+	'''
+	
+	
+	def generateAffectation (Affectation aff) '''
+	«IF aff.a.name == 'content' »
+	String «aff.v_name.name» = driver.findElement(By.className("«aff.s1»")).getText();
+	«ENDIF»
+	
 	'''
 }
 

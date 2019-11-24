@@ -26,9 +26,11 @@ import org.xtext.example.mydsl.browserAutomation.VarRef;
  * </p>
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getA <em>A</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getV <em>V</em>}</li>
- *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getA1 <em>A1</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getS1 <em>S1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getV1 <em>V1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getA1 <em>A1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getS2 <em>S2</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.SetImpl#getV2 <em>V2</em>}</li>
  * </ul>
  *
  * @generated
@@ -44,26 +46,6 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @ordered
    */
   protected Attribut a;
-
-  /**
-   * The cached value of the '{@link #getV() <em>V</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getV()
-   * @generated
-   * @ordered
-   */
-  protected VarRef v;
-
-  /**
-   * The cached value of the '{@link #getA1() <em>A1</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getA1()
-   * @generated
-   * @ordered
-   */
-  protected Attribut a1;
 
   /**
    * The default value of the '{@link #getS1() <em>S1</em>}' attribute.
@@ -84,6 +66,56 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @ordered
    */
   protected String s1 = S1_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getV1() <em>V1</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getV1()
+   * @generated
+   * @ordered
+   */
+  protected VarRef v1;
+
+  /**
+   * The cached value of the '{@link #getA1() <em>A1</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getA1()
+   * @generated
+   * @ordered
+   */
+  protected Attribut a1;
+
+  /**
+   * The default value of the '{@link #getS2() <em>S2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS2()
+   * @generated
+   * @ordered
+   */
+  protected static final String S2_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getS2() <em>S2</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS2()
+   * @generated
+   * @ordered
+   */
+  protected String s2 = S2_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getV2() <em>V2</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getV2()
+   * @generated
+   * @ordered
+   */
+  protected VarRef v2;
 
   /**
    * <!-- begin-user-doc -->
@@ -162,9 +194,9 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @generated
    */
   @Override
-  public VarRef getV()
+  public String getS1()
   {
-    return v;
+    return s1;
   }
 
   /**
@@ -172,13 +204,38 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetV(VarRef newV, NotificationChain msgs)
+  @Override
+  public void setS1(String newS1)
   {
-    VarRef oldV = v;
-    v = newV;
+    String oldS1 = s1;
+    s1 = newS1;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__S1, oldS1, s1));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public VarRef getV1()
+  {
+    return v1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetV1(VarRef newV1, NotificationChain msgs)
+  {
+    VarRef oldV1 = v1;
+    v1 = newV1;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__V, oldV, newV);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__V1, oldV1, newV1);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -190,20 +247,20 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @generated
    */
   @Override
-  public void setV(VarRef newV)
+  public void setV1(VarRef newV1)
   {
-    if (newV != v)
+    if (newV1 != v1)
     {
       NotificationChain msgs = null;
-      if (v != null)
-        msgs = ((InternalEObject)v).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SET__V, null, msgs);
-      if (newV != null)
-        msgs = ((InternalEObject)newV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SET__V, null, msgs);
-      msgs = basicSetV(newV, msgs);
+      if (v1 != null)
+        msgs = ((InternalEObject)v1).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SET__V1, null, msgs);
+      if (newV1 != null)
+        msgs = ((InternalEObject)newV1).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SET__V1, null, msgs);
+      msgs = basicSetV1(newV1, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__V, newV, newV));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__V1, newV1, newV1));
   }
 
   /**
@@ -262,9 +319,9 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @generated
    */
   @Override
-  public String getS1()
+  public String getS2()
   {
-    return s1;
+    return s2;
   }
 
   /**
@@ -273,12 +330,62 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
    * @generated
    */
   @Override
-  public void setS1(String newS1)
+  public void setS2(String newS2)
   {
-    String oldS1 = s1;
-    s1 = newS1;
+    String oldS2 = s2;
+    s2 = newS2;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__S1, oldS1, s1));
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__S2, oldS2, s2));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public VarRef getV2()
+  {
+    return v2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetV2(VarRef newV2, NotificationChain msgs)
+  {
+    VarRef oldV2 = v2;
+    v2 = newV2;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__V2, oldV2, newV2);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setV2(VarRef newV2)
+  {
+    if (newV2 != v2)
+    {
+      NotificationChain msgs = null;
+      if (v2 != null)
+        msgs = ((InternalEObject)v2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SET__V2, null, msgs);
+      if (newV2 != null)
+        msgs = ((InternalEObject)newV2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.SET__V2, null, msgs);
+      msgs = basicSetV2(newV2, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.SET__V2, newV2, newV2));
   }
 
   /**
@@ -293,10 +400,12 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
     {
       case BrowserAutomationPackage.SET__A:
         return basicSetA(null, msgs);
-      case BrowserAutomationPackage.SET__V:
-        return basicSetV(null, msgs);
+      case BrowserAutomationPackage.SET__V1:
+        return basicSetV1(null, msgs);
       case BrowserAutomationPackage.SET__A1:
         return basicSetA1(null, msgs);
+      case BrowserAutomationPackage.SET__V2:
+        return basicSetV2(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -313,12 +422,16 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
     {
       case BrowserAutomationPackage.SET__A:
         return getA();
-      case BrowserAutomationPackage.SET__V:
-        return getV();
-      case BrowserAutomationPackage.SET__A1:
-        return getA1();
       case BrowserAutomationPackage.SET__S1:
         return getS1();
+      case BrowserAutomationPackage.SET__V1:
+        return getV1();
+      case BrowserAutomationPackage.SET__A1:
+        return getA1();
+      case BrowserAutomationPackage.SET__S2:
+        return getS2();
+      case BrowserAutomationPackage.SET__V2:
+        return getV2();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -336,14 +449,20 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
       case BrowserAutomationPackage.SET__A:
         setA((Attribut)newValue);
         return;
-      case BrowserAutomationPackage.SET__V:
-        setV((VarRef)newValue);
+      case BrowserAutomationPackage.SET__S1:
+        setS1((String)newValue);
+        return;
+      case BrowserAutomationPackage.SET__V1:
+        setV1((VarRef)newValue);
         return;
       case BrowserAutomationPackage.SET__A1:
         setA1((Attribut)newValue);
         return;
-      case BrowserAutomationPackage.SET__S1:
-        setS1((String)newValue);
+      case BrowserAutomationPackage.SET__S2:
+        setS2((String)newValue);
+        return;
+      case BrowserAutomationPackage.SET__V2:
+        setV2((VarRef)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -362,14 +481,20 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
       case BrowserAutomationPackage.SET__A:
         setA((Attribut)null);
         return;
-      case BrowserAutomationPackage.SET__V:
-        setV((VarRef)null);
+      case BrowserAutomationPackage.SET__S1:
+        setS1(S1_EDEFAULT);
+        return;
+      case BrowserAutomationPackage.SET__V1:
+        setV1((VarRef)null);
         return;
       case BrowserAutomationPackage.SET__A1:
         setA1((Attribut)null);
         return;
-      case BrowserAutomationPackage.SET__S1:
-        setS1(S1_EDEFAULT);
+      case BrowserAutomationPackage.SET__S2:
+        setS2(S2_EDEFAULT);
+        return;
+      case BrowserAutomationPackage.SET__V2:
+        setV2((VarRef)null);
         return;
     }
     super.eUnset(featureID);
@@ -387,12 +512,16 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
     {
       case BrowserAutomationPackage.SET__A:
         return a != null;
-      case BrowserAutomationPackage.SET__V:
-        return v != null;
-      case BrowserAutomationPackage.SET__A1:
-        return a1 != null;
       case BrowserAutomationPackage.SET__S1:
         return S1_EDEFAULT == null ? s1 != null : !S1_EDEFAULT.equals(s1);
+      case BrowserAutomationPackage.SET__V1:
+        return v1 != null;
+      case BrowserAutomationPackage.SET__A1:
+        return a1 != null;
+      case BrowserAutomationPackage.SET__S2:
+        return S2_EDEFAULT == null ? s2 != null : !S2_EDEFAULT.equals(s2);
+      case BrowserAutomationPackage.SET__V2:
+        return v2 != null;
     }
     return super.eIsSet(featureID);
   }
@@ -410,6 +539,8 @@ public class SetImpl extends MinimalEObjectImpl.Container implements Set
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (s1: ");
     result.append(s1);
+    result.append(", s2: ");
+    result.append(s2);
     result.append(')');
     return result.toString();
   }

@@ -12,12 +12,14 @@ import org.eclipse.xtext.generator.AbstractGenerator;
 import org.eclipse.xtext.generator.IFileSystemAccess2;
 import org.eclipse.xtext.generator.IGeneratorContext;
 import org.eclipse.xtext.xbase.lib.IteratorExtensions;
+import org.xtext.example.mydsl.browserAutomation.Affectation;
 import org.xtext.example.mydsl.browserAutomation.Attribut;
 import org.xtext.example.mydsl.browserAutomation.Click;
-import org.xtext.example.mydsl.browserAutomation.Composant;
 import org.xtext.example.mydsl.browserAutomation.Find;
 import org.xtext.example.mydsl.browserAutomation.Launch;
 import org.xtext.example.mydsl.browserAutomation.Model;
+import org.xtext.example.mydsl.browserAutomation.Set;
+import org.xtext.example.mydsl.browserAutomation.VarRef;
 
 /**
  * Generates code from your model files on save.
@@ -95,22 +97,33 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
     CharSequence _generateLaunch = this.generateLaunch(m.getTisi1().get(0));
     _builder.append(_generateLaunch, "\t ");
     _builder.newLineIfNotEmpty();
-    _builder.append("\t ");
-    _builder.append("new WebDriverWait(driver, 20).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//button[@class=\'agree-button eu-cookie-compliance-default-button\']\"))).click(); //ACCEPT COOKIE");
-    _builder.newLine();
     {
-      EList<Click> _tisi5 = m.getTisi5();
-      for(final Click c : _tisi5) {
-        _builder.append("\t  ");
-        CharSequence _generateClick = this.generateClick(c);
-        _builder.append(_generateClick, "\t  ");
+      EList<Set> _tisi4 = m.getTisi4();
+      for(final Set s : _tisi4) {
+        _builder.append("\t ");
+        CharSequence _generateSet = this.generateSet(s, m.getTisi4().indexOf(s));
+        _builder.append(_generateSet, "\t ");
         _builder.newLineIfNotEmpty();
       }
     }
-    _builder.append("\t  ");
-    CharSequence _generateFind = this.generateFind(m.getTisi6().get(0));
-    _builder.append(_generateFind, "\t  ");
-    _builder.newLineIfNotEmpty();
+    {
+      EList<Click> _tisi5 = m.getTisi5();
+      for(final Click c : _tisi5) {
+        _builder.append("\t ");
+        CharSequence _generateClick = this.generateClick(c);
+        _builder.append(_generateClick, "\t ");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
+      EList<Find> _tisi6 = m.getTisi6();
+      for(final Find f : _tisi6) {
+        _builder.append("\t ");
+        CharSequence _generateFind = this.generateFind(f);
+        _builder.append(_generateFind, "\t ");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append("\t ");
     _builder.append("driver.close();");
     _builder.newLine();
@@ -136,10 +149,33 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
   public CharSequence generateFind(final Find f) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      if ((f != null)) {
-        _builder.append("assertTrue(driver.getPageSource().contains(\"");
+      VarRef _v = f.getV();
+      boolean _tripleEquals = (_v == null);
+      if (_tripleEquals) {
+        _builder.append("new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//*[contains(.,\'");
         String _s = f.getS();
         _builder.append(_s);
+        _builder.append("\')]\")));");
+        _builder.newLineIfNotEmpty();
+        _builder.append("assertTrue(driver.getPageSource().contains(\"");
+        String _s_1 = f.getS();
+        _builder.append(_s_1);
+        _builder.append("\"));");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
+      VarRef _v_1 = f.getV();
+      if ((_v_1 instanceof VarRef)) {
+        _builder.append("new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath(\"//*[contains(.,\'");
+        String _s_2 = f.getS();
+        _builder.append(_s_2);
+        _builder.append("\')]\")));");
+        _builder.newLineIfNotEmpty();
+        _builder.append("    ");
+        _builder.append("assertTrue(driver.getPageSource().contains(\"");
+        String _name = f.getV().getVa().getName();
+        _builder.append(_name, "    ");
         _builder.append("\"));");
         _builder.newLineIfNotEmpty();
       }
@@ -150,9 +186,7 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
   public CharSequence generateClick(final Click click) {
     StringConcatenation _builder = new StringConcatenation();
     {
-      Composant _c = click.getC();
-      boolean _equals = Objects.equal(_c, "link");
-      if (_equals) {
+      if ((Objects.equal(click.getC().getName(), "link") && (click.getV() == null))) {
         _builder.append("WebElement button = driver.findElement(By.xpath(String.format(\"//a[contains(.,");
         String _s = click.getS();
         _builder.append(_s);
@@ -164,9 +198,24 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
     }
     _builder.newLine();
     {
-      Composant _c_1 = click.getC();
-      boolean _equals_1 = Objects.equal(_c_1, "image");
-      if (_equals_1) {
+      if ((Objects.equal(click.getC().getName(), "link") && (click.getV() instanceof VarRef))) {
+        _builder.append("WebElement button = driver.findElement(By.xpath(\"//a[@");
+        String _name = click.getA().getName();
+        _builder.append(_name);
+        _builder.append("=\'\"+");
+        String _name_1 = click.getV().getVa().getName();
+        _builder.append(_name_1);
+        _builder.append("+\"\']\"));");
+        _builder.newLineIfNotEmpty();
+        _builder.append("driver.get(button.getAttribute(\"href\"));");
+        _builder.newLine();
+      }
+    }
+    _builder.newLine();
+    {
+      String _name_2 = click.getC().getName();
+      boolean _equals = Objects.equal(_name_2, "image");
+      if (_equals) {
         _builder.append("driver.findElement(By.xpath(String.format(\"//img[contains(@");
         Attribut _a = click.getA();
         _builder.append(_a);
@@ -177,7 +226,79 @@ public class BrowserAutomationGenerator extends AbstractGenerator {
         _builder.newLineIfNotEmpty();
       }
     }
+    {
+      String _name_3 = click.getC().getName();
+      boolean _equals_1 = Objects.equal(_name_3, "button");
+      if (_equals_1) {
+        _builder.append("driver.findElement(By.xpath(\"//input[@");
+        String _name_4 = click.getA().getName();
+        _builder.append(_name_4);
+        _builder.append("=\'");
+        String _s_2 = click.getS();
+        _builder.append(_s_2);
+        _builder.append("\']\")).submit();\t");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.append(" \t");
+    _builder.newLine();
+    return _builder;
+  }
+  
+  public CharSequence generateSet(final Set s, final int i) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      String _name = s.getA1().getName();
+      boolean _equals = Objects.equal(_name, "id");
+      if (_equals) {
+        _builder.append("WebElement input = driver.findElement(By.id(\"");
+        String _s2 = s.getS2();
+        _builder.append(_s2);
+        _builder.append("\"));");
+        _builder.newLineIfNotEmpty();
+        _builder.append("input.sendKeys(\"");
+        String _s1 = s.getS1();
+        _builder.append(_s1);
+        _builder.append("\");");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    {
+      String _name_1 = s.getA1().getName();
+      boolean _equals_1 = Objects.equal(_name_1, "Content");
+      if (_equals_1) {
+        _builder.append("String id");
+        _builder.append(i);
+        _builder.append(" = driver.findElement(By.xpath(\"//label[contains(., \'");
+        String _s2_1 = s.getS2();
+        _builder.append(_s2_1);
+        _builder.append("\')]\")).getAttribute(\"for\");");
+        _builder.newLineIfNotEmpty();
+        _builder.append("driver.findElement(By.id(id");
+        _builder.append(i);
+        _builder.append(")).sendKeys(Keys.SPACE);");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    return _builder;
+  }
+  
+  public CharSequence generateAffectation(final Affectation aff) {
+    StringConcatenation _builder = new StringConcatenation();
+    {
+      String _name = aff.getA().getName();
+      boolean _equals = Objects.equal(_name, "content");
+      if (_equals) {
+        _builder.append("String ");
+        String _name_1 = aff.getV_name().getName();
+        _builder.append(_name_1);
+        _builder.append(" = driver.findElement(By.className(\"");
+        String _s1 = aff.getS1();
+        _builder.append(_s1);
+        _builder.append("\")).getText();");
+        _builder.newLineIfNotEmpty();
+      }
+    }
     _builder.newLine();
     return _builder;
   }

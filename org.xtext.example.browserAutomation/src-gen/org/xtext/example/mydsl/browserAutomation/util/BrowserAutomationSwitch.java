@@ -119,7 +119,6 @@ public class BrowserAutomationSwitch<T> extends Switch<T>
       {
         Variable variable = (Variable)theEObject;
         T result = caseVariable(variable);
-        if (result == null) result = caseAffectation(variable);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }

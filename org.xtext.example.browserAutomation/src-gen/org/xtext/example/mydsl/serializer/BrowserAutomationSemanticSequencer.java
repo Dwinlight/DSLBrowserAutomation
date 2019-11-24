@@ -14,6 +14,7 @@ import org.eclipse.xtext.serializer.ISerializationContext;
 import org.eclipse.xtext.serializer.acceptor.SequenceFeeder;
 import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequencer;
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
+import org.xtext.example.mydsl.browserAutomation.Affectation;
 import org.xtext.example.mydsl.browserAutomation.Attribut;
 import org.xtext.example.mydsl.browserAutomation.Browser;
 import org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage;
@@ -43,6 +44,9 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == BrowserAutomationPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case BrowserAutomationPackage.AFFECTATION:
+				sequence_Affectation(context, (Affectation) semanticObject); 
+				return; 
 			case BrowserAutomationPackage.ATTRIBUT:
 				sequence_Attribut(context, (Attribut) semanticObject); 
 				return; 
@@ -80,15 +84,8 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 				sequence_VarRef(context, (VarRef) semanticObject); 
 				return; 
 			case BrowserAutomationPackage.VARIABLE:
-				if (rule == grammarAccess.getAffectationRule()) {
-					sequence_Affectation_Variable(context, (Variable) semanticObject); 
-					return; 
-				}
-				else if (rule == grammarAccess.getVariableRule()) {
-					sequence_Variable(context, (Variable) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_Variable(context, (Variable) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -96,12 +93,12 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	
 	/**
 	 * Contexts:
-	 *     Affectation returns Variable
+	 *     Affectation returns Affectation
 	 *
 	 * Constraint:
-	 *     (name=ID (a=Attribut a2=Attribut v=VarRef?)?)
+	 *     (v_name=Variable (a=Attribut a2=Attribut (s1=STRING | v=VarRef))?)
 	 */
-	protected void sequence_Affectation_Variable(ISerializationContext context, Variable semanticObject) {
+	protected void sequence_Affectation(ISerializationContext context, Affectation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -265,7 +262,7 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 *     Set returns Set
 	 *
 	 * Constraint:
-	 *     (a=Attribut v=VarRef? a1=Attribut (s1=STRING | v=VarRef))
+	 *     (a=Attribut (s1=STRING | v1=VarRef) a1=Attribut (s2=STRING | v2=VarRef))
 	 */
 	protected void sequence_Set(ISerializationContext context, org.xtext.example.mydsl.browserAutomation.Set semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -295,15 +292,15 @@ public class BrowserAutomationSemanticSequencer extends AbstractDelegatingSemant
 	 *     VarRef returns VarRef
 	 *
 	 * Constraint:
-	 *     var=[Variable|ID]
+	 *     va=[Variable|ID]
 	 */
 	protected void sequence_VarRef(ISerializationContext context, VarRef semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.VAR_REF__VAR) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.VAR_REF__VAR));
+			if (transientValues.isValueTransient(semanticObject, BrowserAutomationPackage.Literals.VAR_REF__VA) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, BrowserAutomationPackage.Literals.VAR_REF__VA));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVarRefAccess().getVarVariableIDTerminalRuleCall_0_1(), semanticObject.eGet(BrowserAutomationPackage.Literals.VAR_REF__VAR, false));
+		feeder.accept(grammarAccess.getVarRefAccess().getVaVariableIDTerminalRuleCall_0_1(), semanticObject.eGet(BrowserAutomationPackage.Literals.VAR_REF__VA, false));
 		feeder.finish();
 	}
 	

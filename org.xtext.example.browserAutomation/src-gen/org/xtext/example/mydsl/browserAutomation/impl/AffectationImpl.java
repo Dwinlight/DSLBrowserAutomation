@@ -3,22 +3,100 @@
  */
 package org.xtext.example.mydsl.browserAutomation.impl;
 
-import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.example.mydsl.browserAutomation.Affectation;
+import org.xtext.example.mydsl.browserAutomation.Attribut;
 import org.xtext.example.mydsl.browserAutomation.BrowserAutomationPackage;
+import org.xtext.example.mydsl.browserAutomation.VarRef;
+import org.xtext.example.mydsl.browserAutomation.Variable;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Affectation</b></em>'.
  * <!-- end-user-doc -->
+ * <p>
+ * The following features are implemented:
+ * </p>
+ * <ul>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl#getV_name <em>Vname</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl#getA <em>A</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl#getA2 <em>A2</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl#getS1 <em>S1</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.browserAutomation.impl.AffectationImpl#getV <em>V</em>}</li>
+ * </ul>
  *
  * @generated
  */
 public class AffectationImpl extends MinimalEObjectImpl.Container implements Affectation
 {
+  /**
+   * The cached value of the '{@link #getV_name() <em>Vname</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getV_name()
+   * @generated
+   * @ordered
+   */
+  protected Variable v_name;
+
+  /**
+   * The cached value of the '{@link #getA() <em>A</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getA()
+   * @generated
+   * @ordered
+   */
+  protected Attribut a;
+
+  /**
+   * The cached value of the '{@link #getA2() <em>A2</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getA2()
+   * @generated
+   * @ordered
+   */
+  protected Attribut a2;
+
+  /**
+   * The default value of the '{@link #getS1() <em>S1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS1()
+   * @generated
+   * @ordered
+   */
+  protected static final String S1_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getS1() <em>S1</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getS1()
+   * @generated
+   * @ordered
+   */
+  protected String s1 = S1_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getV() <em>V</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getV()
+   * @generated
+   * @ordered
+   */
+  protected VarRef v;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -38,6 +116,376 @@ public class AffectationImpl extends MinimalEObjectImpl.Container implements Aff
   protected EClass eStaticClass()
   {
     return BrowserAutomationPackage.Literals.AFFECTATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Variable getV_name()
+  {
+    return v_name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetV_name(Variable newV_name, NotificationChain msgs)
+  {
+    Variable oldV_name = v_name;
+    v_name = newV_name;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__VNAME, oldV_name, newV_name);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setV_name(Variable newV_name)
+  {
+    if (newV_name != v_name)
+    {
+      NotificationChain msgs = null;
+      if (v_name != null)
+        msgs = ((InternalEObject)v_name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__VNAME, null, msgs);
+      if (newV_name != null)
+        msgs = ((InternalEObject)newV_name).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__VNAME, null, msgs);
+      msgs = basicSetV_name(newV_name, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__VNAME, newV_name, newV_name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Attribut getA()
+  {
+    return a;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetA(Attribut newA, NotificationChain msgs)
+  {
+    Attribut oldA = a;
+    a = newA;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__A, oldA, newA);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setA(Attribut newA)
+  {
+    if (newA != a)
+    {
+      NotificationChain msgs = null;
+      if (a != null)
+        msgs = ((InternalEObject)a).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__A, null, msgs);
+      if (newA != null)
+        msgs = ((InternalEObject)newA).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__A, null, msgs);
+      msgs = basicSetA(newA, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__A, newA, newA));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Attribut getA2()
+  {
+    return a2;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetA2(Attribut newA2, NotificationChain msgs)
+  {
+    Attribut oldA2 = a2;
+    a2 = newA2;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__A2, oldA2, newA2);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setA2(Attribut newA2)
+  {
+    if (newA2 != a2)
+    {
+      NotificationChain msgs = null;
+      if (a2 != null)
+        msgs = ((InternalEObject)a2).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__A2, null, msgs);
+      if (newA2 != null)
+        msgs = ((InternalEObject)newA2).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__A2, null, msgs);
+      msgs = basicSetA2(newA2, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__A2, newA2, newA2));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getS1()
+  {
+    return s1;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setS1(String newS1)
+  {
+    String oldS1 = s1;
+    s1 = newS1;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__S1, oldS1, s1));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public VarRef getV()
+  {
+    return v;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetV(VarRef newV, NotificationChain msgs)
+  {
+    VarRef oldV = v;
+    v = newV;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__V, oldV, newV);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setV(VarRef newV)
+  {
+    if (newV != v)
+    {
+      NotificationChain msgs = null;
+      if (v != null)
+        msgs = ((InternalEObject)v).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__V, null, msgs);
+      if (newV != null)
+        msgs = ((InternalEObject)newV).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - BrowserAutomationPackage.AFFECTATION__V, null, msgs);
+      msgs = basicSetV(newV, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, BrowserAutomationPackage.AFFECTATION__V, newV, newV));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.AFFECTATION__VNAME:
+        return basicSetV_name(null, msgs);
+      case BrowserAutomationPackage.AFFECTATION__A:
+        return basicSetA(null, msgs);
+      case BrowserAutomationPackage.AFFECTATION__A2:
+        return basicSetA2(null, msgs);
+      case BrowserAutomationPackage.AFFECTATION__V:
+        return basicSetV(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public Object eGet(int featureID, boolean resolve, boolean coreType)
+  {
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.AFFECTATION__VNAME:
+        return getV_name();
+      case BrowserAutomationPackage.AFFECTATION__A:
+        return getA();
+      case BrowserAutomationPackage.AFFECTATION__A2:
+        return getA2();
+      case BrowserAutomationPackage.AFFECTATION__S1:
+        return getS1();
+      case BrowserAutomationPackage.AFFECTATION__V:
+        return getV();
+    }
+    return super.eGet(featureID, resolve, coreType);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eSet(int featureID, Object newValue)
+  {
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.AFFECTATION__VNAME:
+        setV_name((Variable)newValue);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__A:
+        setA((Attribut)newValue);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__A2:
+        setA2((Attribut)newValue);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__S1:
+        setS1((String)newValue);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__V:
+        setV((VarRef)newValue);
+        return;
+    }
+    super.eSet(featureID, newValue);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void eUnset(int featureID)
+  {
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.AFFECTATION__VNAME:
+        setV_name((Variable)null);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__A:
+        setA((Attribut)null);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__A2:
+        setA2((Attribut)null);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__S1:
+        setS1(S1_EDEFAULT);
+        return;
+      case BrowserAutomationPackage.AFFECTATION__V:
+        setV((VarRef)null);
+        return;
+    }
+    super.eUnset(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public boolean eIsSet(int featureID)
+  {
+    switch (featureID)
+    {
+      case BrowserAutomationPackage.AFFECTATION__VNAME:
+        return v_name != null;
+      case BrowserAutomationPackage.AFFECTATION__A:
+        return a != null;
+      case BrowserAutomationPackage.AFFECTATION__A2:
+        return a2 != null;
+      case BrowserAutomationPackage.AFFECTATION__S1:
+        return S1_EDEFAULT == null ? s1 != null : !S1_EDEFAULT.equals(s1);
+      case BrowserAutomationPackage.AFFECTATION__V:
+        return v != null;
+    }
+    return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuilder result = new StringBuilder(super.toString());
+    result.append(" (s1: ");
+    result.append(s1);
+    result.append(')');
+    return result.toString();
   }
 
 } //AffectationImpl

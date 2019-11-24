@@ -21,11 +21,11 @@ Click:
 	'CLICK' c=Composant 'WHERE' a=Attribut ('CONTAINS'|'EQUALS') (s=STRING|v= VarRef)
 ;
 Set:
-	'SET' a=Attribut (STRING|v= VarRef) 'WHERE' a1=Attribut ('CONTAINS'|'EQUALS') (s1=STRING|v= VarRef)
+	'SET' a=Attribut (s1=STRING|v1= VarRef) 'WHERE' a1=Attribut ('CONTAINS'|'EQUALS') (s2=STRING|v2= VarRef)
 ;
 Affectation:
 	
-	Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS'|'EQUALS') (STRING|v= VarRef) | STRING)
+	v_name=Variable '=' ('GET' a=Attribut 'WHERE' a2=Attribut ('CONTAINS'|'EQUALS') (s1=STRING|v= VarRef) | STRING)
 ;
 
 
@@ -33,7 +33,7 @@ Variable:
 	name = ID
 ;
 VarRef:
-	var=[Variable]
+	va=[Variable]
 ;
 Composant:
 	name = ID;
