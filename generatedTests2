@@ -1,0 +1,33 @@
+import org.junit.jupiter.api.Test;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+	import org.openqa.selenium.support.ui.ExpectedConditions;
+	import org.openqa.selenium.support.ui.WebDriverWait;
+	
+	import java.util.HashMap;
+	
+	import static org.junit.jupiter.api.Assertions.assertNotNull;
+	import static org.junit.jupiter.api.Assertions.assertTrue;
+	
+	
+	
+	
+	
+	
+	 @Test
+	 public void test() {
+	 System.setProperty("webdriver.gecko.driver","C:/Users/cocop/Downloads/geckodriver-v0.26.0-win64/geckodriver.exe");
+	 WebDriver driver = new FirefoxDriver();
+	 driver.get("http://www.imt-atlantique.fr/fr");
+	 WebElement button = driver.findElement(By.xpath(String.format("//a[contains(.,Toutes les actualités)]")));
+	 driver.get(button.getAttribute("href"));
+	 
+	 
+	  	
+	 new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(.,'Accueil')]")));
+	 assertTrue(driver.getPageSource().contains("Accueil"));
+	 driver.close();
+			}
+		}
