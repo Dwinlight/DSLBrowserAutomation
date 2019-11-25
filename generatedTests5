@@ -1,0 +1,38 @@
+import org.junit.jupiter.api.Test;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+	import org.openqa.selenium.support.ui.ExpectedConditions;
+	import org.openqa.selenium.support.ui.WebDriverWait;
+	
+	import java.util.HashMap;
+	
+	import static org.junit.jupiter.api.Assertions.assertNotNull;
+	import static org.junit.jupiter.api.Assertions.assertTrue;
+	
+	
+	
+	
+	
+	
+	 @Test
+	 public void test() {
+	 System.setProperty("webdriver.gecko.driver","C:/Users/cocop/Downloads/geckodriver-v0.26.0-win64/geckodriver.exe");
+	 WebDriver driver = new FirefoxDriver();
+	 driver.get("http://www.imt-atlantique.fr/fr/formation/trouver-ma-formation");
+	 String id1 = driver.findElement(By.xpath("//label[contains(., 'Temps plein')]")).getAttribute("for");
+	 driver.findElement(By.id(id1)).sendKeys(Keys.SPACE);
+	 String id2 = driver.findElement(By.xpath("//label[contains(., 'A domicile')]")).getAttribute("for");
+	 driver.findElement(By.id(id2)).sendKeys(Keys.SPACE);
+	 String id3 = driver.findElement(By.xpath("//label[contains(., 'Anglais')]")).getAttribute("for");
+	 driver.findElement(By.id(id3)).sendKeys(Keys.SPACE);
+	 
+	 
+	 driver.findElement(By.xpath("//input[@value='Appliquer les critères']")).submit();	
+	  	
+	 new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(.,'No found course matching your criteria.')]")));
+	 assertTrue(driver.getPageSource().contains("No found course matching your criteria."));
+	 driver.close();
+			}
+		}
