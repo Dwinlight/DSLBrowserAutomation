@@ -1,0 +1,34 @@
+import org.junit.jupiter.api.Test;
+	import org.openqa.selenium.By;
+	import org.openqa.selenium.WebDriver;
+	import org.openqa.selenium.WebElement;
+	import org.openqa.selenium.firefox.FirefoxDriver;
+	import org.openqa.selenium.support.ui.ExpectedConditions;
+	import org.openqa.selenium.support.ui.WebDriverWait;
+	
+	import java.util.HashMap;
+	
+	import static org.junit.jupiter.api.Assertions.assertNotNull;
+	import static org.junit.jupiter.api.Assertions.assertTrue;
+	
+	
+	
+	
+	
+	
+	 @Test
+	 public void test() {
+	 System.setProperty("webdriver.gecko.driver","C:/Users/cocop/Downloads/geckodriver-v0.26.0-win64/geckodriver.exe");
+	 WebDriver driver = new FirefoxDriver();
+	 driver.get("http://www.imt-atlantique.fr/fr/rechercher");
+	 WebElement input = driver.findElement(By.id("edit-search-api-fulltext"));
+	 input.sendKeys("Donald Trump");
+	 
+	 
+	 driver.findElement(By.xpath("//input[@value='Appliquer les filtres']")).submit();	
+	  	
+	 new WebDriverWait(driver, 5).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[contains(.,'Aucun résultat ne correspond à votre recherche')]")));
+	 assertTrue(driver.getPageSource().contains("Aucun résultat ne correspond à votre recherche"));
+	 driver.close();
+			}
+		}
